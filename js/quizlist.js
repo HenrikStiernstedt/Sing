@@ -28,16 +28,12 @@ var vm = new Vue({
       "buzzList" : [0],
       quizMasterId: 0,
       question : {
-        questionNumber: 0,
-        questionType : "BUZZ_RUSH",
-        questionText: "",
-        correctAnswer: "",
-        questionScore: 0,
-        questionTime: 30,
-        questionClues : [{
-          "clueScore" : 0,
-          "clueText" : ""
-        }]
+        "songNumber": 1,
+        "songType" : "SNAPS",
+        "songTitle": "Bredbandsbolaget",
+        "melody": "Spritbolaget",
+        "author": "Henrik Stiernstedt",
+        "songText": ["test"]
       },
       pendingAnswers: [{
         "id" : 0,
@@ -60,31 +56,23 @@ var vm = new Vue({
     quizMaster :
     {
       "pendingQuestion" : {
-        "questionNumber": 0,
-        "questionType" : "BUZZ_RUSH",
-        "questionText": "",
-        "correctAnswer": "",
-        "questionScore": 2,
-        "questionTime": 30,
-        "questionClues" : [{
-          "clueScore" : 0,
-          "clueText" : ""
-        }]
+        "songNumber": 1,
+        "songType" : "SNAPS",
+        "songTitle": "Bredbandsbolaget",
+        "melody": "Spritbolaget",
+        "author": "Henrik Stiernstedt",
+        "songText": ["test"]
       },
       "savegame": "game",
       "loadQuestions": "2020",
       "QuestionListNumber": 0,
       "questionList": [{
-        "questionNumber": 0,
-        "questionType" : "BUZZ_RUSH",
-        "questionText": "",
-        "correctAnswer": "",
-        "questionScore": 2,
-        "questionTime": "",
-        "questionClues" : [{
-          "clueScore" : 0,
-          "clueText" : ""
-        }]
+        "songNumber": 1,
+        "songType" : "SNAPS",
+        "songTitle": "Bredbandsbolaget",
+        "melody": "Spritbolaget",
+        "author": "Henrik Stiernstedt",
+        "songText": ["test"]
       }]
     },
     environment :

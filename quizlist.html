@@ -54,11 +54,11 @@
         <!-- Frågekort -->
         <div class="questionInfo col-md-6">
           <transition name="slide-to-back">
-            <div class="flip-card slideContainer glass"  v-bind:key="status.question.questionNumber">
+            <div class="slideContainer glass"  v-bind:key="status.question.songNumber">
 
-              <div class="flip-card-inner">
-                <div class="flip-card-front glass">
-                  <span v-if="status.question.questionType == 'WELCOME'">
+              <div class="">
+                <div class="">
+                  <span v-if="status.question.songType == 'WELCOME'">
                     <img class="card-img-top" src="images/39.jpg" alt="Gott nytt år" />
                     <div class="card-body">
                       <div class="QuestionCountdownOverlay">10</div>
@@ -73,97 +73,35 @@
                     </div>
                   </span>
 
-                  <span v-if="status.question.questionType == 'MAJOR_VICTORY'">
-                    <img class="card-img-top" src="images/majority-rules.png" alt="Majoriteten bestämmer">
+                  <span v-if="status.question.songType == 'SNAPS'">
+                    <img class="card-img-top" src="images/snaps.jpeg" alt="Snapsvisa!">
                     <div class="card-body">
                       <div v-if="status.questionTime" class="QuestionCountdownOverlay" :key="`countdown-${status.questionTime}`"> {{status.questionTime}}</div>
-                      <div class="QuestionScoreOverlay" :key="status.question.questionScore"> {{status.question.questionScore}}</div>
-                      <h5 class="card-title">Fråga {{status.question.questionNumber}}: Majoriteten bestämmer</h5>
+                      <h5 class="card-title">Sång {{status.question.songNumber}}: {{status.question.songTitle}}</h5>
                       <p class="card-text">
-                        <strong><span style="white-space: normal;">{{ status.question.questionText.replace(/&nbsp;/g, ' ') }}</span></strong>
+
+                        <span v-for="line in status.question.songText">
+                          <span>{{line}}</span><br/>
+
+                        </span>
+
+                        <!--span style="white-space: normal;">{{ status.question.questionText.replace(/&nbsp;/g, ' ') }}</span>-->
+                        <!--<strong><span style="white-space: normal;">{{ status.question.questionText.replace(/&nbsp;/g, ' ') }}</span></strong>-->
+                        <!--
                         <span v-if="status.question.questionScore != '0'"><br/>Värd
                           <transition name="bounce" mode="out-in">
                             <span :key="status.question.questionScore" class="badge badge-pill badge-secondary">{{status.question.questionScore}}</span>
                           </transition>
                           poäng
                         </span>
+                      -->
                       </p>
 
                     </div>
                   </span>
 
-                  <span v-if="status.question.questionType == 'QUIZ'">
-                    <img class="card-img-top" src="images/quiz.jpg" alt="Quiz">
-                    <div class="card-body">
-                      <div v-if="status.questionTime" class="QuestionCountdownOverlay" :key="`countdown-${status.questionTime}`"> {{status.questionTime}}</div>
-                      <div class="QuestionScoreOverlay" :key="status.question.questionScore"> {{status.question.questionScore}}</div>
-                      <h5 class="card-title">Fråga {{status.question.questionNumber}}: Quiz</h5>
-                      <p class="card-text">
-                        <strong><span style="white-space: normal;">{{ status.question.questionText.replace(/&nbsp;/g, ' ') }}</span></strong>
-                        <span v-if="status.question.questionScore != '0'"><br/>Värd
-                          <transition name="bounce" mode="out-in">
-                            <span :key="status.question.questionScore" class="badge badge-pill badge-secondary">{{status.question.questionScore}}</span>
-                          </transition>
-                          poäng
-                        </span>
-                      </p>
-
-                    </div>
-                  </span>
-
-                  <span v-if="status.question.questionType == 'RED_THREAD'">
-                    <img class="card-img-top" src="images/Pasparet3.jpg" alt="Röda tråden">
-                    <div class="card-body">
-                      <div v-if="status.questionTime" class="QuestionCountdownOverlay" :key="`countdown-${status.questionTime}`"> {{status.questionTime}}</div>
-                      <div class="QuestionScoreOverlay" :key="status.question.questionScore"> {{status.question.questionScore}}</div>
-                      <h5 class="card-title">Fråga {{status.question.questionNumber}}: Röda tråden</h5>
-                      <p class="card-text">
-                        <strong><span style="white-space: normal;">{{ status.question.questionText.replace(/&nbsp;/g, ' ') }}</span></strong>
-                        <span v-if="status.question.questionScore != '0'"><br/>Värd
-                          <transition name="bounce" mode="out-in">
-                            <span :key="status.question.questionScore" class="badge badge-pill badge-secondary">{{status.question.questionScore}}</span>
-                          </transition>
-                          poäng
-                        </span>
-                      </p>
-
-                    </div>
-                  </span>
-
-                  <span v-if="status.question.questionType == 'BUZZ_RUSH'">
-                    <img class="card-img-top" src="images/buzzers3.png" alt="Buzzers">
-                    <div class="card-body">
-                      <div v-if="status.questionTime" class="QuestionCountdownOverlay" :key="`countdown-${status.questionTime}`"> {{status.questionTime}}</div>
-                      <div class="QuestionScoreOverlay" :key="status.question.questionScore"> {{status.question.questionScore}}</div>
-                      <h5 class="card-title">Fråga {{status.question.questionNumber}}: Handen på buzzern!</h5>
-                      <p class="card-text">
-                        <strong><span style="white-space: normal;">{{ status.question.questionText.replace(/&nbsp;/g, ' ') }}</span></strong>
-                        <span v-if="status.question.questionScore != '0'"><br/>Värd
-                          <transition name="bounce" mode="out-in">
-                            <span :key="status.question.questionScore" class="badge badge-pill badge-secondary">{{status.question.questionScore}}</span>
-                          </transition>
-                          poäng
-                        </span>
-                      </p>
-
-                    </div>
-                  </span>
                 </div> <!--end of front-->
-                <!-- facit -->
-                <div class="flip-card-back glass">
-                  <img class="card-img-top" src="images/correct.jpg" alt="Facit">
-                    <div class="card-body">
-                      <div class="QuestionScoreOverlay" :key="status.question.questionScore"> {{status.question.questionScore}}</div>
-                      
-                      <h5 class="card-title">Facit fråga {{status.question.questionNumber}}:<span style="color: rgb(255, 166, 0)"> {{status.question.correctAnswer}}</span></h5>
-                      <p class="card-text">
-                        <strong>{{ status.question.questionText }}</span></strong>
-                        <br/>
-                        <span>&nbsp;</span>
-                      </p>
 
-                    </div>
-                </div>
               </div>
 
             </div>
@@ -174,9 +112,9 @@
         <!-- Answer area -->
         <div id="player" class="player col-md-6" style="min-height:110px;">
           <transition name="fade" mode="out-in">
-            <div v-if="status.question.questionType != 'WELCOME'" class="card glass answerArea"  v-bind:key="status.question.questionType"> <!-- Only update on new question type. -->
+            <div v-if="status.question.songType != 'WELCOME'" class="card glass answerArea"  v-bind:key="status.question.songType"> <!-- Only update on new question type. -->
               <div class="card-body">
-                <span v-if="status.question.questionType == 'BUZZ_RUSH'">
+                <span v-if="status.question.songType == 'BUZZ_RUSH'">
                   <div v-if="status.winningTeam == player.id" v-on:click="buzz()" class="alert alert-success" role="alert">Du har buzzat!</div>
                   <div v-else-if="status.winningTeam" v-on:click="buzz()" class="alert alert-warning" role="alert">{{status.winningTeamName}} har buzzat.</div>
                   <div v-else-if="getCurrentPlayer(players, player.id)?.HasBuzzed" v-on:click="buzz()" type="button" class="btn btn-danger btn-lg btn-block">Du har redan buzzat!</div>
@@ -204,9 +142,8 @@
         <!-- End of Answer area -->
 
       </div>
+      <!-- Kontroller för score board --><!-- BORTKOMMENTERAT FÖR TILLFÄLLET
       <div class="row Leaderboard">
-
-        <!-- Kontroller för score board -->
         <div class="playerTable col-xs-12" style="width:100%">
           <div class="card glass">
             <div class="card-body" style="padding:0px;">
@@ -234,8 +171,6 @@
                     </td>
                     <td>
                       <transition name="qbounce" mode="out-in">
-                        
-                        <!--<i :key="p.emote" v-if="player.id == p.team" :class="p.emote" class="far fa-2x" data-toggle="tooltip" title="Detta är du"></i>-->
                         <i :key="1" v-if="p.isCorrect" class="far fa-grin-stars fa-2x shaking"></i>
                         <i :key="2" v-else-if="status.winningTeam !== p.team && p.HasBuzzed" class="far fa-sad-cry fa-2x headShake"></i>
                         <i :key="p.emote" v-else-if="p.active" :class="p.emote" class="far fa-2x"></i>
@@ -243,8 +178,6 @@
                       </transition>
                       <span v-if="p.buzzOrder">Buzz: {{ p.buzzOrder }}</span>
                       <i v-if="status.winningTeam == p.team" class="far fa-hand-paper shaking fa-2x"></i>
-                      <!--<i v-if="status.winningTeam !== p.team && p.HasBuzzed" class="far fa-frown fa-2x"></i>
-                      <i v-if="p.isCorrect" class="far fa-star fa-2x"></i> -->
                     </td>
                     <td>
 
@@ -273,6 +206,7 @@
         </div>
 
       </div>
+      -->
       <div class="row administration">
         <!-- Kontroller för QuizMaster och administration -->
         <div class="administration col-xs-12" style="width:100%">
@@ -288,27 +222,37 @@
               
               <div class="input-group mb-1">
                 <div class="input-group-prepend">
-                  <span class="input-group-text" id="asdf">Frågenummer</span>
+                  <span class="input-group-text" id="asdf">Sångnummer</span>
                 </div>
-                <input v-model="quizMaster.pendingQuestion.questionNumber" type="text" class="form-control" aria-label="Default" aria-describedby="asdf">
+                <input v-model="quizMaster.pendingQuestion.songNumber" type="text" class="form-control" aria-label="Default" aria-describedby="asdf">
               </div>
               <div class="input-group mb-1">
                 <div class="input-group-prepend">
-                  <span class="input-group-text" id="inputGroup-sizing-default">Frågetyp</span>
+                  <span class="input-group-text" id="inputGroup-sizing-default">Sångtyp</span>
                 </div>
-                <select class="form-control" type="select" v-model="quizMaster.pendingQuestion.questionType" >
-                  <option value="RED_THREAD">Röda tråden</option>
-                  <option value="QUIZ">Quiz</option>
-                  <option value="MAJOR_VICTORY">Majoriteten bestämmer</option>
-                  <option value="BUZZ_RUSH">Handen på Buzzern</option>
+                <select class="form-control" type="select" v-model="quizMaster.pendingQuestion.songType" >
+                  <option value="SNAPS">Snapsvisor!</option>
                   <option value="WELCOME">Välkomstskärm</option>
                 </select>
               </div>
               <div class="input-group mb-1">
                 <div class="input-group-prepend">
-                  <span class="input-group-text" id="inputGroup-sizing-default">Fråga</span>
+                  <span class="input-group-text" id="asdf">Titel</span>
                 </div>
-                <textarea v-model="quizMaster.pendingQuestion.questionText" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <input v-model="quizMaster.pendingQuestion.songTitle" type="text" class="form-control" aria-label="Default" aria-describedby="asdf">
+              </div>
+              <div class="input-group mb-1">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="asdf">Melodi</span>
+                </div>
+                <input v-model="quizMaster.pendingQuestion.melody" type="text" class="form-control" aria-label="Default" aria-describedby="asdf">
+              </div>
+              <!-- TODO: Split string on newline and join array with newlines when shown here. -->
+              <div class="input-group mb-1">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroup-sizing-default">Sång</span>
+                </div>
+                <textarea v-model="quizMaster.pendingQuestion.songText" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                 <!--<input v-model="quizMaster.pendingQuestion.questionText" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">-->
               </div>
               <div class="input-group mb-1">

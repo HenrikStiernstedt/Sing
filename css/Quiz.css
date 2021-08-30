@@ -56,7 +56,7 @@ td:first-child, th:first-child {
 }
 
 .questionInfo {
-  /*min-height: 400px;*/
+  /*min-height: 800px;*/
   display: grid;
   margin-bottom: 10px;
 }
@@ -76,7 +76,7 @@ td:first-child, th:first-child {
 */
 
 body {
-  background: url(../images/background.jpg) repeat fixed; 
+  background: url(../images/background2.png) repeat fixed; 
 }
 
 .slideContainer {
@@ -149,7 +149,7 @@ body {
 .flip-card {
   background-color: transparent;
   /*width: 300px;*/
-  height: 300px;
+  /*height: 300px;*/
   perspective: 1000px;
 }
 
@@ -297,7 +297,7 @@ body {
     z-index: 5000;
   }
   70% {
-    transcorm: scale(0.9);
+    transform: scale(0.9);
     z-index: 0;
     opacity: 1;
   }

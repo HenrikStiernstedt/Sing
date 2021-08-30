@@ -1,166 +1,52 @@
 [{
-    "questionNumber": 1,
-    "questionType" : "QUIZ",
-    "questionText": "Vilken nationalitet hade flygplanet?",
-    "correctAnswer": "Ukraina",
-    "questionScore": 2,
-    "questionClues" : [{
-      "clueScore" : 0,
-      "clueText" : ""
-    }]
+    "songNumber": 1,
+    "songType" : "SNAPS",
+    "songTitle": "Bredbandsbolaget",
+    "melody": "Spritbolaget",
+    "author": "Henrik Stiernstedt",
+    "songText": 
+    [
+      "Till Internetet vänder jag",
+      "För jag vill se nått nu",
+      "Jag vill ha nåt som roar bra",
+      "t.ex. Hulu",
+      "Webbsidan den sade -\"Goday!\"",
+      "Do you live in the USA?\"",
+      "Om du ej denna tjänsten når",
+      "kom hit igen om fem, sex år.",
+      "",
+      "Nej detta var ju inte bra",
+      "jag vill ha min film-fix",
+      "Då plötsligt en idé jag fick",
+      "det finns film på Netflix",
+      "Många filmer att välja på",
+      "Men allt är från typ 82",
+      "Trots månadskostnad är betald",
+      "blir aldrig någon film här vald",
+      "",
+      "Nej detta var ju inte bra",
+      "hur ska jag roa mig?",
+      "Men plötsligt en idé jag fick",
+      "visst lever Pirate Bay?",
+      "Många titlar fanns där på rad",
+      "med \"XviD\" och jag vet ej vad",
+      "Jag klicka på warez.exe",
+      "Nu kan jag inte se nåt me'"
+    ]
   },
   {
-    "questionNumber": "",
-    "questionType" : "QUIZ",
-    "questionText": "Vem blev årets manliga idrottare på idrottsgalan 2020?",
-    "correctAnswer": "",
-    "questionScore": 2,
-    "questionClues" : [{
-      "clueScore" : 0,
-      "clueText" : "Daniel Ståhl"
-    }]
-  },
-  {
-    "questionNumber": "",
-    "questionType" : "QUIZ",
-    "questionText": "Vilken film vann pris för bästa film på Oscarsgalan?",
-    "correctAnswer": "Parasit",
-    "questionScore": 2,
-    "questionClues" : [{
-      "clueScore" : 0,
-      "clueText" : ""
-    }]
-  },
-  {
-    "questionNumber": "",
-    "questionType" : "QUIZ",
-    "questionText": "Vilka vann årets upplaga av svenska melodifestivalen?",
-    "correctAnswer": "The Mamas",
-    "questionScore": 2,
-    "questionClues" : [{
-      "clueScore" : 0,
-      "clueText" : ""
-    }]
-  },
-  {
-    "questionNumber": "",
-    "questionType" : "QUIZ",
-    "questionText": "Vem utsågs till årets bäst klädda kvinna?",
-    "correctAnswer": "Hedda Stiernstedt",
-    "questionScore": 2,
-    "questionClues" : [{
-      "clueScore" : 0,
-      "clueText" : ""
-    }]
-  },
-  {
-    "questionNumber": "",
-    "questionType" : "QUIZ",
-    "questionText": "Vilken är sjukdomen?",
-    "correctAnswer": "Polio",
-    "questionScore": 2,
-    "questionClues" : [{
-      "clueScore" : 0,
-      "clueText" : ""
-    }]
-  },
-  {
-    "questionNumber": "",
-    "questionType" : "QUIZ",
-    "questionText": "Som första land i världen meddelade Skottland i slutet av november att man ska börja erbjuda vad gratis?",
-    "correctAnswer": "Mensskydd",
-    "questionScore": 2,
-    "questionClues" : [{
-      "clueScore" : 0,
-      "clueText" : ""
-    }]
-  },
-  {
-    "questionNumber": "",
-    "questionType" : "QUIZ",
-    "questionText": "Vad hette mannen?",
-    "correctAnswer": "George Floyd",
-    "questionScore": 2,
-    "questionClues" : [{
-      "clueScore" : 0,
-      "clueText" : ""
-    }]
-  },
-  {
-    "questionNumber": "",
-    "questionType" : "QUIZ",
-    "questionText": "Vem mördade egentligen Olof Palme?",
-    "correctAnswer": "Skandiamannen",
-    "questionScore": 2,
-    "questionClues" : [{
-      "clueScore" : 0,
-      "clueText" : ""
-    }]
-  },
-  {
-    "questionNumber": "",
-    "questionType" : "QUIZ",
-    "questionText": "Vad heter Katy Perry och Legolas första gemensamma blomma, jag menar barn?",
-    "correctAnswer": "Daisy",
-    "questionScore": 2,
-    "questionClues" : [{
-      "clueScore" : 0,
-      "clueText" : ""
-    }]
-  },
-  {
-    "questionNumber": "",
-    "questionType" : "QUIZ",
-    "questionText": "Vad heter den nya Bond-filmen?",
-    "correctAnswer": "No time to die",
-    "questionScore": 2,
-    "questionClues" : [{
-      "clueScore" : 0,
-      "clueText" : ""
-    }]
-  },
-  {
-    "questionNumber": "",
-    "questionType" : "QUIZ",
-    "questionText": "Under hösten släpptes en ny hypad streamingtjänst i Sverige. Vilken?",
-    "correctAnswer": "Disney+",
-    "questionScore": 2,
-    "questionClues" : [{
-      "clueScore" : 0,
-      "clueText" : ""
-    }]
-  },
-  {
-    "questionNumber": "",
-    "questionType" : "QUIZ",
-    "questionText": "Hur många nobelpris delas ut varje år?",
-    "correctAnswer": "6",
-    "questionScore": 2,
-    "questionClues" : [{
-      "clueScore" : 0,
-      "clueText" : ""
-    }]
-  },
-  {
-    "questionNumber": "",
-    "questionType" : "QUIZ",
-    "questionText": "Vem vann åretsbragdguld?",
-    "correctAnswer": "Armand Duplantis",
-    "questionScore": 2,
-    "questionClues" : [{
-      "clueScore" : 0,
-      "clueText" : ""
-    }]
-  },
-  {
-    "questionNumber": "",
-    "questionType" : "QUIZ",
-    "questionText": "Var arrangeras Sommar-OS 2020, nästa år?",
-    "correctAnswer": "Tokyo",
-    "questionScore": 2,
-    "questionClues" : [{
-      "clueScore" : 0,
-      "clueText" : ""
-    }]
+  "songNumber": 2,
+    "songType" : "SNAPS",
+    "songTitle": "Frihet utan ansvar",
+    "author": "Henrik Stiernstedt",
+    "meoldy": "Kaffe utan grädde",
+    "originalAuthor": null,
+    "songText": 
+    [
+      "Hacka i KonsultKoll",
+      "är som frihet utan ansvar",
+      "För frihet under ansvar",
+      "är väl ingen frihet alls?"
+    ]    
   }
 ]

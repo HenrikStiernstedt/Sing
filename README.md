@@ -27,7 +27,7 @@ The SingMaster controls all singing.
 
 * [ ] Hide the SingMaster-password field as it is not important for the majority of players.
 
-* [ ]"I'm ready"-notification for players to signal that we're ready to sing
+* [ ] "I'm ready"-notification for players to signal that we're ready to sing
   
 * "I'm happy" emotion indicator as well as "I have no clue"-indicator. Just for fun. 
   - [x] Partly implemented, with no impact on the singing.

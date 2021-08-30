@@ -73,17 +73,13 @@ var data = {
     "winningTeam" : null,
     "buzzList" : [],
     quizMasterId: 0,
-    question : { // TODO: Defaultfrågan är hårdkodad tills vidare.
-      questionNumber: 0,
-      questionType : "BUZZ_RUSH",
-      questionText: "Vem där?",
-      correctAnswer: "",
-      questionScore: 10,
-      questionTime: 30,
-      questionClues : [{
-        "clueScore" : 10,
-        "clueText" : ""
-      }]      
+    question : { 
+      "songNumber": 1,
+      "songType" : "SNAPS",
+      "songTitle": "Bredbandsbolaget",
+      "melody": "Spritbolaget",
+      "author": "Henrik Stiernstedt",
+      "songText": ["test"]
     },
     pendingAnswers: [{
       "id" : 0,
@@ -100,15 +96,12 @@ var data = {
   }],
   quizMasterPassword : '4552',
   "questionList": [{
-    questionNumber: 0,
-    questionType : "BUZZ_RUSH",
-    questionText: "Vem där?",
-    correctAnswer: "",
-    questionScore: 10,
-    questionClues : [{
-      "clueScore" : 10,
-      "clueText" : ""
-    }]
+    "songNumber": 1,
+    "songType" : "SNAPS",
+    "songTitle": "Bredbandsbolaget",
+    "melody": "Spritbolaget",
+    "author": "Henrik Stiernstedt",
+    "songText": ["test"]
   }]
 }
 

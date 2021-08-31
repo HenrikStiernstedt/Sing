@@ -74,6 +74,13 @@ td:first-child, th:first-child {
   background-color: white;
 }
 */
+
+.MelodyLabel {
+  font-size: small;
+  font-weight: bold;
+
+}
+
 .card-header {
   background-color: rgba(0,0,0,.08);
 }

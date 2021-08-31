@@ -77,7 +77,10 @@
                     <div class="card-body">
                       <!--<div v-if="status.questionTime" class="QuestionCountdownOverlay" :key="`countdown-${status.questionTime}`"> {{status.questionTime}}</div>-->
                       <h5 class="card-title">Sång {{status.question.songNumber}}: {{status.question.songTitle}}</h5>
-                      <p class="card-text">
+                      
+                        <div> <span class="MelodyLabel">Melodi:</span> <span class="melodyValue"> {{status.question.melody}}</span></div>
+                        <div> <span class="MelodyLabel">Text:</span> <span class="melodyValue"> {{status.question.author}}</span></div>
+                        <p></p>
 
                         <span v-for="line in status.question.songText">
                           <span>{{line}}</span><br/>
@@ -94,7 +97,7 @@
                           poäng
                         </span>
                       -->
-                      </p>
+                      
 
                     </div>
                   </span>

@@ -59,11 +59,10 @@
               <div class="">
                 <div class="">
                   <span v-if="status.question.songType == 'WELCOME'">
-                    <img class="card-img-top" src="images/39.jpg" alt="Gott nytt år" />
+                    <img class="card-img-top" src="images/kor.png" alt="Nu kör vi" />
                     <div class="card-body">
-                      <div class="QuestionCountdownOverlay">10</div>
                       
-                      <h5 class="card-title">Henkes ny- och 39-årsquiz!</h5>
+                      <h5 class="card-title">Sångboken 2.0</h5>
                       <p class="card-text">
                         <strong><span style="white-space: normal;">{{ status.question.questionText }}</span></strong>
                         <br/>
@@ -76,7 +75,7 @@
                   <span v-if="status.question.songType == 'SNAPS'">
                     <img class="card-img-top" src="images/snaps.jpeg" alt="Snapsvisa!">
                     <div class="card-body">
-                      <div v-if="status.questionTime" class="QuestionCountdownOverlay" :key="`countdown-${status.questionTime}`"> {{status.questionTime}}</div>
+                      <!--<div v-if="status.questionTime" class="QuestionCountdownOverlay" :key="`countdown-${status.questionTime}`"> {{status.questionTime}}</div>-->
                       <h5 class="card-title">Sång {{status.question.songNumber}}: {{status.question.songTitle}}</h5>
                       <p class="card-text">
 
@@ -109,35 +108,42 @@
 
           </transition>
         </div>
-        <!-- Answer area --><!-- TODO: remove? Replace
+        <!-- Answer area / Song list -->
         <div id="player" class="player col-md-6" style="min-height:110px;">
           <transition name="fade" mode="out-in">
-            <div v-if="status.question.songType != 'WELCOME'" class="card glass answerArea"  v-bind:key="status.question.songType">
+            <div v-if="status.question.songType == 'WELCOME' && player.pendingAnswer" class="card glass answerArea"  v-bind:key="status.question.songType">
               <div class="card-body">
-                <span v-if="status.question.songType == 'BUZZ_RUSH'">
-                  <div v-if="status.winningTeam == player.id" v-on:click="buzz()" class="alert alert-success" role="alert">Du har buzzat!</div>
-                  <div v-else-if="status.winningTeam" v-on:click="buzz()" class="alert alert-warning" role="alert">{{status.winningTeamName}} har buzzat.</div>
-                  <div v-else-if="getCurrentPlayer(players, player.id)?.HasBuzzed" v-on:click="buzz()" type="button" class="btn btn-danger btn-lg btn-block">Du har redan buzzat!</div>
-                  <div v-else-if="status.isBuzzActive" v-on:click="buzz()" type="button" class="btn btn-primary btn-lg btn-block">Buzz!</div>
-
-                </span>
-                <span v-else-if="status.isBuzzActive">
+                <span>
                   <div class="input-group input-group-lg">
-                    <input v-model="player.pendingAnswer" @keyup.enter="buzz()" type="text" class="form-control" placeholder="Svar" aria-label="Lagnamn" aria-describedby="basic-addon2">
+                    <input v-model="player.pendingAnswer" @keyup.enter="buzz()" type="text" class="form-control" placeholder="Önska" aria-label="Lagnamn" aria-describedby="basic-addon2">
                     <div class="input-group-append">
                       <button class="btn btn-primary" v-on:click="buzz()" :disabled="!player.pendingAnswer" type="button">Svara</button>
                     </div>
                   </div>
-                  <div>
+<!--                  <div>
                     <small v-if="status.questionTime">Återstående tid: {{status.questionTime}}</small>
                   </div>
                   <div>
                     <small v-if="player.submittedAnswer">Du har svarat: {{player.submittedAnswer}}</small>
                   </div>
+-->                  
                 </span>
               </div>
             </div>
-          </transition>
+          </transition>          
+          <div class="card glass answerArea"  v-bind:key="status.question.songType">
+            <div class="card-body">
+              <h5 class="card-title">Sånger</h5>
+              <ol>
+                <transition-group name="fade" mode="out-in"></transition-group>
+                  <li v-for="song in status.questionList" :key='song.songNumber' value="{{song.songNumber}}">{{song.songTitle}}</li>
+                </transition-group>
+              </ol>
+            
+            </div>
+          </div>
+
+
         </div>
         <!-- End of Answer area -->
 

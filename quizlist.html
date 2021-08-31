@@ -109,10 +109,10 @@
 
           </transition>
         </div>
-        <!-- Answer area -->
+        <!-- Answer area --><!-- TODO: remove? Replace
         <div id="player" class="player col-md-6" style="min-height:110px;">
           <transition name="fade" mode="out-in">
-            <div v-if="status.question.songType != 'WELCOME'" class="card glass answerArea"  v-bind:key="status.question.songType"> <!-- Only update on new question type. -->
+            <div v-if="status.question.songType != 'WELCOME'" class="card glass answerArea"  v-bind:key="status.question.songType">
               <div class="card-body">
                 <span v-if="status.question.songType == 'BUZZ_RUSH'">
                   <div v-if="status.winningTeam == player.id" v-on:click="buzz()" class="alert alert-success" role="alert">Du har buzzat!</div>
@@ -252,7 +252,7 @@
                 <div class="input-group-prepend">
                   <span class="input-group-text" id="inputGroup-sizing-default">Sång</span>
                 </div>
-                <textarea v-model="quizMaster.pendingQuestion.songText" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <textarea v-model="plainTextSongText" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                 <!--<input v-model="quizMaster.pendingQuestion.questionText" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">-->
               </div>
               <div class="input-group mb-1">
@@ -291,15 +291,16 @@
 
               <div class="btn-group mb-1" role="group" aria-label="New-Question">
                 <div class="input-group">
+                  <button type="button" class="btn btn-primary" v-on:click="loadLastQuestion()" :disabled="quizMaster.QuestionListNumber <= 0">Föregående sång</button>
                   <input v-model="quizMaster.QuestionListNumber" type="text" class="form-control" aria-label="Nästa fråga" style="width: 50px;">
                   <div class="input-group-append">
                     <span class="input-group-text">/{{quizMaster.questionList.length}}</span>
-                    <button type="button" class="btn btn-primary" v-on:click="loadNextQuestion()" :disabled="quizMaster.QuestionListNumber >= quizMaster.questionList.length">Nästa fråga</button>
+                    <button type="button" class="btn btn-primary" v-on:click="loadNextQuestion()" :disabled="quizMaster.QuestionListNumber > quizMaster.questionList.length-1">Nästa sång</button>
                   </div>
                 </div>
               </div>
               <div class="btn-group mb-1">
-                <button type="button" class="btn btn-primary" v-on:click="newQuestion()">Ny fråga</button>
+                <button type="button" class="btn btn-primary" v-on:click="newQuestion()">Ny sång</button>
               </div>
 
               <!-- Game buttons -->

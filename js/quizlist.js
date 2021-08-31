@@ -81,6 +81,18 @@ var vm = new Vue({
       minConfidence: -3
     }
   },
+  computed:
+  {
+    plainTextSongText: {
+      get: function() {
+        return this.quizMaster.pendingQuestion.songText.join("\n");
+      },
+      set: function(newvalue) {
+        this.quizMaster.pendingQuestion.songText = newvalue.split('\n');
+      }
+
+    }
+  },
   methods: {
     say: function (message) {
       alert(message)
@@ -129,11 +141,22 @@ var vm = new Vue({
       socket.emit("AutoCorrect", vm.quizMaster.pendingQuestion.correctAnswer);
     },
     loadNextQuestion: function() {
-      if(vm.quizMaster.QuestionListNumber < vm.quizMaster.questionList.length)
+      if(vm.quizMaster.QuestionListNumber < vm.quizMaster.questionList.length -1)
       {
-        console.log("Hämtar nästa fråga: " + vm.quizMaster.QuestionListNumber);
+        console.log("Hämtar nästa fråga: " + ++vm.quizMaster.QuestionListNumber);
         vm.quizMaster.pendingQuestion = vm.quizMaster.questionList[vm.quizMaster.QuestionListNumber];
-        vm.quizMaster.QuestionListNumber++;
+        //vm.quizMaster.QuestionListNumber++;
+      }
+      else
+      {
+        console.log("Slut på frågor att hämta.");
+      }
+    },
+    loadLastQuestion: function() {
+      if(vm.quizMaster.QuestionListNumber > 0)
+      {
+        console.log("Hämtar förra sång: " + --vm.quizMaster.QuestionListNumber);
+        vm.quizMaster.pendingQuestion = vm.quizMaster.questionList[vm.quizMaster.QuestionListNumber];
       }
       else
       {
@@ -306,6 +329,7 @@ function initQuizlist() {
     console.log(questionList);
     vm.quizMaster.QuestionListNumber = 0;
     vm.quizMaster.questionList = questionList;
+    vm.quizMaster.pendingQuestion = vm.quizMaster.questionList[0];
   });
 
   socket.on('ResetBuzz', function(status) {

@@ -42,6 +42,8 @@ The SingMaster controls all singing.
 
 * [ ] Revelation of lyrics in time with the song. Good for when you want to preform live, want everyone to follow along but not spoil the whole song until you get there.
 
+* [ ] A public list of all songs, so each user can check them out beforhand. 
+
 ## SingMaster GUI
 
 * [ ] New public sing board and song display.
@@ -57,6 +59,10 @@ The SingMaster controls all singing.
 
 * [ ] Comments field to songs.
 
+* [x] The possibility to enter and edit song texts easily. (textarea to string array and back.)
+
+* [x] The possibility to add songs easily and store them.
+
 ## Songboard only mode
 * [ ] A way to only show songs.
 * [ ] A way to not be part of the singing board, but still recieve singing updates.
@@ -66,7 +72,7 @@ The SingMaster controls all singing.
 * [ ] First person to buzz gets to choose the next song.
 
 ### Quiz
-  - [x] Standard quiz mode where the most voted type of song wins. Beer, wine, schnaps, funny etc.
+  - [ ] Standard quiz mode where the most voted type of song wins. Beer, wine, schnaps, funny etc.
 
 ### More song modes
   - [ ] Majority rules. Everyone types in a song. The most voted one wins. The Song Master will have to search and find the lyrics and paste it into the "up next" song.

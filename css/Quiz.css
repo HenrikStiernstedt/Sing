@@ -74,6 +74,9 @@ td:first-child, th:first-child {
   background-color: white;
 }
 */
+.card-header {
+  background-color: rgba(0,0,0,.08);
+}
 
 body {
   background: url(../images/background2.png) repeat fixed; 

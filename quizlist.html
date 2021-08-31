@@ -108,7 +108,7 @@
 
           </transition>
         </div>
-        <!-- Answer area / Song list -->
+        <!-- Answer area -->
         <div id="player" class="player col-md-6" style="min-height:110px;">
           <transition name="fade" mode="out-in">
             <div v-if="status.question.songType == 'WELCOME' && player.pendingAnswer" class="card glass answerArea"  v-bind:key="status.question.songType">
@@ -130,25 +130,57 @@
                 </span>
               </div>
             </div>
-          </transition>          
-          <div class="card glass answerArea"  v-bind:key="status.question.songType">
-            <div class="card-body">
-              <h5 class="card-title">Sånger</h5>
-              <ol>
-                <transition-group name="fade" mode="out-in"></transition-group>
-                  <li v-for="song in status.questionList" :key='song.songNumber' value="{{song.songNumber}}">{{song.songTitle}}</li>
-                </transition-group>
-              </ol>
+          </transition>   
+
+          <!-- Song list -->       
+
+          
+          <div class="accordion" id="songlist">
+            <div class="card glass" >
+              <template v-for="song in status.questionList" >
+                <div class="card-header" :id='"heading"+song.songNumber' :key='song.songNumber'>
+                  <h5 class="mb-0">
+                    <a class="btn btn-link" type="button" data-toggle="collapse" :data-target="'#collapse'+song.songNumber" aria-expanded="false" :aria-controls='"collapse"+song.songNumber'>
+                      {{song.songNumber}}. {{song.songTitle}}
+                    </a>
+                  </h5>
+                </div>
             
+                <div :id='"collapse"+song.songNumber' class="collapse" :aria-labelledby='"heading"+song.songNumber' data-parent="#songlist">
+                  <div class="card-body">
+                    <span v-for="line in song.songText">
+                      <span>{{line}}</span><br/>
+
+                    </span>
+                  </div>
+                </div>
+              </template>
             </div>
           </div>
+      
+
+          
+          <!-- Old song list
+          <div class="card glass">
+            <h5 class="card-title">Sånger</h5>
+            <div class="card-body">
+              
+              <ol>
+                <transition-group name="fade" mode="out-in"></transition-group>
+                  <li v-for="song in status.questionList" :key='song.songNumber' :value="song.songNumber">{{song.songTitle}}</li>
+                </transition-group>
+              </ol>
+            </div>
+          </div>
+          -->
+        
 
 
         </div>
         <!-- End of Answer area -->
 
       </div>
-      <!-- Kontroller för score board --><!-- BORTKOMMENTERAT FÖR TILLFÄLLET
+      <!-- Kontroller för score board -->
       <div class="row Leaderboard">
         <div class="playerTable col-xs-12" style="width:100%">
           <div class="card glass">
@@ -159,8 +191,8 @@
                     <th style="width:25px;">#</th>
                     <th style="width:200px;">Namn</th>
                     <th style="width:110px;">Status</th>
-                    <th>Svar</th>
-                    <th style="width:50px;">Poäng</th>
+                    <th>Önskan</th>
+                    <!--<th style="width:50px;">Poäng</th>-->
                     <th v-if="player.isQuizMaster">Knappar</th>
                   </tr>
                 </thead>
@@ -196,7 +228,7 @@
 
 
                     </td>
-                    <td> {{p.score}}</td>
+                    <!--<td> {{p.score}}</td>-->
                     <td v-if="player.isQuizMaster">
 
                       <a v-on:Click="givePoints((p.questionScore ? p.questionScore : status.question.questionScore), p.id, true)"><i v-if="p.isCorrect" class="far fa-star fa-2x"></i><i v-else class="fas fa-star fa-2x"></i></a>
@@ -212,7 +244,7 @@
         </div>
 
       </div>
-      -->
+      <!---->
       <div class="row administration">
         <!-- Kontroller för QuizMaster och administration -->
         <div class="administration col-xs-12" style="width:100%">
@@ -222,7 +254,7 @@
 
           
             <div class="card-header">
-              Du är QuizMaster
+              Du är SingMaster
             </div>
             <div class="card-body">
               
@@ -354,7 +386,7 @@
                     <i class="fas fa-user-tag"></i> Byt namn
                   </button>
                   <button type="button" class="btn btn-outline-secondary mb-2" data-toggle="modal" data-target="#QMSettingsModal">
-                    <i class="fas fa-user-shield"></i> QuizMaster
+                    <i class="fas fa-user-shield"></i> SingMaster
                   </button>
                 </div>
               <!--</div>-->
@@ -424,7 +456,7 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="QMSettingsModalLabel">Ange lösenord för Quiz Master</h5>
+            <h5 class="modal-title" id="QMSettingsModalLabel">Ange lösenord för Sing Master</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -434,7 +466,7 @@
             <div v-if="!player.isQuizMaster" class="input-group input-group-sm mb-3">
               <input v-model="player.quizMasterPassword" @keyup.enter="MakeMeQuizMaster()" type="password" class="form-control" placeholder="" aria-label="QM" aria-describedby="basic-addon2" autocomplete="off">
               <div class="input-group-append">
-                <button class="btn btn-primary" v-on:click="MakeMeQuizMaster()" type="button" data-dismiss="modal">QM pwd</button>
+                <button class="btn btn-primary" v-on:click="MakeMeQuizMaster()" type="button" data-dismiss="modal">SM pwd</button>
               </div>
             </div>
           </div>

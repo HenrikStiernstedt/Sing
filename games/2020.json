@@ -48,5 +48,30 @@
       "För frihet under ansvar",
       "är väl ingen frihet alls?"
     ]    
-  }
+  },
+  {
+    "songNumber": "3",
+    "songType": "SNAPS",
+    "songTitle": "Du kör i Azure nu",
+    "melody": "In the army now",
+    "author": "Henrik Stiernstedt",
+    "songText": [
+        "En skalbar server i ett annat land,",
+        "allt som krävs är ett rejält bredband",
+        "Du kör i Azure nu,",
+        "oh-oo-oh du kör i Azure, nu",
+        "Nu kommer du ihåg vad säljaren sa",
+        "Allting kommer att gå jättebra",
+        "Du kör i Azure nu",
+        "oh-oo-oh du kör i Azure, nu",
+        "Du blir hjälten på ditt IT-kontor",
+        "Skall aldrig mer behöva jobba jour",
+        "Du kör i Azure nu",
+        "oh-oo-oh du kör i Azure, nu",
+        "Uptime på nära hundra procent",
+        "Men en på tiotusen har nu hänt",
+        "Är körd i Azure nu",
+        "oh-oo no! Är körd i Azure, nu"
+    ]
+}
 ]

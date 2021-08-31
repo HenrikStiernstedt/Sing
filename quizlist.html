@@ -291,11 +291,11 @@
 
               <div class="btn-group mb-1" role="group" aria-label="New-Question">
                 <div class="input-group">
-                  <button type="button" class="btn btn-primary" v-on:click="loadLastQuestion()" :disabled="quizMaster.QuestionListNumber <= 0">Föregående sång</button>
+                  <button type="button" class="btn btn-primary" v-on:click="loadLastQuestion()" :disabled="quizMaster.QuestionListNumber <= 1">Föregående sång</button>
                   <input v-model="quizMaster.QuestionListNumber" type="text" class="form-control" aria-label="Nästa fråga" style="width: 50px;">
                   <div class="input-group-append">
                     <span class="input-group-text">/{{quizMaster.questionList.length}}</span>
-                    <button type="button" class="btn btn-primary" v-on:click="loadNextQuestion()" :disabled="quizMaster.QuestionListNumber > quizMaster.questionList.length-1">Nästa sång</button>
+                    <button type="button" class="btn btn-primary" v-on:click="loadNextQuestion()" :disabled="quizMaster.QuestionListNumber >= quizMaster.questionList.length">Nästa sång</button>
                   </div>
                 </div>
               </div>

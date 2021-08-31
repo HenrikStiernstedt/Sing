@@ -141,11 +141,10 @@ var vm = new Vue({
       socket.emit("AutoCorrect", vm.quizMaster.pendingQuestion.correctAnswer);
     },
     loadNextQuestion: function() {
-      if(vm.quizMaster.QuestionListNumber < vm.quizMaster.questionList.length -1)
+      if(vm.quizMaster.QuestionListNumber <= vm.quizMaster.questionList.length )
       {
         console.log("Hämtar nästa fråga: " + ++vm.quizMaster.QuestionListNumber);
-        vm.quizMaster.pendingQuestion = vm.quizMaster.questionList[vm.quizMaster.QuestionListNumber];
-        //vm.quizMaster.QuestionListNumber++;
+        vm.quizMaster.pendingQuestion = vm.quizMaster.questionList[vm.quizMaster.QuestionListNumber-1];
       }
       else
       {
@@ -153,10 +152,10 @@ var vm = new Vue({
       }
     },
     loadLastQuestion: function() {
-      if(vm.quizMaster.QuestionListNumber > 0)
+      if(vm.quizMaster.QuestionListNumber > 1)
       {
         console.log("Hämtar förra sång: " + --vm.quizMaster.QuestionListNumber);
-        vm.quizMaster.pendingQuestion = vm.quizMaster.questionList[vm.quizMaster.QuestionListNumber];
+        vm.quizMaster.pendingQuestion = vm.quizMaster.questionList[vm.quizMaster.QuestionListNumber-1];
       }
       else
       {
@@ -327,7 +326,7 @@ function initQuizlist() {
   socket.on('ReturnLoadQuestions', function(questionList) {
     console.log("Nya frågor inlästa!");
     console.log(questionList);
-    vm.quizMaster.QuestionListNumber = 0;
+    vm.quizMaster.QuestionListNumber = 1;
     vm.quizMaster.questionList = questionList;
     vm.quizMaster.pendingQuestion = vm.quizMaster.questionList[0];
   });

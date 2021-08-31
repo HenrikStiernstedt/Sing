@@ -173,6 +173,15 @@ var vm = new Vue({
       socket.emit("LoadQuestions", vm.quizMaster.loadQuestions);
     },
 
+    saveQuestions: function() {
+      console.log("Spara/uppdatera sångbok!");
+      console.log(vm.quizMaster.questionList);
+      if(confirm("Är du säker på att du vill spara över filen "+vm.quizMaster.loadQuestions+"?"))
+      {
+        socket.emit("SaveQuestions", { questionList: vm.quizMaster.questionList, filename: vm.quizMaster.loadQuestions});
+      }
+    },
+
     newGame: function() {
       if(confirm("Är du säker?"))
       {
@@ -328,6 +337,7 @@ function initQuizlist() {
     console.log(questionList);
     vm.quizMaster.QuestionListNumber = 1;
     vm.quizMaster.questionList = questionList;
+    vm.status.questionList = questionList; // Make song list public.
     vm.quizMaster.pendingQuestion = vm.quizMaster.questionList[0];
   });
 

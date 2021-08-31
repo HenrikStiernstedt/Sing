@@ -412,11 +412,27 @@ io.on('connection', function(socket){
     try {
       let dataToLoad = fs.readFileSync('games/'+filename+'.json', null);
       data.questionList = JSON.parse(dataToLoad);
+      data.status.questionList = data.questionList; // Make list of songs public.
       console.log("Loaded questions");
       console.log(data.questionList);
-//      var player = getCurrentPlayer(socket.handshake.session.team);
-//      io.to(player.socketId).emit("ReturnLoadQuestions", data.questionList);
-      
+      io.sockets.connected[socket.id].emit("ReturnLoadQuestions", data.questionList);
+
+    } catch (error) {
+      console.error(error);
+    }
+  });
+
+  socket.on('SaveQuestions', ({questionList, filename}) => {
+    if(!verifyQM(socket.handshake.session.team, "SaveQuestions")) { return; }
+    if(!filename) {
+      filename = 'songbook';
+    }
+    let dataToSave = JSON.stringify(questionList);
+    try {
+      fs.writeFileSync('games/'+filename+'.json', dataToSave);
+
+      data.questionList = questionList;
+      data.status.questionList = data.questionList; // Make list of songs public.
       io.sockets.connected[socket.id].emit("ReturnLoadQuestions", data.questionList);
 
     } catch (error) {

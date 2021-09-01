@@ -14,6 +14,7 @@ var vm = new Vue({
         "HasBuzzd": false,
         "isCorrect": null,
         "answer" : null,
+        "lastAnswer": 0,
         "questionScore" : 0,
         "NumberOfWins": 0,
         "emote" : "",
@@ -85,8 +86,8 @@ var vm = new Vue({
     },
     environment :
     {
-      maxConfidence: 2,
-      minConfidence: -3
+      maxConfidence: 3,
+      minConfidence: -4
     }
   },
   computed:
@@ -138,6 +139,10 @@ var vm = new Vue({
     lowerQuestionScore: function() {
       console.log("Uppdaterar frågan. Sänker poängen");
       vm.quizMaster.pendingQuestion.questionScore -= 1;
+    },
+    startQuestion: function() {
+      console.log("Startar frågan!");
+      socket.emit('StartQuestion');
     },
     completeQuestion: function () {
       console.log("Avslutar frågan!");
@@ -252,6 +257,8 @@ function getStatusUpdate()
       vm.status = (serverStatus.status);
       vm.players = (serverStatus.players);
 
+      vm.quizMaster.questionList = serverStatus.status.questionList; // If you are singMaster, set pending questionList to the actual questionList if reconnected.
+
       // Trying to get team name restored after a reload.
       //vm.player.teamName = status.nameRequired.name;
     }
@@ -345,7 +352,7 @@ function initQuizlist() {
     console.log(questionList);
     vm.quizMaster.QuestionListNumber = 1;
     vm.quizMaster.questionList = questionList;
-    vm.status.questionList = questionList; // Make song list public.
+    //vm.status.questionList = questionList; // Question list is distributed to eceryone via another status emit. 
     vm.quizMaster.pendingQuestion = vm.quizMaster.questionList[0];
   });
 

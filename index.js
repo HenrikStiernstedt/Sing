@@ -60,6 +60,7 @@ var data = {
       "HasBuzzd": false,
       "isCorrect": null,
       "answer" : null,
+      "lastAnswer": 0,
       "questionScore" : 0,
       "NumberOfWins": 0,
       "emote" : "",
@@ -132,7 +133,7 @@ app.use(express.static(__dirname + '/', {
 app.get('/status', function(req, res){
   res.json(
     {
-      question : data.status.question,
+      question: data.status.question,
       status: data.status,
       players: data.players,
       nameRequired: {
@@ -239,6 +240,7 @@ io.on('connection', function(socket){
             "buzzOrder": null,
             "isCorrect": null,
             "answer" : null,  
+            "lastAnswer": 0,
             "questionScore" : 0,
             "NumberOfWins": 0,
             "emote": emote,
@@ -423,6 +425,8 @@ io.on('connection', function(socket){
       data.status.questionList = data.questionList; // Make list of songs public.
       console.log("Loaded questions");
       console.log(data.questionList);
+      io.emit('UpdatePlayers',  {status: data.status, players: data.players } );
+
       io.sockets.connected[socket.id].emit("ReturnLoadQuestions", data.questionList);
 
     } catch (error) {
@@ -464,32 +468,8 @@ io.on('connection', function(socket){
       return;
     }
 
-    if(data.status.question.questionType == 'RED_THREAD' || data.status.question.questionType == 'MAJOR_VICTORY' || data.status.question.questionType == 'QUIZ')
-    {
-      addOrReplace(data.answers, {
-        "id" : socket.handshake.session.team,
-        "answer": answer,
-        "questionScore": data.status.question.questionScore,
-        "clueScore": null
-      });
-
-      var player = getCurrentPlayer(socket.handshake.session.team);
-      player.questionScore = data.status.question.questionScore;
-
-      io.emit('UpdatePlayers', {status: data.status, players: data.players } );
-
-      console.log(data.status);
-      
-      if (typeof fn === 'function')
-      {
-        fn(answer);
-      }
-      else{
-        console.log("No callback function in buzz. Hacker?");
-      }
-      return;
-    }
-    else if(data.status.question.questionType == 'BUZZ_RUSH')
+    // If we choose to include a buzzer for attention in the singing book, then use this.
+    if(data.status.question.questionType == 'BUZZ_RUSH')
     {
 
       if(data.status.buzzList.includes(socket.handshake.session.team))
@@ -535,12 +515,46 @@ io.on('connection', function(socket){
 
         //io.emit('Buzzed', {id : data.status.winningTeam, teamName: teamName, status: data.status, players: data.players});
       }
-    }
-    else {
-      console.log("WARN: Buzz with unknown question type.");
-      fn("WARN: Buzz with unknown question type.");
+      return;
     }
 
+    // Handle wishes for songs.
+    addOrReplace(data.answers, {
+      "id" : socket.handshake.session.team,
+      "answer": answer,
+      "questionScore": data.status.question.questionScore,
+      "clueScore": null
+    });
+
+    var player = getCurrentPlayer(socket.handshake.session.team);
+
+    player.answer = answer; // Make answers public.
+    player.lastAnswer = Date.now();
+
+    console.log("Player " + player.name + " wished: "+ answer);
+
+    // Sort player array according to last answer.
+      data.players.sort(function (a, b) {
+        if (a.lastAnswer > b.lastAnswer) {
+            return -1;
+        }
+        if (b.lastAnswer > a.lastAnswer) {
+            return 1;
+        }
+        return 0;
+    });
+
+    io.emit('UpdatePlayers', {status: data.status, players: data.players } );
+
+    //console.log(data.status);
+    
+    if (typeof fn === 'function')
+    {
+      fn(answer);
+    }
+    else{
+      console.log("No callback function in buzz. Hacker?");
+    }
   });
 
   // UPDATE a question without triggering calculation of scores or anything.
@@ -589,19 +603,25 @@ io.on('connection', function(socket){
       data.status.buzzList = [];  // TODO: poppa buzz list, eller hur skall den här fungera egentligen?
       //io.emit('ResetBuzz', {status: data.status});
     }
+    // Skip automatic start of buzzers for songs.
+    /*
     else
     {
       data.status.isBuzzActive = true;
     }
+    */
 
     data.status.question = question;
 
+    // Skip timers for songs.
+    /*
     data.status.questionTime = question.questionTime;
     if(data.status.questionTime && data.status.questionTime != 0)
     {
       // Start the countdown again
       data.status.questionTime = question.questionTime;
     }
+    */
     //io.emit('QuestionUpdated', data.status.question);
 
     // Sort player array according to score.
@@ -614,141 +634,21 @@ io.on('connection', function(socket){
       }
       return 0;
   });
-    io.emit('UpdatePlayers', {status: data.status, players: data.players, action: clientAction });
-
-  });
-
-  // If we have our own start countdwn function, this will be it.
-  socket.on("StartCountdown", function(noOfSeconds)
-  {
-    data.status.questionTime = noOfSeconds;
     io.emit('UpdatePlayers', {status: data.status, players: data.players });
 
-    io.emit("Countdown", { "state": "started", "noOfSeconds": noOfSeconds });
-    //setTimeout(updateCountdown, 1000, noOfSeconds);
   });
 
+  socket.on('StartQuestion', function() {
+    if(!verifyQM(socket.handshake.session.team, "StartQuestion")) { return; }
+
+    startQuestion();
+  });
 
   socket.on('CompleteQuestion', function(playerList) {
     if(!verifyQM(socket.handshake.session.team, "CompleteQuestion")) { return; }
 
     completeQuestion();
 
-  });
-
-  socket.on("AutoCorrect", function(correctAnswer)  {
-    if(!verifyQM(socket.handshake.session.team, "AutoCorrect")) { return; }
-    // Autocorrect only works on public answers at the moment. User "Avsluta fråga" först.
-
-    if(data.status.question.questionType == "RED_THREAD" || data.status.question.questionType == "QUIZ")
-    {
-      console.log("AutoCorrecting with answer: " + correctAnswer);
-      if(correctAnswer == null) {return; }
-
-      data.players.forEach(player => {
-
-        var currentScore = parseInt(player.questionScore ? player.questionScore : data.status.question.questionScore);
-
-        if(player.answer && share.cleanString(player.answer) == share.cleanString(correctAnswer)) {
-          if(!player.isCorrect)
-          {
-            player.score += currentScore; // TODO: Remove this score calculation. It should be done at a later stage instead. 
-          }
-          player.isCorrect = true;
-        } 
-        else
-        {
-          if(player.isCorrect)
-          {
-            player.score -= currentScore; // TODO: Remove this score calculation. It should be done at a later stage instead. 
-          }
-          player.isCorrect = false;
-        }
-      });
-    }
-    else if(data.status.question.questionType == "MAJOR_VICTORY")
-    {
-      console.log("AutoCorrecting for  majority rules");
-
-      // Count the number of each similar answer.
-      // Check what palayers answered the most common answer, which can be two different answers if they get the same count
-      // Give out points.
-      
-      var answers = [];
-      var maxNumberOfAnswers = 0;
-
-      data.answers.forEach(answer => {
-        console.log("Investigating: " + answer.answer);
-        if(answer.answer == undefined || answer.answer == null || answer.answer == "")
-        {
-          console.log("No valid answer found");
-        }
-        else
-        {
-
-          console.log("CurrentAnswer = " + currentAnswer );
-          var currentAnswer = getCurrentObject(answers, share.cleanString(answer.answer));  
-
-          if(!currentAnswer && currentAnswer == undefined)
-          {
-            answers.push({
-              "id": share.cleanString(answer.answer),
-              "count": 1,
-              "playerIds": [ answer.id ]
-            });
-            if(maxNumberOfAnswers == 0)
-            {
-              maxNumberOfAnswers = 1;
-            }
-          }
-          else {
-            currentAnswer.count++;
-            currentAnswer.playerIds.push(answer.id);
-
-            if(maxNumberOfAnswers < currentAnswer.count)
-            {
-              maxNumberOfAnswers = currentAnswer.count;
-            }
-          }
-        }
-      });
-
-      console.log(answers);
-
-      answers.forEach(answer => {
-        console.log(answer.count);
-        if(answer.count == maxNumberOfAnswers)
-        {
-          console.log("Players answering with answer " + answer.id);
-        }
-        
-        answer.playerIds.forEach(playerId => {
-          
-
-          var player = getCurrentPlayer(playerId);
-          var currentScore = parseInt(player.questionScore ? player.questionScore : data.status.question.questionScore);
-
-          if(answer.count == maxNumberOfAnswers) {
-            if(!player.isCorrect)
-            {
-              player.score += currentScore; // TODO: Remove this score calculation. It should be done at a later stage instead. 
-            }
-            player.isCorrect = true;
-          } 
-          else
-          {
-            if(player.isCorrect)
-            {
-              player.score -= currentScore; // TODO: Remove this score calculation. It should be done at a later stage instead. 
-            }
-            player.isCorrect = false;
-          }
-        });
-      });
-    }
-    
-    data.status.question.correctAnswer = correctAnswer;
-    io.emit('UpdatePlayers', {status: data.status, players: data.players, action: "ShowCorrectAnswer"  });
   });
 
   socket.on('ResetBuzz', function() {
@@ -868,7 +768,8 @@ function resetPlayers(endTheGame) {
   var winningScore;
   if(endTheGame)
   {
-    winningScore = Math.max.apply(Math, data.players.map(function(o) { return o.score; }))
+    winningScore = Math.max.apply(Math, data.players.map(function(o) { return o.score; }));
+    player.confidenceLevel = 0;
   }
 
 
@@ -880,7 +781,7 @@ function resetPlayers(endTheGame) {
     player.confidenceLevel = 0,
     //player.emote = 0),
     player.emote = share.getEmoteFromConfidenceLevel(endTheGame && player.score == winningScore ? 100 : 0),
-    player.confidenceLevel = 0;
+    
     player.questionScore = 0,
     player.NumberOfWins += (endTheGame && player.score == winningScore ? 1 : 0), // Om vi avslutar spelet får winnaren en pinne i totalen.
     player.score = (endTheGame ? 0 : player.score) // Om vi avslutar spelet, nolla allas poäng.
@@ -889,46 +790,12 @@ function resetPlayers(endTheGame) {
 
 }
 
-// Infinit loop to keep track of countdowns.
-setInterval(updateCountdown, 1000);
-
-
-function startCountdown(noOfSeconds) {
-  data.status.questionTime = noOfSeconds;
-}
-
-function updateCountdown() {
-  if(!data.status.isBuzzActive)
-  {
-    // If the countdown isn't active anymore for wahtever reason, do nothing.   
-    return;
-  }
-
-  if(data.status.questionTime === "")
-  {
-    return;
-  }
-
-  if(data.status.questionTime <= 0)
-  {
-    console.log("Countdown stoped");
-    io.emit("Countdown", { "state": "ended", "noOfSeconds": 0 });
-    completeQuestion();
-  }
-  else
-  {
-    console.log("Countdown to " + data.status.questionTime);
-
-    io.emit("Countdown", { "state": "countdown", "noOfSeconds": data.status.questionTime });
-    --data.status.questionTime;
-    io.emit('UpdatePlayers', {status: data.status, players: data.players });
-  }
-}
-
+// Avslutar frågan, eller egentligen bara stänger av möjligheten att mata in nya förslag, då alla förslag är öppna i sångboken.
 function completeQuestion() {
   console.log("Avslutar frågan.");
   data.status.isBuzzActive = false;
 
+  /*
   data.players.forEach(player => {
     // TODO: Aslo check if the answer was correct.
     if(data.answers != null)
@@ -942,8 +809,22 @@ function completeQuestion() {
     //player.score += answer.questionScore;
     //player.questionScore = 0;
   });
+  */
 
   data.status.questionTimeActive = false;
 
   io.emit('UpdatePlayers', {status: data.status, players: data.players });
+}
+
+
+// Starta frågan och rensa tidigare önskemål.
+function startQuestion() {
+  console.log("Startar frågan.");
+  data.status.isBuzzActive = true;
+
+  data.players.forEach(player => {
+      player.answer = null;
+  });
+  io.emit('UpdatePlayers', {status: data.status, players: data.players, action: "clear" });
+
 }

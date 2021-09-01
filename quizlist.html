@@ -62,9 +62,11 @@
                     <img class="card-img-top" src="images/kor.png" alt="Nu kör vi" />
                     <div class="card-body">
                       
-                      <h5 class="card-title">Sångboken 2.0</h5>
+                      <h5 class="card-title">{{status.question.songTitle}}</h5>
                       <p class="card-text">
-                        <strong><span style="white-space: normal;">{{ status.question.questionText }}</span></strong>
+                        <span v-for="line in status.question.songText">
+                          <span>{{line}}</span><br/>
+                        </span>
                         <br/>
                         <span>&nbsp;</span>
                       </p>
@@ -114,13 +116,13 @@
         <!-- Answer area -->
         <div id="player" class="player col-md-6" style="min-height:110px;">
           <transition name="fade" mode="out-in">
-            <div v-if="status.question.songType == 'WELCOME' && player.pendingAnswer" class="card glass answerArea"  v-bind:key="status.question.songType">
+            <div v-if="status.isBuzzActive" class="card glass answerArea"  v-bind:key="status.question.songType">
               <div class="card-body">
                 <span>
                   <div class="input-group input-group-lg">
                     <input v-model="player.pendingAnswer" @keyup.enter="buzz()" type="text" class="form-control" placeholder="Önska" aria-label="Lagnamn" aria-describedby="basic-addon2">
                     <div class="input-group-append">
-                      <button class="btn btn-primary" v-on:click="buzz()" :disabled="!player.pendingAnswer" type="button">Svara</button>
+                      <button class="btn btn-primary" v-on:click="buzz()" type="button">Svara</button>
                     </div>
                   </div>
 <!--                  <div>
@@ -144,7 +146,7 @@
                 <div class="card-header" :id='"heading"+song.songNumber' :key='song.songNumber'>
                   <h5 class="mb-0">
                     <a class="btn btn-link"  data-toggle="collapse" :data-target="'#collapse'+song.songNumber" aria-expanded="false" :aria-controls='"collapse"+song.songNumber'>
-                      {{song.songNumber}}. {{song.songTitle}}
+                      <span  v-if="song.songType != 'WELCOME'">{{song.songNumber}}. </span>{{song.songTitle}}
                     </a>
                   </h5>
                 </div>
@@ -188,15 +190,15 @@
       </div>
       <!-- Kontroller för score board -->
       <div class="row Leaderboard">
-        <div class="playerTable col-xs-12" style="width:100%">
+        <div class="playerTable col-lg-12" style="width:100%">
           <div class="card glass">
             <div class="card-body" style="padding:0px;">
               <table class="MaxWidth">
                 <thead>
                   <tr>
                     <th style="width:25px;">#</th>
-                    <th style="width:200px;">Namn</th>
-                    <th style="width:110px;">Status</th>
+                    <th style="width:120px;">Namn</th>
+                    <th style="width:70px;">Status</th>
                     <th>Önskan</th>
                     <!--<th style="width:50px;">Poäng</th>-->
                     <th v-if="player.isQuizMaster">Knappar</th>
@@ -299,6 +301,7 @@
                 <textarea v-model="plainTextSongText" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                 <!--<input v-model="quizMaster.pendingQuestion.questionText" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">-->
               </div>
+              <!--
               <div class="input-group mb-1">
                 <div class="input-group-prepend">
                   <span class="input-group-text" id="asdf">Poäng</span>
@@ -317,10 +320,11 @@
                 </div>
                 <input v-model="status.questionTime" type="number" class="form-control" aria-label="Default" aria-describedby="Tid">
                 <div class="input-group-append">
-                  <button type="button" class="btn btn-primary" v-on:click="lowerQuestionScore()">-1p</button> <!-- :disabled="quizMaster.QuestionListNumber >= quizMaster.questionList.length" -->
+                  <button type="button" class="btn btn-primary" v-on:click="lowerQuestionScore()">-1p</button> 
                   <button type="button" class="btn btn-primary" v-on:click="updateQuestion()">UF</button>
                 </div>    
               </div>
+              -->
               <div class="input-group mb-1">
                 <div class="input-group-prepend">
                   <span class="input-group-text" id="asdf">Svar</span>
@@ -328,9 +332,8 @@
                 <input v-model="quizMaster.pendingQuestion.correctAnswer" type="text" class="form-control" aria-label="Default" aria-describedby="asdf">
               </div>
               <div class="btn-group mb-1" role="group" aria-label="Question-buttons">
-                <button type="button" class="btn btn-primary" v-on:click="updateQuestion()">Uppdatera fråga</button>
-                <button type="button" class="btn btn-primary" v-on:click="completeQuestion()" :disabled="!status.isBuzzActive">Avsluta fråga</button>
-                <button type="button" class="btn btn-primary" v-on:click="autoCorrect()" :disabled="status.isBuzzActive">Rätta</button>
+                <button type="button" class="btn btn-primary" v-on:click="startQuestion()">Starta önskemål</button>
+                <button type="button" class="btn btn-primary" v-on:click="completeQuestion()" :disabled="!status.isBuzzActive">Avsluta önskemål</button>
               </div>
 
               <div class="btn-group mb-1" role="group" aria-label="New-Question">
@@ -344,7 +347,7 @@
                 </div>
               </div>
               <div class="btn-group mb-1">
-                <button type="button" class="btn btn-primary" v-on:click="newQuestion()">Ny sång</button>
+                <button type="button" class="btn btn-primary" v-on:click="newQuestion()">Visa sång!</button>
               </div>
 
               <!-- Game buttons -->

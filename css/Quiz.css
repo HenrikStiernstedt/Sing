@@ -74,12 +74,18 @@ td:first-child, th:first-child {
   background-color: white;
 }
 */
-
-.MelodyLabel {
+.melodyLabelWrapper {
   font-size: small;
-  font-weight: bold;
-
+  margin-top: -5px;
 }
+
+.melodyLabel {
+  font-weight: bold;
+}
+/*
+.melodyValue {
+}
+*/
 
 .card-header {
   background-color: rgba(0,0,0,.08);

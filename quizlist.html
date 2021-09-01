@@ -78,8 +78,8 @@
                       <!--<div v-if="status.questionTime" class="QuestionCountdownOverlay" :key="`countdown-${status.questionTime}`"> {{status.questionTime}}</div>-->
                       <h5 class="card-title">Sång {{status.question.songNumber}}: {{status.question.songTitle}}</h5>
                       
-                        <div> <span class="MelodyLabel">Melodi:</span> <span class="melodyValue"> {{status.question.melody}}</span></div>
-                        <div> <span class="MelodyLabel">Text:</span> <span class="melodyValue"> {{status.question.author}}</span></div>
+                        <div class="melodyLabelWrapper" v-if="status.question.melody"> <span class="melodyLabel">Melodi:</span> <span class="melodyValue"> {{status.question.melody}}</span></div>
+                        <div class="melodyLabelWrapper" v-if="status.question.author"> <span class="melodyLabel">Text:</span> <span class="melodyValue"> {{status.question.author}}</span></div>
                         <p></p>
 
                         <span v-for="line in status.question.songText">
@@ -143,7 +143,7 @@
               <template v-for="song in status.questionList" >
                 <div class="card-header" :id='"heading"+song.songNumber' :key='song.songNumber'>
                   <h5 class="mb-0">
-                    <a class="btn btn-link" type="button" data-toggle="collapse" :data-target="'#collapse'+song.songNumber" aria-expanded="false" :aria-controls='"collapse"+song.songNumber'>
+                    <a class="btn btn-link"  data-toggle="collapse" :data-target="'#collapse'+song.songNumber" aria-expanded="false" :aria-controls='"collapse"+song.songNumber'>
                       {{song.songNumber}}. {{song.songTitle}}
                     </a>
                   </h5>
@@ -151,6 +151,9 @@
             
                 <div :id='"collapse"+song.songNumber' class="collapse" :aria-labelledby='"heading"+song.songNumber' data-parent="#songlist">
                   <div class="card-body">
+                    <div class="melodyLabelWrapper" v-if="song.melody"> <span class="melodyLabel">Melodi:</span> <span class="melodyValue"> {{song.melody}}</span></div>
+                    <div class="melodyLabelWrapper" v-if="song.author"> <span class="melodyLabel">Text:</span> <span class="melodyValue"> {{song.author}}</span></div>
+                    <p></p>
                     <span v-for="line in song.songText">
                       <span>{{line}}</span><br/>
 

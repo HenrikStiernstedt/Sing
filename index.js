@@ -439,7 +439,8 @@ io.on('connection', function(socket){
     if(!filename) {
       filename = 'songbook';
     }
-    let dataToSave = JSON.stringify(questionList);
+    let dataToSave = JSON.stringify(questionList, null, '\t');
+    
     try {
       fs.writeFileSync('games/'+filename+'.json', dataToSave);
 

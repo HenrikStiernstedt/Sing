@@ -826,6 +826,6 @@ function startQuestion() {
   data.players.forEach(player => {
       player.answer = null;
   });
-  io.emit('UpdatePlayers', {status: data.status, players: data.players, action: "clear" });
+  io.emit('UpdatePlayers', {status: data.status, players: data.players });
 
 }

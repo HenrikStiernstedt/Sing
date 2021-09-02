@@ -1,0 +1,115 @@
+[
+	{
+		"songNumber": "X",
+		"songType": "WELCOME",
+		"songTitle": "Sångboken 2.0",
+		"melody": "",
+		"author": "",
+		"songText": [
+			"Välkommen till Multisofts digitala och lätt automatiserade sångbok"
+		]
+	},
+	{
+		"songNumber": 1,
+		"songType": "SNAPS",
+		"songTitle": "Så länge rösten är mild",
+		"melody": "Så länge skutan kan gå",
+		"songText": [
+			"Så länge rösten är mild",
+			"så länge ingen är vild",
+			"så länge spegeln på väggen ger halvskaplig bild",
+			"så länge alla kan stå",
+			"så länge alla kan gå",
+			"så länge alla kan tralla så fyller vi på. "
+		]
+	},
+	{
+		"songNumber": 2,
+		"songType": "SNAPS",
+		"songTitle": "Alla tallarna!",
+		"meoldy": "Kaffe utan grädde",
+		"originalAuthor": null,
+		"songText": [
+			"Alla tallarna, alla tallarna,",
+			"Alla stora, alla små,",
+			"Alla tallarna, alla tallarna",
+			"Ska vi koka brännvin på.",
+			"Alla tallarna, alla tallarna,",
+			"från roten till dess topp,",
+			"alla tallarna, alla tallarna,",
+			"de ska vi ta dricka opp!"
+		],
+		"melody": "Valfri..."
+	},
+	{
+		"songNumber": "3",
+		"songType": "SNAPS",
+		"songTitle": "Snapsatleten",
+		"melody": "Måndag gör jag ingenting,  ingenting, ingenting",
+		"songText": [
+			"Jag behöver inget gym, ",
+			"inget gym, inget gym.",
+			"Högerarmen min är grym, ",
+			"jättegrym, jättegrym.",
+			"Lyfter nubbar kvart i stupen",
+			"för att hälla ner i strupen.",
+			"Nu ni vet min hemlighet",
+			"Hur jag blev en snapsatlet!"
+		]
+	},
+	{
+		"songNumber": "4",
+		"songType": "SNAPS",
+		"songTitle": "Mera Skåne",
+		"melody": "Internationalen",
+		"songText": [
+			"Mera brännvin i glasen,",
+			"mera glas på vårt bord",
+			"Mera bord på kalasen,",
+			"mer kalas på vår jord",
+			"Mera jordar med måne,",
+			"mera månar kring mars",
+			"Mera marscher till Skåne,",
+			"mera skåne jo bevars"
+		]
+	},
+	{
+		"songNumber": "5",
+		"songType": "SNAPS",
+		"songTitle": "Vikingen",
+		"melody": "When Johnny  Comes Marching Home",
+		"songText": [
+			"En viking älskar livets vann",
+			"Hurra, hurra",
+			"Den hastigt i mitt svalg försvann",
+			"Hurra, hurra",
+			"Till kalv, till oxe, till fisk, till fläsk",
+			"När kärringar bara dricker läsk",
+			"Ja då vill alla vikingar ha en bäsk",
+			"När vi har druckit bäsken slut",
+			"Tragik, tragik",
+			"Då bäres varje viking ut",
+			"Som lik, sig lik",
+			"Och se’n om vi vaknar vi sjunger en bit",
+			"Se’n korkar vi upp Skånes Akvavit",
+			"Skål för alla vikingar som kom hit"
+		]
+	},
+	{
+		"songNumber": "6",
+		"songType": "SNAPS",
+		"songTitle": "Svåra ord",
+		"melody": "Var bor du lilla råtta?",
+		"songText": [
+			"Det finns så många långa svåra ord",
+			"som inte går att fånga vid vårt bord.",
+			"För nu har snapsen verkat, vilken pers.",
+			"Gud hjälpe mig att klara nästa vers.",
+			"",
+			"Besiktningsprotokollet, ganska lätt.",
+			"men 30-års-krigsgrollet, mera svett.",
+			"Ett fotbollsVMshalvtidsreferat.",
+			"En arvstvistsbouppteckningsadvokat."
+		]
+	}
+]

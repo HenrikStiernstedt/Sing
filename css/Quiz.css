@@ -12,6 +12,10 @@ html, body {
     touch-action: manipulation; /* Stop double tapping to zoom in ios. */
 }
 
+input[type="button"]{ 
+  touch-action: manipulation; 
+}
+
 .container-fluid { height: 100%; }
 
 .hs-height { height: 100% }

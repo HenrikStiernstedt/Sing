@@ -756,7 +756,7 @@ io.on('connection', function(socket){
 function resetPlayers(endTheGame) {
   data.status.isBuzzed = false;
   data.status.questionTime = "";
-  data.status.isBuzzActive = true;
+  //data.status.isBuzzActive = true;
   data.status.winningTeamName = null;
   data.status.winningTeam = null;
   data.status.buzzList = [];
@@ -778,9 +778,9 @@ function resetPlayers(endTheGame) {
     player.isCorrect = null,
     player.answer = null,
     player.HasBuzzed = false,
-    player.confidenceLevel = 0,
+    //player.confidenceLevel = 0,
     //player.emote = 0),
-    player.emote = share.getEmoteFromConfidenceLevel(endTheGame && player.score == winningScore ? 100 : 0),
+    //player.emote = share.getEmoteFromConfidenceLevel(endTheGame && player.score == winningScore ? 100 : 0),
     
     player.questionScore = 0,
     player.NumberOfWins += (endTheGame && player.score == winningScore ? 1 : 0), // Om vi avslutar spelet får winnaren en pinne i totalen.

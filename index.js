@@ -586,7 +586,7 @@ io.on('connection', function(socket){
         question.questionNumber = (parseInt(data.status.question.questionNumber) + 1);
       }
 
-      resetPlayers(false);
+      //resetPlayers(false);
     }
     else if(question.questionNumber == "" || question.questionNumber == "0")
     {

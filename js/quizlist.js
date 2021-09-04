@@ -194,7 +194,7 @@ var vm = new Vue({
           "songText": [""]
         }
       );
-      vm.quizMaster.QuestionListNumber = vm.quizMaster.questionList.length-1;
+      vm.quizMaster.QuestionListNumber = vm.quizMaster.questionList.length;
       
     },
     

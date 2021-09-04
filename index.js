@@ -635,7 +635,7 @@ io.on('connection', function(socket){
       }
       return 0;
   });
-    io.emit('UpdatePlayers', {status: data.status, players: data.players });
+    io.emit('UpdatePlayers', {status: data.status, players: data.players, action: 'new' });
 
   });
 

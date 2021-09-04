@@ -146,11 +146,12 @@
           <div class="accordion" id="songlist">
             <div class="card glass" >
               <template v-for="song in status.questionList" >
-                <div class="card-header" v-bind:class="song.songType" :id='"heading"+song.songNumber' :key='song.songNumber'>
+                <div class="card-header" v-bind:class="song.songType" data-toggle="collapse"  :data-target="'#collapse'+song.songNumber" :id='"heading"+song.songNumber' :key='song.songNumber'>
                   <h5 class="mb-0">
-                    <a class="btn btn-link"  data-toggle="collapse" :data-target="'#collapse'+song.songNumber" aria-expanded="false" :aria-controls='"collapse"+song.songNumber'>
+                    <a class="btn btn-link" aria-expanded="false"  :aria-controls='"collapse"+song.songNumber'>
                       <span  v-if="song.songType != 'WELCOME'">{{song.songNumber}}. </span>{{song.songTitle}}
                     </a>
+                    <button v-if="status.isBuzzActive" v-bind:buttonValue="song.songTitle" class="btn btn-primary float-right" v-on:click="buzz2($event);" type="button">Önska</button>
                   </h5>
                 </div>
             

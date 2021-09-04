@@ -90,6 +90,9 @@ td:first-child, th:first-child {
 .melodyValue {
 }
 */
+.card-header {
+  border-top: 1px solid rgba(0,0,0,.125);
+}
 
 .card-header {
   background-color: rgba(0,0,0,.08);

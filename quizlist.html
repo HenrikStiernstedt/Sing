@@ -74,9 +74,12 @@
                     </div>
                   </span>
 
-                  <span v-if="status.question.songType == 'SNAPS'">
-                    <img class="card-img-top" src="images/snaps.jpeg" alt="Snapsvisa!">
-                    <div class="card-body">
+                  <span v-else>
+                    <img v-if="status.question.songType == 'SNAPS'" class="card-img-top" src="images/snaps.jpeg" alt="Snapsvisa!">
+                    <img v-if="status.question.songType == 'DUBLIN'" class="card-img-top" src="images/dublin2.jpg" alt="Dublinvisa!">
+                    <img v-if="status.question.songType == 'WINE'" class="card-img-top" src="images/wine.jpg" alt="Dublinvisa!">
+                    <img v-if="status.question.songType == 'BEER'" class="card-img-top" src="images/beer.jpg" alt="Dublinvisa!">
+                    <div class="card-body" v-bind:class="status.question.songType">
                       <!--<div v-if="status.questionTime" class="QuestionCountdownOverlay" :key="`countdown-${status.questionTime}`"> {{status.questionTime}}</div>-->
                       <h5 class="card-title">Sång {{status.question.songNumber}}: {{status.question.songTitle}}</h5>
                       
@@ -143,7 +146,7 @@
           <div class="accordion" id="songlist">
             <div class="card glass" >
               <template v-for="song in status.questionList" >
-                <div class="card-header" :id='"heading"+song.songNumber' :key='song.songNumber'>
+                <div class="card-header" v-bind:class="song.songType" :id='"heading"+song.songNumber' :key='song.songNumber'>
                   <h5 class="mb-0">
                     <a class="btn btn-link"  data-toggle="collapse" :data-target="'#collapse'+song.songNumber" aria-expanded="false" :aria-controls='"collapse"+song.songNumber'>
                       <span  v-if="song.songType != 'WELCOME'">{{song.songNumber}}. </span>{{song.songTitle}}
@@ -152,7 +155,7 @@
                 </div>
             
                 <div :id='"collapse"+song.songNumber' class="collapse" :aria-labelledby='"heading"+song.songNumber' data-parent="#songlist">
-                  <div class="card-body">
+                  <div class="card-body" v-bind:class="song.songType">
                     <div class="melodyLabelWrapper" v-if="song.melody"> <span class="melodyLabel">Melodi:</span> <span class="melodyValue"> {{song.melody}}</span></div>
                     <div class="melodyLabelWrapper" v-if="song.author"> <span class="melodyLabel">Text:</span> <span class="melodyValue"> {{song.author}}</span></div>
                     <p></p>
@@ -279,6 +282,9 @@
                 <select class="form-control" type="select" v-model="quizMaster.pendingQuestion.songType" >
                   <option value="SNAPS">Snapsvisor!</option>
                   <option value="WELCOME">Välkomstskärm</option>
+                  <option value="DUBLIN">Dublin</option>
+                  <option value="WINE">Vin</option>
+                  <option value="BEER">Öl</option>
                 </select>
               </div>
               <div class="input-group mb-1">
@@ -348,6 +354,9 @@
               </div>
               <div class="btn-group mb-1">
                 <button type="button" class="btn btn-primary" v-on:click="newQuestion()">Visa sång!</button>
+              </div>
+              <div class="btn-group mb-1">
+                <button type="button" class="btn btn-primary" v-on:click="createNewQuestion()">Ny sång!</button>
               </div>
 
               <!-- Game buttons -->

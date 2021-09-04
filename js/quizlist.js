@@ -67,10 +67,10 @@ var vm = new Vue({
       "pendingQuestion" : {
         "songNumber": 1,
         "songType" : "SNAPS",
-        "songTitle": "Bredbandsbolaget",
-        "melody": "Spritbolaget",
-        "author": "Henrik Stiernstedt",
-        "songText": ["test"]
+        "songTitle": "",
+        "melody": "",
+        "author": "",
+        "songText": []
       },
       "savegame": "game",
       "loadQuestions": "2020",
@@ -181,6 +181,23 @@ var vm = new Vue({
       socket.emit('UpdateQuestion', 'NEW', vm.quizMaster.pendingQuestion);
       popAudioElement.play();
     },
+    createNewQuestion: function() {
+      console.log("Skapa ny fråga");
+      //vm.quizMaster.pendingQuestion = {};
+      vm.quizMaster.questionList.push(
+        {
+          "songNumber": vm.quizMaster.questionList.length,
+          "songType" : "SNAPS",
+          "songTitle": "",
+          "melody": "",
+          "author": null,
+          "songText": [""]
+        }
+      );
+      vm.quizMaster.QuestionListNumber = vm.quizMaster.questionList.length-1;
+      
+    },
+    
     loadQuestions: function() {
       console.log("Ladda ny Quiz!");
       socket.emit("LoadQuestions", vm.quizMaster.loadQuestions);

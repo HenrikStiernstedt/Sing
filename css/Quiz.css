@@ -95,6 +95,26 @@ td:first-child, th:first-child {
   background-color: rgba(0,0,0,.08);
 }
 
+.WELCOME {
+  background-color: rgba(0,0,0,.08);
+}
+
+.SNAPS {
+  background-color: rgba(150,150,0,.08);
+}
+
+.DUBLIN {
+  background-color: rgba(0,150,0,.08);
+}
+
+.WINE {
+  background-color: rgba(150,0,0,.08);
+}
+
+.BEER {
+  background-color: rgba(255,255,0,.20);
+}
+
 body {
   background: url(../images/background2.png) repeat fixed; 
 }

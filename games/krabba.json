@@ -2,11 +2,11 @@
 	{
 		"songNumber": "X",
 		"songType": "WELCOME",
-		"songTitle": "Sångboken 2.0",
+		"songTitle": "Kräftskiva",
 		"melody": "",
 		"author": "",
 		"songText": [
-			"Välkommen till Multisofts digitala och lätt automatiserade sångbok"
+			"Fjärde september 2021, Ransta."
 		]
 	},
 	{
@@ -110,6 +110,243 @@
 			"men 30-års-krigsgrollet, mera svett.",
 			"Ett fotbollsVMshalvtidsreferat.",
 			"En arvstvistsbouppteckningsadvokat."
+		]
+	},
+	{
+		"songNumber": 7,
+		"songType": "SNAPS",
+		"songTitle": "Månen",
+		"melody": "Mors lilla Olle",
+		"author": null,
+		"songText": [
+			"En gång i månan är månen full,",
+			"aldrig vi sett honom ramla omkull.",
+			"Stum av beundran hur mycket han tål",
+			"höjer vi glasen och utbringar skål! "
+		]
+	},
+	{
+		"songNumber": 8,
+		"songType": "WINE",
+		"songTitle": "Bordeaux, Bordeaux",
+		"melody": "I sommarens soliga dagar",
+		"author": null,
+		"songText": [
+			"Jag minns än idag hur min fader",
+			"kom hem ifrån staden så glader",
+			"och rada’ upp flaskor i rader",
+			"och sade nöjd som så: ",
+			"Bordeaux, Bordeaux",
+			"",
+			"Han drack ett glas, kom i extas",
+			"och sedan blev det stort kalas",
+			"och vi små glin, ja vi drack vin",
+			"som första klassens fyllesvin",
+			"och vi dansade runt där på borden",
+			"och skrek så vi blev blå: ",
+			"Bordeaux, Bordeaux"
+		]
+	},
+	{
+		"songNumber": 9,
+		"songType": "WINE",
+		"songTitle": "Imsig vimsig blir man",
+		"melody": "Imse vimse spindel",
+		"author": null,
+		"songText": [
+			"Imsig vimsig blir man utav lite vin",
+			"Klättrar upp på stolen, verkar piggelin",
+			"Ramlar under bordet, sussar en minut",
+			"Vaknar av att vinet i glaset tagit slut"
+		]
+	},
+	{
+		"songNumber": 10,
+		"songType": "WINE",
+		"songTitle": "I Frankrike dricks det viner ",
+		"melody": "Eurovisionssignaturen",
+		"author": null,
+		"songText": [
+			"I Frankrike dricks det viner",
+			"När tyskarna dricker öl underbart de mår ",
+			"Men svensken som dricker, svin är ",
+			"Oss svin emellan ta en tår "
+		]
+	},
+	{
+		"songNumber": 11,
+		"songType": "SNAPS",
+		"songTitle": "Spritbolaget",
+		"melody": "Snickarboa",
+		"author": null,
+		"songText": [
+			"Till spritbolaget ränner jag",
+			"och bankar på dess port",
+			"Jag vill ha nåt’ som bränner bra",
+			"och gör mig sketfull fort",
+			"Expediten sade: Godda’,",
+			"hur gammal kan min herre va?",
+			"Har ni nåt’ leg, ditt fula drägg",
+			"Kom hit igen när ni fått skägg",
+			"Nej, detta det var inte bra,",
+			"jag ska bli full ikväll",
+			"Då plötsligt en idé fick jag,",
+			"de har ju sprit på Shell (och OKQ8!)",
+			"Många flaskor stod där på rad,",
+			"så nu kan jag bli full och glad",
+			"Den röda drycken åkte ner,",
+			"nu kan jag inte titta mer!"
+		]
+	},
+	{
+		"songNumber": 12,
+		"songType": "SNAPS",
+		"songTitle": "Nikolajev",
+		"melody": "Sovjetunionens nationalsång",
+		"author": null,
+		"songText": [
+			"Jag heter Nikolajev",
+			"och kommer från Sovjet",
+			"Jag flyger runt jorden i min rymdraket",
+			"Och jag skall stanna uppe i 84 varv",
+			"För det har Chrustjev sagt,",
+			"men det tycker jag är larv",
+			"Jag längtar hem, hem till min planet",
+			"till fru och barn där hemma i Sovjet",
+			"Men mest utav allt längtar jag till ett rum",
+			"med ett hjärta uppå dörren",
+			"Jag längtar hem, hem till min planet",
+			"till fru och barn där hemma i Sovjet",
+			"Min kapsel innehåller många instrument",
+			"Ja, mycket av sånt som ännu ej är känt",
+			"Men lika förbannat, vad du nu än tror",
+			"jag glömde gå på muggen innan jag for",
+			"Jag längtar hem..."
+		]
+	},
+	{
+		"songNumber": 13,
+		"songType": "BEER",
+		"songTitle": "Ode till ölet",
+		"melody": "Trampa på gasen",
+		"author": null,
+		"songText": [
+			"Tu tu tu Tuborg",
+			"och ca ca ca Carlsberg",
+			"det är den bästa",
+			"pi pi pi pilsnern som jag vet",
+			"Tu tu tu Carlsberg",
+			"och ca ca ca Tuborg",
+			"det är det bästa",
+			"pi pi pi ölet som jag vet",
+			"Tu tu tu Ölberg",
+			"och ca ca ca Pilsborg",
+			"det är den bästa",
+			"pi pi pi biran som jag vet",
+			"Tu ca pi Ölsner",
+			"och pi tu ca Bira",
+			"det är den bästa",
+			"ca pi tu lering som jag gjort"
+		]
+	},
+	{
+		"songNumber": 14,
+		"songType": "BEER",
+		"songTitle": "Min pilsner",
+		"melody": "My Bonnie",
+		"author": null,
+		"songText": [
+			"Min Pilsner skall svalka min tunga",
+			"Min Pilsner skall duscha min gom",
+			"Min Pilsner skall få mig att sjunga",
+			"om jag ser att flaskan är tom:",
+			"Pilsner. Pilsner",
+			"Hämta en Pilsner till mig till mig",
+			"Pilsner. Pilsner",
+			"Hämta en Pilsner till mig till mig!"
+		]
+	},
+	{
+		"songNumber": 15,
+		"songType": "DUBLIN",
+		"songTitle": "Snart ska vi ut på rövarstråt!",
+		"melody": "Folk och rövare i Kamomilla stad",
+		"author": null,
+		"songText": [
+			"Snart ska vi ut på rövarstråt",
+			"och bära gröna hattar",
+			"och dricka allt vi kommer åt",
+			"och aldrig  lämna slattar",
+			"Vi håller på så gott det går",
+			"och lämnar tomma glas som spår",
+			"Och alltid så tar vi så mycket vi får",
+			"utav Guinnes och Murphy's och Tullamore.",
+			"",
+			"”Ja det gör vi”",
+			"",
+			"Vi går till Dublins gamla stad",
+			"Och korsar floden Liffey",
+			"Där kanske det blir nakenbad",
+			"Om det har druckits whiskey",
+			"Mot nästa pub vi sedan drar",
+			"För rundan den är inte klar",
+			"så länge det finns någon öppen pub kvar",
+			"I Christchurch och Ballsbridge och Temple Bar",
+			"",
+			"”Ja, där bor vi ju”"
+		]
+	},
+	{
+		"songNumber": 16,
+		"songType": "SNAPS",
+		"songTitle": "Autocorrect",
+		"melody": "Vem kan segla",
+		"author": null,
+		"songText": [
+			"Vem kan skriva ett sms",
+			"Efter sju-åtta snapsar",
+			"Utan autocorrects effekt",
+			"Som gör att allt kollapsar",
+			"",
+			"Jag kan skrida fett sms",
+			"Efter sju-klocka snacksar",
+			"Utan automobilskonfekt",
+			"Jag dör på katt och paxar"
+		]
+	},
+	{
+		"songNumber": 17,
+		"songType": "SNAPS",
+		"songTitle": "Idas Facebookvisa",
+		"melody": "Idas sommarvisa",
+		"author": null,
+		"songText": [
+			"Du skall inte tro att jag glömmer bort",
+			"De bilder vi plåtar ikväll",
+			"Jag kommer att ladda upp varje kort",
+			"Och vill inte höra nått gnäll",
+			"",
+			"De hamnar på Facebok helt indiskret",
+			"Ja, även om du säger nej",
+			"Du har ingen rätt att förbjuda det",
+			"För du har gjort samma mot mig"
+		]
+	},
+	{
+		"songNumber": 18,
+		"songType": "SNAPS",
+		"songTitle": "Digitala snapsvisan",
+		"melody": "Fattig bonddräng",
+		"author": null,
+		"songText": [
+			"Twitter, Skype och Facebook,",
+			"jag har blitt virtuell",
+			"Instagram är bättre ",
+			"än att ses IRL!",
+			"Vill du träffs och skåla,",
+			"nja, då blir jag nog less",
+			"skicka hellre snapsen ",
+			"till min (HUTT)mejladress!"
 		]
 	}
 ]

@@ -230,18 +230,45 @@ var vm = new Vue({
         socket.emit("Load", vm.quizMaster.savegame);
       }
     },
-    buzz: function () {
-      if(vm.status.question.questionType != "BUZZ_RUSH" && !vm.player.pendingAnswer)
-      {
-        return;
-      }
-      socket.emit('Buzz', vm.player.pendingAnswer, function (answer)
+    // Special buzz for voting buttons.
+    buzz2: function(event) {
+      console.log(event.target);
+      console.log(event.target.getAttribute("buttonvalue"));
+      var pendingAnswer = event.target.getAttribute("buttonvalue");
+
+      socket.emit('Buzz', pendingAnswer, function (answer)
         {
           console.log("You answered " + answer);
           // vm.player.submittedAnswer = answer;
 
         });
-      vm.player.submittedAnswer = vm.player.pendingAnswer;
+      vm.player.submittedAnswer = pendingAnswer;
+      vm.player.pendingAnswer = "";
+
+      event.stopPropagation();
+
+    },
+
+    buzz: function (pendingAnswer) {
+      if(vm.status.question.questionType != "BUZZ_RUSH" && !vm.player.pendingAnswer)
+      {
+        return;
+      }
+      console.log("Du svarade: " + pendingAnswer);
+      //console.log($event.target.button-value);
+
+      if(pendingAnswer == undefined || pendingAnswer == null)
+      {
+        pendingAnswer = vm.player.pendingAnswer;
+      }
+
+      socket.emit('Buzz', pendingAnswer, function (answer)
+        {
+          console.log("You answered " + answer);
+          // vm.player.submittedAnswer = answer;
+
+        });
+      vm.player.submittedAnswer = pendingAnswer;
       vm.player.pendingAnswer = "";
       /*
       if(vm.status.question.questionType == "BUZZ_RUSH")
@@ -426,6 +453,13 @@ function initQuizlist() {
     // Update this player
     var p = getThisPlayer();
     vm.player.confidenceLevel = p?.confidenceLevel || 0;
+
+    if(statusHolder.action == 'new')
+    {
+      //window.scroll(0,0);
+      location.href = "#";
+      location.href = '#app';
+    }
     
   });
 

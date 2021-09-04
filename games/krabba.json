@@ -348,5 +348,32 @@
 			"skicka hellre snapsen ",
 			"till min (HUTT)mejladress!"
 		]
+	},
+	{
+		"songNumber": 19,
+		"songType": "SNAPS",
+		"songTitle": "Onödigt",
+		"melody": "Tre pepparkaksgubbar",
+		"author": null,
+		"songText": [
+			"Visst gillar jag vatten, men OP smakar bäst.",
+			"Den är lika viktig som havre för en häst.",
+			"För vattnet som ofta finns i ett glas breve´",
+			"är lika onödigt som blinkers på en BMW"
+		]
+	},
+	{
+		"songNumber": 20,
+		"songType": "SNAPS",
+		"songTitle": "Kräftorgie",
+		"melody": "Daggstänkta berg",
+		"author": null,
+		"songText": [
+			"Från kräftbordet hörs ljuva stön – fallera",
+			"Här frossar vi i stjärt oavsett kön – fallera",
+			"Vi suga liksom slicka",
+			"först en pojke sen en flicka",
+			"och för det får vi varsin snaps som lön – fallera!"
+		]
 	}
 ]

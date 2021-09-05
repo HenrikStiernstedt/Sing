@@ -175,6 +175,17 @@ var vm = new Vue({
         console.log("Slut på frågor att hämta.");
       }
     },
+    loadQuestion: function(event, songNumber) {
+      vm.quizMaster.QuestionListNumber = songNumber;
+      vm.quizMaster.pendingQuestion = vm.quizMaster.questionList[vm.quizMaster.QuestionListNumber];
+      event.stopPropagation();
+    },
+    showQuestion: function(event, songNumber) {
+      vm.quizMaster.QuestionListNumber = songNumber;
+      vm.quizMaster.pendingQuestion = vm.quizMaster.questionList[vm.quizMaster.QuestionListNumber];
+      socket.emit('UpdateQuestion', 'NEW', vm.quizMaster.pendingQuestion);
+      event.stopPropagation();
+    },
     newQuestion: function () {
       console.log("Ny fråga!");
       console.log(vm.quizMaster.pendingQuestion);

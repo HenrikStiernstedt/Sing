@@ -42,7 +42,7 @@ The SingMaster controls all singing.
 
 * [ ] Revelation of lyrics in time with the song. Good for when you want to preform live, want everyone to follow along but not spoil the whole song until you get there.
 
-* [ ] A public list of all songs, so each user can check them out beforhand. 
+* [x] A public list of all songs, so each user can check them out beforhand. 
 
 ## SingMaster GUI
 
@@ -75,7 +75,7 @@ The SingMaster controls all singing.
   - [ ] Standard quiz mode where the most voted type of song wins. Beer, wine, schnaps, funny etc.
 
 ### More song modes
-  - [ ] Majority rules. Everyone types in a song. The most voted one wins. The Song Master will have to search and find the lyrics and paste it into the "up next" song.
+  - [x] Majority rules. Everyone types in a song. The most voted one wins. The Song Master will have to search and find the lyrics and paste it into the "up next" song.
 
 ## Technical
 * [ ] Use Bootstrap-vue?

@@ -73,6 +73,10 @@ td:first-child, th:first-child {
   border-width: 0px;
 }
 
+#player button {
+  width: 80px;
+}
+
 /*
 .playerTable tr {
   background-color: white;

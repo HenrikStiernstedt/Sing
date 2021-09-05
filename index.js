@@ -80,7 +80,8 @@ var data = {
       "songTitle": "Bredbandsbolaget",
       "melody": "Spritbolaget",
       "author": "Henrik Stiernstedt",
-      "songText": ["test"]
+      "songText": ["test"],
+      "comment": ""
     },
     pendingAnswers: [{
       "id" : 0,
@@ -94,7 +95,8 @@ var data = {
       "songTitle": "Bredbandsbolaget",
       "melody": "Spritbolaget",
       "author": "Henrik Stiernstedt",
-      "songText": ["test"]
+      "songText": ["test"],
+      "comment": ""
     }]
   },
   answers: [{
@@ -110,7 +112,8 @@ var data = {
     "songTitle": "Bredbandsbolaget",
     "melody": "Spritbolaget",
     "author": "Henrik Stiernstedt",
-    "songText": ["test"]
+    "songText": ["test"],
+    "comment": ""
   }]
 }
 

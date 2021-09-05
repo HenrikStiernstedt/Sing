@@ -92,6 +92,10 @@
 
                         </span>
 
+                        <p></p>
+                        <div class="melodyLabelWrapper" v-if="status.question.comment"> <span class="melodyLabel">Kuriosa:</span> <span class="melodyValue"> {{status.question.comment}}</span></div>
+                        
+
                         <!--span style="white-space: normal;">{{ status.question.questionText.replace(/&nbsp;/g, ' ') }}</span>-->
                         <!--<strong><span style="white-space: normal;">{{ status.question.questionText.replace(/&nbsp;/g, ' ') }}</span></strong>-->
                         <!--
@@ -157,6 +161,8 @@
                       <span>{{line}}</span><br/>
 
                     </span>
+                    <p></p>
+                    <div class="melodyLabelWrapper" v-if="song.comment"> <span class="melodyLabel">Kuriosa:</span> <span class="melodyValue"> {{song.comment}}</span></div>
                   </div>
                 </div>
               </template>
@@ -311,12 +317,18 @@
                 </div>
                 <input v-model="quizMaster.pendingQuestion.melody" type="text" class="form-control" aria-label="Default" aria-describedby="asdf">
               </div>
+              <div class="input-group mb-1">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="asdf">Textförfattare</span>
+                </div>
+                <input v-model="quizMaster.pendingQuestion.author" type="text" class="form-control" aria-label="Default" aria-describedby="asdf">
+              </div>
               <!-- TODO: Split string on newline and join array with newlines when shown here. -->
               <div class="input-group mb-1">
                 <div class="input-group-prepend">
                   <span class="input-group-text" id="inputGroup-sizing-default">Sång</span>
                 </div>
-                <textarea v-model="plainTextSongText" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <textarea v-model="plainTextSongText" class="form-control" id="exampleFormControlTextarea1" rows="8"></textarea>
                 <!--<input v-model="quizMaster.pendingQuestion.questionText" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">-->
               </div>
               <!--
@@ -345,9 +357,9 @@
               -->
               <div class="input-group mb-1">
                 <div class="input-group-prepend">
-                  <span class="input-group-text" id="asdf">Svar</span>
+                  <span class="input-group-text" id="asdf">Kommentar</span>
                 </div>
-                <input v-model="quizMaster.pendingQuestion.correctAnswer" type="text" class="form-control" aria-label="Default" aria-describedby="asdf">
+                <input v-model="quizMaster.pendingQuestion.comment" type="text" class="form-control" aria-label="Default" aria-describedby="asdf">
               </div>
               <div class="btn-group mb-1" role="group" aria-label="Question-buttons">
                 <button type="button" class="btn btn-primary" v-on:click="startQuestion()" :disabled="status.isBuzzActive">Starta önskemål</button>

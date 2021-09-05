@@ -34,7 +34,8 @@ var vm = new Vue({
         "songTitle": "Bredbandsbolaget",
         "melody": "Spritbolaget",
         "author": "Henrik Stiernstedt",
-        "songText": ["test"]
+        "songText": ["test"],
+        "comment": ""
       },
       pendingAnswers: [{
         "id" : 0,
@@ -45,10 +46,11 @@ var vm = new Vue({
       "questionList": [{
         "songNumber": 1,
         "songType" : "SNAPS",
-        "songTitle": "Bredbandsbolaget",
-        "melody": "Spritbolaget",
-        "author": "Henrik Stiernstedt",
-        "songText": ["test"]
+        "songTitle": "",
+        "melody": "",
+        "author": "",
+        "songText": [""],
+        "comment": ""
       }]
     },
     player:
@@ -70,7 +72,8 @@ var vm = new Vue({
         "songTitle": "",
         "melody": "",
         "author": "",
-        "songText": []
+        "songText": [],
+        "comment": ""
       },
       "savegame": "game",
       "loadQuestions": "2020",
@@ -81,7 +84,8 @@ var vm = new Vue({
         "songTitle": "Bredbandsbolaget",
         "melody": "Spritbolaget",
         "author": "Henrik Stiernstedt",
-        "songText": ["test"]
+        "songText": ["test"],
+        "comment": ""
       }]
     },
     environment :

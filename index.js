@@ -361,11 +361,11 @@ io.on('connection', function(socket){
   // Quizmaster functions below.
   socket.on('MakeMeQuizMaster', function(password) {
     var player = getCurrentPlayer(socket.handshake.session.team);
-    console.log(`Player ${player.teamName} wants to be QuizMaster`);
+    console.log(`Player ${player.teamName} wants to be SingMaster`);
     if(password == data.quizMasterPassword)
     {
       data.status.quizMasterId = socket.handshake.session.team;
-      player.teamName = 'QuizMaster';
+      player.teamName = 'SingMaster';
       socket.handshake.session.teamName = player.teamName;
 
       io.sockets.connected[socket.id].emit('Welcome',

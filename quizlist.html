@@ -129,25 +129,27 @@
                 <div class="card-header" v-bind:class="song.songType" data-toggle="collapse"  :data-target="'#collapse'+song.songNumber" :id='"heading"+song.songNumber' :key='song.songNumber'>
                   <h5 class="mb-0">
                     <a class="btn btn-link" aria-expanded="false"  :aria-controls='"collapse"+song.songNumber'>
-                      <span  v-if="song.songType != 'WELCOME'">{{song.songNumber}}. </span>{{song.songTitle}}
+                      <span  v-if="song.songType != 'WELCOME'">{{song.songNumber}}. </span>{{song.songTitle}} <i v-if="song.isSung" class="fas fa-check"></i>
                     </a>
 
-                    
+                  
+                    <div v-if="player.isQuizMaster" class="btn-group float-right" role="group">
+                      <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Välj
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <a class="dropdown-item" href="#" v-on:click="loadQuestion($event, index);" >Välj</a>
+                        <a class="dropdown-item" href="#" v-on:click="showQuestion($event, index);" >Ladda direkt</a>
+                        <a class="dropdown-item" href="#" v-on:click="markAsSung($event, index);" >Markera som sjungen</a>
+                      </div>
+                    </div>
                     <!--<button v-if="player.isQuizMaster" class="btn btn-primary float-right" v-on:click="loadQuestion($event, index);" type="button">Välj</button>-->
                     <transition name="fade" mode="out-in">
-                      <button v-if="status.isBuzzActive && player.submittedAnswer != song.songTitle" v-bind:buttonValue="song.songTitle" class="btn btn-primary float-right" v-on:click="buzz2($event);" type="button">Önska</button>
+                      <button v-if="status.isBuzzActive && player.submittedAnswer != song.songTitle && !song.isSung" v-bind:buttonValue="song.songTitle" class="btn btn-primary float-right" v-on:click="buzz2($event);" type="button">Önska</button>
                       <button v-if="player.submittedAnswer == song.songTitle" class="btn btn-secondary float-right" disabled type="button">Önskad</button>
-                  </transition>
+                    </transition>
 
-                  <div v-if="player.isQuizMaster" class="btn-group float-right" role="group">
-                    <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Välj
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                      <a class="dropdown-item" href="#" v-on:click="loadQuestion($event, index);" >Välj</a>
-                      <a class="dropdown-item" href="#" v-on:click="showQuestion($event, index);" >Ladda direkt</a>
-                    </div>
-                  </div>
+                  
 
                   </h5>
                 </div>
@@ -361,6 +363,12 @@
                 </div>
                 <input v-model="quizMaster.pendingQuestion.comment" type="text" class="form-control" aria-label="Default" aria-describedby="asdf">
               </div>
+
+              <div class="form-check form-switch">
+                <input  v-model="quizMaster.pendingQuestion.isSung" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                <label class="form-check-label" for="flexSwitchCheckDefault">Sjungd</label>
+              </div>
+
               <div class="btn-group mb-1" role="group" aria-label="Question-buttons">
                 <button type="button" class="btn btn-primary" v-on:click="startQuestion()" :disabled="status.isBuzzActive">Starta önskemål</button>
                 <button type="button" class="btn btn-primary" v-on:click="completeQuestion()" :disabled="!status.isBuzzActive">Avsluta önskemål</button>
@@ -381,6 +389,9 @@
               </div>
               <div class="btn-group mb-1">
                 <button type="button" class="btn btn-primary" v-on:click="createNewQuestion()">Ny sång!</button>
+              </div>
+              <div class="btn-group mb-1">
+                <button type="button" class="btn btn-primary" v-on:click="publishQuestions()">Publisera sånglistan</button>
               </div>
 
               <!-- Game buttons -->

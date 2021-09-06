@@ -35,7 +35,8 @@ var vm = new Vue({
         "melody": "Spritbolaget",
         "author": "Henrik Stiernstedt",
         "songText": ["test"],
-        "comment": ""
+        "comment": "",
+        "isSung": false
       },
       pendingAnswers: [{
         "id" : 0,
@@ -50,7 +51,8 @@ var vm = new Vue({
         "melody": "",
         "author": "",
         "songText": [""],
-        "comment": ""
+        "comment": "",
+        "isSung": false
       }]
     },
     player:
@@ -73,7 +75,8 @@ var vm = new Vue({
         "melody": "",
         "author": "",
         "songText": [],
-        "comment": ""
+        "comment": "",
+        "isSung": false
       },
       "savegame": "game",
       "loadQuestions": "2020",
@@ -85,7 +88,8 @@ var vm = new Vue({
         "melody": "Spritbolaget",
         "author": "Henrik Stiernstedt",
         "songText": ["test"],
-        "comment": ""
+        "comment": "",
+        "isSung": false
       }]
     },
     environment :
@@ -190,6 +194,12 @@ var vm = new Vue({
       socket.emit('UpdateQuestion', 'NEW', vm.quizMaster.pendingQuestion);
       event.stopPropagation();
     },
+    markAsSung: function(event, songNumber) {
+      var song = vm.quizMaster.questionList[songNumber];
+      song.isSung = !song.isSung;
+      socket.emit("PublishQuestions", {questionList: vm.quizMaster.questionList});
+      event.stopPropagation();
+    },
     newQuestion: function () {
       console.log("Ny fråga!");
       console.log(vm.quizMaster.pendingQuestion);
@@ -198,19 +208,21 @@ var vm = new Vue({
     },
     createNewQuestion: function() {
       console.log("Skapa ny fråga");
-      //vm.quizMaster.pendingQuestion = {};
-      vm.quizMaster.questionList.push(
-        {
-          "songNumber": vm.quizMaster.questionList.length,
-          "songType" : "SNAPS",
-          "songTitle": "",
-          "melody": "",
-          "author": null,
-          "songText": [""]
-        }
-      );
-      vm.quizMaster.QuestionListNumber = vm.quizMaster.questionList.length;
-      
+      if(confirm("Vill du skapa en ny sång?"))
+      {
+        //vm.quizMaster.pendingQuestion = {};
+        vm.quizMaster.questionList.push(
+          {
+            "songNumber": vm.quizMaster.questionList.length,
+            "songType" : "SNAPS",
+            "songTitle": "",
+            "melody": "",
+            "author": null,
+            "songText": [""]
+          }
+        );
+        vm.quizMaster.QuestionListNumber = vm.quizMaster.questionList.length;
+      }
     },
     
     loadQuestions: function() {
@@ -225,6 +237,10 @@ var vm = new Vue({
       {
         socket.emit("SaveQuestions", { questionList: vm.quizMaster.questionList, filename: vm.quizMaster.loadQuestions});
       }
+    },
+
+    publishQuestions: function() {
+      socket.emit("PublishQuestions", {questionList: vm.quizMaster.questionList});
     },
 
     newGame: function() {
@@ -409,10 +425,10 @@ function initQuizlist() {
   socket.on('ReturnLoadQuestions', function(questionList) {
     console.log("Nya frågor inlästa!");
     console.log(questionList);
-    vm.quizMaster.QuestionListNumber = 1;
+    //vm.quizMaster.QuestionListNumber = 1; // Keep questionListNumber. It may still be right.
     vm.quizMaster.questionList = questionList;
-    //vm.status.questionList = questionList; // Question list is distributed to eceryone via another status emit. 
-    vm.quizMaster.pendingQuestion = vm.quizMaster.questionList[0];
+    //vm.status.questionList = questionList; // Question list is distributed to eceryone via UpdatePlayers emit. 
+    //vm.quizMaster.pendingQuestion = vm.quizMaster.questionList[0];
   });
 
   socket.on('ResetBuzz', function(status) {

@@ -1,77 +1,304 @@
-[{
-    "songNumber": 1,
-    "songType" : "SNAPS",
-    "songTitle": "Bredbandsbolaget",
-    "melody": "Spritbolaget",
-    "author": "Henrik Stiernstedt",
-    "songText": 
-    [
-      "Till Internetet vänder jag",
-      "För jag vill se nått nu",
-      "Jag vill ha nåt som roar bra",
-      "t.ex. Hulu",
-      "Webbsidan den sade -\"Goday!\"",
-      "Do you live in the USA?\"",
-      "Om du ej denna tjänsten når",
-      "kom hit igen om fem, sex år.",
-      "",
-      "Nej detta var ju inte bra",
-      "jag vill ha min film-fix",
-      "Då plötsligt en idé jag fick",
-      "det finns film på Netflix",
-      "Många filmer att välja på",
-      "Men allt är från typ 82",
-      "Trots månadskostnad är betald",
-      "blir aldrig någon film här vald",
-      "",
-      "Nej detta var ju inte bra",
-      "hur ska jag roa mig?",
-      "Men plötsligt en idé jag fick",
-      "visst lever Pirate Bay?",
-      "Många titlar fanns där på rad",
-      "med \"XviD\" och jag vet ej vad",
-      "Jag klicka på warez.exe",
-      "Nu kan jag inte se nåt me'"
-    ]
-  },
-  {
-  "songNumber": 2,
-    "songType" : "SNAPS",
-    "songTitle": "Frihet utan ansvar",
-    "author": "Henrik Stiernstedt",
-    "meoldy": "Kaffe utan grädde",
-    "originalAuthor": null,
-    "songText": 
-    [
-      "Hacka i KonsultKoll",
-      "är som frihet utan ansvar",
-      "För frihet under ansvar",
-      "är väl ingen frihet alls?"
-    ]    
-  },
-  {
-    "songNumber": "3",
-    "songType": "SNAPS",
-    "songTitle": "Du kör i Azure nu",
-    "melody": "In the army now",
-    "author": "Henrik Stiernstedt",
-    "songText": [
-        "En skalbar server i ett annat land,",
-        "allt som krävs är ett rejält bredband",
-        "Du kör i Azure nu,",
-        "oh-oo-oh du kör i Azure, nu",
-        "Nu kommer du ihåg vad säljaren sa",
-        "Allting kommer att gå jättebra",
-        "Du kör i Azure nu",
-        "oh-oo-oh du kör i Azure, nu",
-        "Du blir hjälten på ditt IT-kontor",
-        "Skall aldrig mer behöva jobba jour",
-        "Du kör i Azure nu",
-        "oh-oo-oh du kör i Azure, nu",
-        "Uptime på nära hundra procent",
-        "Men en på tiotusen har nu hänt",
-        "Är körd i Azure nu",
-        "oh-oo no! Är körd i Azure, nu"
-    ]
-}
+[
+	{
+		"songNumber": "X",
+		"songType": "WELCOME",
+		"songTitle": "Höstkonferens Visby",
+		"melody": "",
+		"author": "",
+		"songText": [
+			"Multisofts höstkonferens 2021, Visby Gotland",
+			"",
+			"Här finner ni ett urval av songer som skrivits i samband med AW:s, konferenser och julfester sen någon gång kring 2018."
+		]
+	},
+	{
+		"songNumber": 1,
+		"songType": "SNAPS",
+		"songTitle": "Så länge rösten är mild",
+		"melody": "Så länge skutan kan gå",
+		"songText": [
+			"Så länge rösten är mild",
+			"så länge ingen är vild",
+			"så länge spegeln på väggen ger halvskaplig bild",
+			"så länge alla kan stå",
+			"så länge alla kan gå",
+			"så länge alla kan tralla så fyller vi på. "
+		],
+		"isSung": true
+	},
+	{
+		"songNumber": 2,
+		"songType": "SNAPS",
+		"songTitle": "Alla tallarna!",
+		"meoldy": "Kaffe utan grädde",
+		"originalAuthor": null,
+		"songText": [
+			"Alla tallarna, alla tallarna,",
+			"Alla stora, alla små,",
+			"Alla tallarna, alla tallarna",
+			"Ska vi koka brännvin på.",
+			"Alla tallarna, alla tallarna,",
+			"från roten till dess topp,",
+			"alla tallarna, alla tallarna,",
+			"de ska vi ta dricka opp!"
+		],
+		"melody": "Valfri..."
+	},
+	{
+		"songNumber": "3",
+		"songType": "SNAPS",
+		"songTitle": "Snapsatleten",
+		"melody": "Måndag gör jag ingenting,  ingenting, ingenting",
+		"songText": [
+			"Jag behöver inget gym, ",
+			"inget gym, inget gym.",
+			"Högerarmen min är grym, ",
+			"jättegrym, jättegrym.",
+			"Lyfter nubbar kvart i stupen",
+			"för att hälla ner i strupen.",
+			"Nu ni vet min hemlighet",
+			"Hur jag blev en snapsatlet!"
+		]
+	},
+	{
+		"songNumber": "4",
+		"songType": "SNAPS",
+		"songTitle": "Mera Skåne",
+		"melody": "Internationalen",
+		"songText": [
+			"Mera brännvin i glasen,",
+			"mera glas på vårt bord",
+			"Mera bord på kalasen,",
+			"mer kalas på vår jord",
+			"Mera jordar med måne,",
+			"mera månar kring mars",
+			"Mera marscher till Skåne,",
+			"mera skåne jo bevars"
+		]
+	},
+	{
+		"songNumber": "5",
+		"songType": "SNAPS",
+		"songTitle": "Vikingen",
+		"melody": "When Johnny  Comes Marching Home",
+		"songText": [
+			"En viking älskar livets vann",
+			"Hurra, hurra",
+			"Den hastigt i mitt svalg försvann",
+			"Hurra, hurra",
+			"Till kalv, till oxe, till fisk, till fläsk",
+			"När kärringar bara dricker läsk",
+			"Ja då vill alla vikingar ha en bäsk",
+			"När vi har druckit bäsken slut",
+			"Tragik, tragik",
+			"Då bäres varje viking ut",
+			"Som lik, sig lik",
+			"Och se’n om vi vaknar vi sjunger en bit",
+			"Se’n korkar vi upp Skånes Akvavit",
+			"Skål för alla vikingar som kom hit"
+		],
+		"isSung": false
+	},
+	{
+		"songNumber": "6",
+		"songType": "SNAPS",
+		"songTitle": "Svåra ord",
+		"melody": "Var bor du lilla råtta?",
+		"songText": [
+			"Det finns så många långa svåra ord",
+			"som inte går att fånga vid vårt bord.",
+			"För nu har snapsen verkat, vilken pers.",
+			"Gud hjälpe mig att klara nästa vers.",
+			"",
+			"Besiktningsprotokollet, ganska lätt.",
+			"men 30-års-krigsgrollet, mera svett.",
+			"Ett fotbollsVMshalvtidsreferat.",
+			"En arvstvistsbouppteckningsadvokat."
+		]
+	},
+	{
+		"songNumber": 7,
+		"songType": "SNAPS",
+		"songTitle": "Månen",
+		"melody": "Mors lilla Olle",
+		"author": null,
+		"songText": [
+			"En gång i månan är månen full,",
+			"aldrig vi sett honom ramla omkull.",
+			"Stum av beundran hur mycket han tål",
+			"höjer vi glasen och utbringar skål! "
+		]
+	},
+	{
+		"songNumber": 8,
+		"songType": "WINE",
+		"songTitle": "Bordeaux, Bordeaux",
+		"melody": "I sommarens soliga dagar",
+		"author": null,
+		"songText": [
+			"Jag minns än idag hur min fader",
+			"kom hem ifrån staden så glader",
+			"och rada’ upp flaskor i rader",
+			"och sade nöjd som så: ",
+			"Bordeaux, Bordeaux",
+			"",
+			"Han drack ett glas, kom i extas",
+			"och sedan blev det stort kalas",
+			"och vi små glin, ja vi drack vin",
+			"som första klassens fyllesvin",
+			"och vi dansade runt där på borden",
+			"och skrek så vi blev blå: ",
+			"Bordeaux, Bordeaux"
+		]
+	},
+	{
+		"songNumber": 9,
+		"songType": "WINE",
+		"songTitle": "Imsig vimsig blir man",
+		"melody": "Imse vimse spindel",
+		"author": null,
+		"songText": [
+			"Imsig vimsig blir man utav lite vin",
+			"Klättrar upp på stolen, verkar piggelin",
+			"Ramlar under bordet, sussar en minut",
+			"Vaknar av att vinet i glaset tagit slut"
+		]
+	},
+	{
+		"songNumber": 10,
+		"songType": "WINE",
+		"songTitle": "I Frankrike dricks det viner ",
+		"melody": "Eurovisionssignaturen",
+		"author": null,
+		"songText": [
+			"I Frankrike dricks det viner",
+			"När tyskarna dricker öl underbart de mår ",
+			"Men svensken som dricker, svin är ",
+			"Oss svin emellan ta en tår "
+		]
+	},
+	{
+		"songNumber": 11,
+		"songType": "SNAPS",
+		"songTitle": "Spritbolaget",
+		"melody": "Snickarboa",
+		"author": null,
+		"songText": [
+			"Till spritbolaget ränner jag",
+			"och bankar på dess port",
+			"Jag vill ha nåt’ som bränner bra",
+			"och gör mig sketfull fort",
+			"Expediten sade: Godda’,",
+			"hur gammal kan min herre va?",
+			"Har ni nåt’ leg, ditt fula drägg",
+			"Kom hit igen när ni fått skägg",
+			"Nej, detta det var inte bra,",
+			"jag ska bli full ikväll",
+			"Då plötsligt en idé fick jag,",
+			"de har ju sprit på Shell (och OKQ8!)",
+			"Många flaskor stod där på rad,",
+			"så nu kan jag bli full och glad",
+			"Den röda drycken åkte ner,",
+			"nu kan jag inte titta mer!"
+		]
+	},
+	{
+		"songNumber": 12,
+		"songType": "SNAPS",
+		"songTitle": "Nikolajev",
+		"melody": "Sovjetunionens nationalsång",
+		"author": null,
+		"songText": [
+			"Jag heter Nikolajev",
+			"och kommer från Sovjet",
+			"Jag flyger runt jorden i min rymdraket",
+			"Och jag skall stanna uppe i 84 varv",
+			"För det har Chrustjev sagt,",
+			"men det tycker jag är larv",
+			"Jag längtar hem, hem till min planet",
+			"till fru och barn där hemma i Sovjet",
+			"Men mest utav allt längtar jag till ett rum",
+			"med ett hjärta uppå dörren",
+			"Jag längtar hem, hem till min planet",
+			"till fru och barn där hemma i Sovjet",
+			"Min kapsel innehåller många instrument",
+			"Ja, mycket av sånt som ännu ej är känt",
+			"Men lika förbannat, vad du nu än tror",
+			"jag glömde gå på muggen innan jag for",
+			"Jag längtar hem..."
+		]
+	},
+	{
+		"songNumber": 13,
+		"songType": "BEER",
+		"songTitle": "Ode till ölet",
+		"melody": "Trampa på gasen",
+		"author": null,
+		"songText": [
+			"Tu tu tu Tuborg",
+			"och ca ca ca Carlsberg",
+			"det är den bästa",
+			"pi pi pi pilsnern som jag vet",
+			"Tu tu tu Carlsberg",
+			"och ca ca ca Tuborg",
+			"det är det bästa",
+			"pi pi pi ölet som jag vet",
+			"Tu tu tu Ölberg",
+			"och ca ca ca Pilsborg",
+			"det är den bästa",
+			"pi pi pi biran som jag vet",
+			"Tu ca pi Ölsner",
+			"och pi tu ca Bira",
+			"det är den bästa",
+			"ca pi tu lering som jag gjort"
+		]
+	},
+	{
+		"songNumber": 14,
+		"songType": "BEER",
+		"songTitle": "Min pilsner",
+		"melody": "My Bonnie",
+		"author": null,
+		"songText": [
+			"Min Pilsner skall svalka min tunga",
+			"Min Pilsner skall duscha min gom",
+			"Min Pilsner skall få mig att sjunga",
+			"om jag ser att flaskan är tom:",
+			"Pilsner. Pilsner",
+			"Hämta en Pilsner till mig till mig",
+			"Pilsner. Pilsner",
+			"Hämta en Pilsner till mig till mig!"
+		]
+	},
+	{
+		"songNumber": 15,
+		"songType": "SNAPS",
+		"songTitle": "Autocorrect",
+		"melody": "Vem kan segla",
+		"author": null,
+		"songText": [
+			"Vem kan skriva ett sms",
+			"Efter sju-åtta snapsar",
+			"Utan autocorrects effekt",
+			"Som gör att allt kollapsar",
+			"",
+			"Jag kan skrida fett sms",
+			"Efter sju-klocka snacksar",
+			"Utan automobilskonfekt",
+			"Jag dör på katt och paxar"
+		]
+	},
+	{
+		"songNumber": 16,
+		"songType": "SNAPS",
+		"songTitle": "Onödigt",
+		"melody": "Tre pepparkaksgubbar",
+		"author": null,
+		"songText": [
+			"Visst gillar jag vatten, men OP smakar bäst.",
+			"Den är lika viktig som havre för en häst.",
+			"För vattnet som ofta finns i ett glas breve´",
+			"är lika onödigt som blinkers på en BMW"
+		]
+	}
 ]

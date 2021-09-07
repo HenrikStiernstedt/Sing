@@ -64,7 +64,7 @@
 			"Hinner en, sticker en, sticker två, sticker tre",
 			"Så dör du kvickare"
 		],
-		"songType": "SNAPS",
+		"songType": "MULTISOFT",
 		"songTitle": "Bålgetingen",
 		"author": "Henrik Stiernstedt",
 		"melody": "Så lunka vi",
@@ -79,7 +79,7 @@
 			"Som på denna jorden vandra",
 			"Bli sängliggande med andningsassistans"
 		],
-		"songType": "SNAPS",
+		"songType": "MULTISOFT",
 		"songTitle": "Vaccinera dig",
 		"author": "Henrik Stiernstedt",
 		"melody": "Klappa händerna"
@@ -119,7 +119,7 @@
 			"En gammal macaron",
 			"En gammal macaron"
 		],
-		"songType": "SNAPS",
+		"songType": "MULTISOFT",
 		"songTitle": "En gammal macaron",
 		"author": "Henrik Stiernstedt",
 		"melody": "En gammal Amazon",
@@ -145,7 +145,7 @@
 			"Och vi säljer BoB ibland",
 			"Vem som sen får bygga löses efter hand..."
 		],
-		"songType": "SNAPS",
+		"songType": "MULTISOFT",
 		"songTitle": "BoB ibland",
 		"author": "Henrik Stiernstedt",
 		"melody": "Bobby Brown",
@@ -225,7 +225,7 @@
 			"Men se, så många kunder som sagt att de är mycket nöjda",
 			"Klingofström, Frösunda, ICA och EFO"
 		],
-		"songType": "SNAPS",
+		"songType": "MULTISOFT",
 		"songTitle": "Lynxarnas vals",
 		"author": "Victor Westin",
 		"melody": "Rönnerdahl"
@@ -253,7 +253,7 @@
 		"author": "Victor Westin",
 		"melody": "Måsen/När månen vandrar",
 		"songTitle": "Kodarn",
-		"songType": "SNAPS"
+		"songType": "MULTISOFT"
 	},
 	{
 		"songNumber": 10,
@@ -279,7 +279,7 @@
 		"author": "Victor Westin",
 		"melody": "Nu grönskar det",
 		"songTitle": "Alla önskar sig",
-		"songType": "SNAPS"
+		"songType": "MULTISOFT"
 	},
 	{
 		"songNumber": 11,
@@ -315,7 +315,7 @@
 			"för att bli en bättre Värd"
 		],
 		"comment": "En gammal klassiker. Baserad på uppmaningen om att skriva något på temat \"En bättre värld\".",
-		"songType": "SNAPS",
+		"songType": "MULTISOFT",
 		"songTitle": "Stena Stena, gamla vän",
 		"melody": "SJ, SJ gamla vän",
 		"author": "Henrik Stiernstedt"
@@ -335,7 +335,7 @@
 		"author": "Kalle Hedberg",
 		"melody": "Så länge skutan kan gå",
 		"songTitle": "Så länge kunden är nöjd",
-		"songType": "SNAPS"
+		"songType": "MULTISOFT"
 	},
 	{
 		"songNumber": 13,
@@ -383,7 +383,7 @@
 		"author": "Rim utan reson",
 		"melody": "Brevet från Kolonien",
 		"songTitle": "Brevet från konsultavdelningen",
-		"songType": "SNAPS",
+		"songType": "MULTISOFT",
 		"comment": "Det är knappt att man minns hur det var på kontoret, men så här var det!"
 	},
 	{
@@ -437,7 +437,7 @@
 	},
 	{
 		"songNumber": 15,
-		"songType": "SNAPS",
+		"songType": "MULTISOFT",
 		"songTitle": "MSFOIBV",
 		"melody": "Siffervisan/Ritsch ratsch",
 		"author": null,
@@ -455,12 +455,40 @@
 	},
 	{
 		"songNumber": 16,
-		"songType": "SNAPS",
-		"songTitle": "",
-		"melody": "",
-		"author": null,
+		"songType": "MULTISOFT",
+		"songTitle": "Jag vill ha en egen UP",
+		"melody": "Jag vill ha en egen måne (Ted Gärdestad)",
+		"author": "Henrik Stiernstedt",
 		"songText": [
-			""
+			"Du har då aldrig trott på testning",
+			"Det passar inte för en punkt",
+			"Trots den är överestimerad",
+			"finns inga timmar kvar",
+			"Kan du förstå två tidrapporter",
+			"Med bara ”punkt” som kommentar",
+			"Man rår ej för att tiden rinner",
+			"Innan man är klar",
+			" ",
+			"Jag vill ha en egen UP som jag kan sitta med",
+			"Där jag kan rapportera all min tid",
+			"Jag kan sitta med min UP",
+			"Och göra ingenting",
+			"Där stannar jag tills allting ordnat sig",
+			" ",
+			"Du tror du vet hur allt ska vara",
+			"Du vet när allting passar sig",
+			"Utom när jag ska förklara",
+			"hur det skitit sig",
+			"Finns inget mer att fakturera",
+			"Och det har tagit mig så hårt",
+			"Du kan väl inte acceptera",
+			"Att någonting är svårt",
+			" ",
+			"Jag vill ha en egen UP som jag kan sitta med",
+			"Där jag kan rapportera all min tid",
+			"Jag kan sitta med min UP",
+			"Och göra ingenting",
+			"Där sitter jag tills allting ordnat sig"
 		]
 	}
 ]

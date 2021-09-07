@@ -2,13 +2,12 @@
 	{
 		"songNumber": "X",
 		"songType": "WELCOME",
-		"songTitle": "Höstkonferens Visby",
+		"songTitle": "Höstkonferens Visby 2021",
 		"melody": "",
 		"author": "",
 		"songText": [
-			"Multisofts höstkonferens 2021, Visby Gotland",
 			"",
-			"Här finner ni ett urval av songer som skrivits i samband med AW:s, konferenser och julfester sen någon gång kring 2018."
+			"Här finner ni ett urval av sånger som skrivits i samband med AW:s, konferenser och julfester sen någon gång kring 2018."
 		]
 	},
 	{
@@ -381,5 +380,53 @@
 		"songTitle": "Brevet från konsultavdelningen",
 		"songType": "SNAPS",
 		"comment": "Det är knappt att man minns hur det var på kontoer, men så här var det!"
+	},
+	{
+		"songNumber": 14,
+		"songType": "SNAPS",
+		"songTitle": "Man kan göra många saker i Excel",
+		"melody": "Ola Aurell - Man kan göra många saker med en katt",
+		"author": "Henrik Stiernstedt",
+		"songText": [
+			"Man kan ha den för att följa obehagen",
+			"som man lovat utan vett på nyårsdagen",
+			"Som att springa tusen meter varje kväll",
+			"Man kan göra många saker i Excel",
+			"",
+			"Man kan skriva formler och analysera",
+			"Det känns nästan som att man kan programmera",
+			"Med en syntax som är något speciell",
+			"kan man göra många saker i Excel",
+			"",
+			"Man kan använda den som en databas",
+			"om man inte kräver att det ej blir knas",
+			"för det krävs en bristfällig datamodell",
+			"för att göra många saker i Excel",
+			"",
+			"Man kan fabricera covid-resultatet",
+			"genom att använda XLS-formatet",
+			"lägga många rader i samma tabell",
+			"kan man tydligen ej göra i Excel",
+			"",
+			"Du kan använda arbetsgivar-licensen",
+			"Även om det kanske känns lite på gränsen",
+			"Om föreningen som drivs är ideell",
+			"kan du göra saker gratis i Excel",
+			"",
+			"Skall du fuska med din skatt får du problem",
+			"Om du kör med Visma som affärssystem",
+			"skall lyckas med att vara kriminell",
+			"skall du göra svarta saker i Excel",
+			"",
+			"Sina barns karriärer kan man planera",
+			"Om det skiter sig så kan man skaffa flera",
+			"Skall de slippa jobba nattskift i blåställ",
+			"Krävs att de kan göra saker i Excel",
+			"",
+			"När man skriver låt på någons melodi",
+			"krävs ett system så att den ej blir humorfri",
+			"Denna låt har jag snott från Ola Aurell",
+			"Och den är skriven helt och hållet i Excel"
+		]
 	}
 ]

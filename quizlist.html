@@ -119,18 +119,18 @@
                     <a class="btn btn-link" aria-expanded="false"  :aria-controls='"collapse"+song.songNumber'>
                       <span  v-if="song.songType != 'WELCOME'">{{song.songNumber}}. </span>{{song.songTitle}} <i v-if="song.isSung" class="fas fa-check"></i>
                     </a>
-                    <template v-if="song.songType != 'WELCOME'">
-                      <div v-if="player.isQuizMaster" class="btn-group float-right" role="group">
-                        <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Välj
-                        </button>
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btnGroupDrop1">
-                          <a class="dropdown-item" v-on:click="loadQuestion($event, index);" >Välj</a>
-                          <a class="dropdown-item" v-on:click="showQuestion($event, index);" >Ladda direkt</a>
-                          <a class="dropdown-item" v-on:click="markAsSung($event, index);" >Markera som sjungen</a>
-                        </div>
+                    <div v-if="player.isQuizMaster" class="btn-group float-right" role="group">
+                      <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Välj
+                      </button>
+                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btnGroupDrop1">
+                        <a class="dropdown-item" v-on:click="loadQuestion($event, index);" >Välj</a>
+                        <a class="dropdown-item" v-on:click="showQuestion($event, index);" >Ladda direkt</a>
+                        <a class="dropdown-item" v-on:click="markAsSung($event, index);" >Markera som sjungen</a>
                       </div>
-                      
+                    </div>
+                    <template v-if="song.songType != 'WELCOME'">
+                     
                       <transition name="fade" mode="out-in">
                         <button v-if="status.isBuzzActive && player.submittedAnswer != song.songTitle && !song.isSung" v-bind:buttonValue="song.songTitle" class="btn btn-primary float-right" v-on:click="buzz2($event);" type="button">Önska</button>
                         <button v-if="player.submittedAnswer == song.songTitle" class="btn btn-secondary float-right" disabled type="button">Önskad</button>

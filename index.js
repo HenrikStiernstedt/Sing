@@ -296,20 +296,28 @@ io.on('connection', function(socket){
       return;
     }
     */
-    var player = getCurrentPlayer(socket.handshake.session.team);
-    player.teamName = name;
-    //players.get(socket.handshake.session.team).teamName = name;
-    socket.handshake.session.teamName = name;
-    socket.handshake.session.save();
-    io.emit('UpdatePlayers', {status: data.status, players: data.players});
+    try {
+      var player = getCurrentPlayer(socket.handshake.session.team);
+      player.teamName = name;
+      //players.get(socket.handshake.session.team).teamName = name;
+      socket.handshake.session.teamName = name;
+      socket.handshake.session.save();
+      io.emit('UpdatePlayers', {status: data.status, players: data.players});
+    } catch (error) {
+      console.error(error);
+    }
   });
 
   socket.on('SetConfidenceLevel', function(confidenceLevel)
   {
-    var player = getCurrentPlayer(socket.handshake.session.team);
-    player.confidenceLevel = confidenceLevel;
-    player.emote = share.getEmoteFromConfidenceLevel(confidenceLevel);
-    io.emit('UpdatePlayers', {status: data.status, players: data.players});
+    try {
+      var player = getCurrentPlayer(socket.handshake.session.team);
+      player.confidenceLevel = confidenceLevel;
+      player.emote = share.getEmoteFromConfidenceLevel(confidenceLevel);
+      io.emit('UpdatePlayers', {status: data.status, players: data.players});
+    } catch (error) {
+      console.error(error);
+    }
   });
 
   socket.on('disconnect', function(){

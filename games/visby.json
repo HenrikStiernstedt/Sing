@@ -6,9 +6,9 @@
 		"melody": "",
 		"author": "",
 		"songText": [
-			"",
 			"Här finner ni ett urval av sånger som skrivits i samband med AW:s, konferenser och julfester sen någon gång kring 2018."
-		]
+		],
+		"comment": ""
 	},
 	{
 		"songNumber": 1,
@@ -30,7 +30,7 @@
 			"Min kapsel har en tveksam bränsleekonomi",
 			"Det krävs tusen stycken för min koloni",
 			"Men likt förbannat, skall jag bygga ett hem",
-			"Må jordens C02 öka några ppm",
+			"Må jordens CO₂ öka några ppm",
 			"",
 			"Jag längtar bort, bort från min planet",
 			"Från skatt och moms och överstatlighet",
@@ -43,7 +43,8 @@
 		"songTitle": "Elon Musk",
 		"author": "Henrik Stiernstedt",
 		"melody": "Sovjets nationalsång",
-		"comment": "Om omvänd version av Niklolajev.\r\nVärt att veta är att \"X Æ A-Xii\" sägs utalas \"Ex Ash A-Twelve\"."
+		"comment": "Om omvänd version av Niklolajev. Värt att veta är att \"X Æ A-Xii\" sägs uttalas \"Ex Ash A-Twelve\".",
+		"isSung": false
 	},
 	{
 		"songNumber": 2,
@@ -52,10 +53,12 @@
 			"till massivt buller och tumult",
 			"När frugan ropar: \"Janne, kom",
 			"vårt fågelbo är fullt —",
+			"",
 			"av getingar! Nu ska de ut!",
 			"Och du, ta fram vår etanol",
 			"så skapar vi med Absolut",
 			"ett riktigt gentingbål\"",
+			"",
 			"Tycker du att boet är för stort",
 			"ta då bort det men så gör det fort",
 			"Hinner en, sticker en, sticker två, sticker tre",
@@ -86,7 +89,7 @@
 		"songText": [
 			"Jag har aldrig varit",
 			"nån entusiast",
-			"vad det gäller fika med torra bondkakor set vill jag slå fast",
+			"vad det gäller fika med torra bondkakor det vill jag slå fast",
 			"Men så fick jag se,",
 			"en dag på plan 5",
 			"Det var nåt som lämnats från konferensservice, jag vet inte vem",
@@ -129,10 +132,12 @@
 			"Att boka lokal det är mitt jobb",
 			"Min USP är snabbhet, mitt UI glänser",
 			"Jag kräver inga användarlicenser",
+			"",
 			"Här är jag på en känd plattform",
 			"Redo att ta staten med storm",
 			"Har finansieringsplan, som är kontant och faktura",
 			"Men har ni innebandyplan tar vi betalt i natura",
+			"",
 			"Åh BoB, åh BoB, jag är helt fantastisk",
 			"och denna låt är inte alls sarkastisk",
 			"Och vi säljer BoB ibland",
@@ -150,11 +155,11 @@
 		"songNumber": "6",
 		"songText": [
 			"Jag har problem med den intelligenta optimizern",
-			"Min executionplan blir bajs sen",
+			"Min execution plan blir bajs sen",
 			"jag uppgraderade till SQL Server tjogosexton",
 			"Jag tänkte att nu blir det fart på'n",
 			"Jag uppgraderade till SQL Server tjugoarton",
-			"Men en compatibilitylevel på 120 hjälper oftas bättre mot nästlade CTE:er och vyer i vyer i en multistatement tabellvärd funktion",
+			"Men en compatibility level på 120 hjälper oftast bättre mot nästlade CTE:er och vyer i vyer i en multistatement tabellvärd funktion",
 			"Jag har problem",
 			"med den intelligenta optimizern!"
 		],
@@ -170,7 +175,7 @@
 			"När jag vill se nått nu",
 			"Jag vill ha nåt som gör mig gla'",
 			"t.ex. Hulu",
-			"Webbsidan den sade -\"Goday!",
+			"Webbsidan den sade -\"Gooday!",
 			"Do you live in the USA?\"",
 			"Om du ej denna tjänsten når",
 			"kom hit igen om fem, sex år",
@@ -180,7 +185,7 @@
 			"Då plötsligt en idé jag fick",
 			"det finns film på Netflix",
 			"Många filmer att välja på",
-			"Men allt var från typ 82",
+			"Men allt var från typ -82",
 			"Trots månadskostnad är betald",
 			"blir aldrig någon film här vald",
 			"",
@@ -379,7 +384,7 @@
 		"melody": "Brevet från Kolonien",
 		"songTitle": "Brevet från konsultavdelningen",
 		"songType": "SNAPS",
-		"comment": "Det är knappt att man minns hur det var på kontoer, men så här var det!"
+		"comment": "Det är knappt att man minns hur det var på kontoret, men så här var det!"
 	},
 	{
 		"songNumber": 14,
@@ -427,6 +432,35 @@
 			"krävs ett system så att den ej blir humorfri",
 			"Denna låt har jag snott från Ola Aurell",
 			"Och den är skriven helt och hållet i Excel"
+		],
+		"isSung": false
+	},
+	{
+		"songNumber": 15,
+		"songType": "SNAPS",
+		"songTitle": "MSFOIBV",
+		"melody": "Siffervisan/Ritsch ratsch",
+		"author": null,
+		"songText": [
+			"C# SQL .NET SQL .NET SQL .NET",
+			"C# SQL .NET SQL .NET UHC",
+			"GPTW SU/SA KÄ-PG",
+			"GDPR SOAP-UI KI-2",
+			"Bitten ditten datten dutten",
+			"Appen Knappen GIP:en VUP:en",
+			"Glada gubbar, igelkotten",
+			"Nöjd-chock SBA!"
+		],
+		"comment": "Multisofts förkortnings- och internbegreppsvisa"
+	},
+	{
+		"songNumber": 16,
+		"songType": "SNAPS",
+		"songTitle": "",
+		"melody": "",
+		"author": null,
+		"songText": [
+			""
 		]
 	}
 ]

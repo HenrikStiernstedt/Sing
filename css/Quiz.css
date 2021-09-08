@@ -122,6 +122,11 @@ td:first-child, th:first-child {
   background-color: rgba(255,255,0,.20);
 }
 
+.MULTISOFT {
+  background: rgb(7,56,205);
+  background: linear-gradient(90deg,  rgba(255,0,0,0.19931722689075626) 0%, rgba(157,71,232,0.196516106442577) 50%,  rgba(7,56,205,0.20211834733893552) 100%);
+}
+
 body {
   background: url(../images/background2.png) repeat fixed; 
 }

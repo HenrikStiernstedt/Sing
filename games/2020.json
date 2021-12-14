@@ -2,13 +2,13 @@
 	{
 		"songNumber": "X",
 		"songType": "WELCOME",
-		"songTitle": "Höstkonferens Visby",
+		"songTitle": "Multisofts julbord 2021",
 		"melody": "",
 		"author": "",
 		"songText": [
-			"Multisofts höstkonferens 2021, Visby Gotland",
+			"Edsbacka gård",
 			"",
-			"Här finner ni ett urval av sånger som skrivits i samband med AW:s, konferenser och julfester sen någon gång kring 2018."
+			"Här finner ni ett urval av sånger som passar en sittnig som denna."
 		],
 		"isSung": false
 	},
@@ -137,57 +137,20 @@
 	},
 	{
 		"songNumber": 8,
-		"songType": "WINE",
-		"songTitle": "Bordeaux, Bordeaux",
-		"melody": "I sommarens soliga dagar",
+		"songType": "SNAPS",
+		"songTitle": "Onödigt",
+		"melody": "Tre pepparkaksgubbar",
 		"author": null,
 		"songText": [
-			"Jag minns än idag hur min fader",
-			"kom hem ifrån staden så glader",
-			"och rada’ upp flaskor i rader",
-			"och sade nöjd som så: ",
-			"Bordeaux, Bordeaux",
-			"",
-			"Han drack ett glas, kom i extas",
-			"och sedan blev det stort kalas",
-			"och vi små glin, ja vi drack vin",
-			"som första klassens fyllesvin",
-			"och vi dansade runt där på borden",
-			"och skrek så vi blev blå: ",
-			"Bordeaux, Bordeaux"
+			"Visst gillar jag vatten, men OP smakar bäst.",
+			"Den är lika viktig som havre för en häst.",
+			"För vattnet som ofta finns i ett glas breve´",
+			"är lika onödigt som blinkers på en BMW"
 		],
 		"isSung": false
 	},
 	{
 		"songNumber": 9,
-		"songType": "WINE",
-		"songTitle": "Imsig vimsig blir man",
-		"melody": "Imse vimse spindel",
-		"author": null,
-		"songText": [
-			"Imsig vimsig blir man utav lite vin",
-			"Klättrar upp på stolen, verkar piggelin",
-			"Ramlar under bordet, sussar en minut",
-			"Vaknar av att vinet i glaset tagit slut"
-		],
-		"isSung": false
-	},
-	{
-		"songNumber": 10,
-		"songType": "WINE",
-		"songTitle": "I Frankrike dricks det viner ",
-		"melody": "Eurovisionssignaturen",
-		"author": null,
-		"songText": [
-			"I Frankrike dricks det viner",
-			"När tyskarna dricker öl underbart de mår ",
-			"Men svensken som dricker, svin är ",
-			"Oss svin emellan ta en tår "
-		],
-		"isSung": false
-	},
-	{
-		"songNumber": 11,
 		"songType": "SNAPS",
 		"songTitle": "Spritbolaget",
 		"melody": "Snickarboa",
@@ -216,32 +179,53 @@
 		"isSung": false
 	},
 	{
-		"songNumber": 12,
-		"songType": "SNAPS",
-		"songTitle": "Nikolajev",
-		"melody": "Sovjetunionens nationalsång",
+		"songNumber": 19,
+		"songType": "WINE",
+		"songTitle": "Imsig vimsig blir man",
+		"melody": "Imse vimse spindel",
 		"author": null,
 		"songText": [
-			"Jag heter Nikolajev",
-			"och kommer från Sovjet",
-			"Jag flyger runt jorden i min rymdraket",
-			"Och jag skall stanna uppe i 84 varv",
-			"För det har Chrustjev sagt,",
-			"men det tycker jag är larv",
+			"Imsig vimsig blir man utav lite vin",
+			"Klättrar upp på stolen, verkar piggelin",
+			"Ramlar under bordet, sussar en minut",
+			"Vaknar av att vinet i glaset tagit slut"
+		],
+		"isSung": false
+	},
+	{
+		"songNumber": 11,
+		"songType": "WINE",
+		"songTitle": "Bordeaux, Bordeaux",
+		"melody": "I sommarens soliga dagar",
+		"author": null,
+		"songText": [
+			"Jag minns än idag hur min fader",
+			"kom hem ifrån staden så glader",
+			"och rada’ upp flaskor i rader",
+			"och sade nöjd som så: ",
+			"Bordeaux, Bordeaux",
 			"",
-			"Jag längtar hem, hem till min planet",
-			"till fru och barn där hemma i Sovjet",
-			"Men mest utav allt längtar jag till ett rum",
-			"med ett hjärta uppå dörren",
-			"",
-			"Jag längtar hem, hem till min planet",
-			"till fru och barn där hemma i Sovjet",
-			"Min kapsel innehåller många instrument",
-			"Ja, mycket av sånt som ännu ej är känt",
-			"",
-			"Men lika förbannat, vad du nu än tror",
-			"jag glömde gå på muggen innan jag for",
-			"Jag längtar hem..."
+			"Han drack ett glas, kom i extas",
+			"och sedan blev det stort kalas",
+			"och vi små glin, ja vi drack vin",
+			"som första klassens fyllesvin",
+			"och vi dansade runt där på borden",
+			"och skrek så vi blev blå: ",
+			"Bordeaux, Bordeaux"
+		],
+		"isSung": false
+	},
+	{
+		"songNumber": 12,
+		"songType": "WINE",
+		"songTitle": "I Frankrike dricks det viner ",
+		"melody": "Eurovisionssignaturen",
+		"author": null,
+		"songText": [
+			"I Frankrike dricks det viner",
+			"När tyskarna dricker öl underbart de mår ",
+			"Men svensken som dricker, svin är ",
+			"Oss svin emellan ta en tår "
 		],
 		"isSung": false
 	},
@@ -289,39 +273,6 @@
 			"Hämta en Pilsner till mig till mig",
 			"Pilsner. Pilsner",
 			"Hämta en Pilsner till mig till mig!"
-		],
-		"isSung": false
-	},
-	{
-		"songNumber": 15,
-		"songType": "SNAPS",
-		"songTitle": "Autocorrect",
-		"melody": "Vem kan segla",
-		"author": null,
-		"songText": [
-			"Vem kan skriva ett sms",
-			"Efter sju-åtta snapsar",
-			"Utan autocorrects effekt",
-			"Som gör att allt kollapsar",
-			"",
-			"Jag kan skrida fett sms",
-			"Efter sju-klocka snacksar",
-			"Utan automobilskonfekt",
-			"Jag dör på katt och paxar"
-		],
-		"isSung": false
-	},
-	{
-		"songNumber": 16,
-		"songType": "SNAPS",
-		"songTitle": "Onödigt",
-		"melody": "Tre pepparkaksgubbar",
-		"author": null,
-		"songText": [
-			"Visst gillar jag vatten, men OP smakar bäst.",
-			"Den är lika viktig som havre för en häst.",
-			"För vattnet som ofta finns i ett glas breve´",
-			"är lika onödigt som blinkers på en BMW"
 		],
 		"isSung": false
 	}

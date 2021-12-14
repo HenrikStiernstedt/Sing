@@ -63,6 +63,8 @@ The SingMaster controls all singing.
 
 * [x] The possibility to add songs easily and store them.
 
+* [ ] Remove the pending question object and only work on the quizMaster.questionList. This makes it possible to make misstakes for no gain at all. 
+
 ## Songboard only mode
 * [ ] A way to only show songs.
 * [ ] A way to not be part of the singing board, but still recieve singing updates.

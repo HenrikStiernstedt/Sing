@@ -9,11 +9,11 @@ var vm = new Vue({
         "score" : 0,
         "active" : false,
         "socketId" : "",
-        "teamName" : null,
+        "teamName" : "",
         "buzzOrder": 0,
         "HasBuzzd": false,
-        "isCorrect": null,
-        "answer" : null,
+        "isCorrect": "",
+        "answer" : "",
         "lastAnswer": 0,
         "questionScore" : 0,
         "NumberOfWins": 0,
@@ -24,8 +24,8 @@ var vm = new Vue({
       "isBuzzed" : false,
       "isBuzzActive" : false,
       "questionTime": 30,
-      "winningTeamName" : null,
-      "winningTeam" : null,
+      "winningTeamName" : "",
+      "winningTeam" : "",
       "buzzList" : [0],
       quizMasterId: 0,
       question : {
@@ -217,7 +217,7 @@ var vm = new Vue({
             "songType" : "SNAPS",
             "songTitle": "",
             "melody": "",
-            "author": null,
+            "author": "",
             "songText": [""]
           }
         );

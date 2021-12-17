@@ -514,5 +514,19 @@
 			""
 		],
 		"isSung": false
+	},
+	{
+		"songNumber": 21,
+		"songType": "MULTISOFT",
+		"songTitle": "Bubblans snapsvisa",
+		"melody": "Skånska slott ohc herresäten",
+		"author": "Henrik Stiernstedt",
+		"songText": [
+			"När snapsglaset inte har nått innehåll kvar",
+			"Man vill att den likt vattenkraften var hållbar",
+			"Men när den tar slut krävs ej olja och kol",
+			"Nej vi dricker biobränslet etanol"
+		],
+		"isSung": false
 	}
 ]

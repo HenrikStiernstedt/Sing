@@ -2,13 +2,11 @@
 	{
 		"songNumber": "X",
 		"songType": "WELCOME",
-		"songTitle": "Höstkonferens Visby",
+		"songTitle": "Multisofts klassiska sångbok",
 		"melody": "",
 		"author": "",
 		"songText": [
-			"Multisofts höstkonferens 2021, Visby Gotland",
-			"",
-			"Här finner ni ett urval av sånger som skrivits i samband med AW:s, konferenser och julfester sen någon gång kring 2018."
+			"Här finner ni ett urval av klassiska sånger."
 		],
 		"isSung": false
 	},

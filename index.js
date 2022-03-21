@@ -76,11 +76,11 @@ var data = {
     quizMasterId: 0,
     question : { 
       "songNumber": 1,
-      "songType" : "SNAPS",
-      "songTitle": "Bredbandsbolaget",
-      "melody": "Spritbolaget",
-      "author": "Henrik Stiernstedt",
-      "songText": ["test"],
+      "songType" : "WELCOME",
+      "songTitle": "Multisofts sångbok",
+      "melody": "",
+      "author": "",
+      "songText": ["Välkommen till Multisofts sångbok."],
       "comment": "",
       "isSung": false
     },
@@ -841,3 +841,15 @@ function startQuestion() {
   io.emit('UpdatePlayers', {status: data.status, players: data.players });
 
 }
+
+// Initial song book after server restart.
+try {
+  let dataToLoad = fs.readFileSync('games/2020x.json', null);
+  data.questionList = JSON.parse(dataToLoad);
+  data.status.questionList = data.questionList; // Make list of songs public.
+  io.emit('UpdatePlayers',  {status: data.status, players: data.players } );
+  io.emit("ReturnLoadQuestions", data.questionList);
+} catch (error) {
+  console.error(error);
+}
+

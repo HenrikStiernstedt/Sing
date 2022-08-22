@@ -512,7 +512,7 @@
 	{
 		"songNumber": 18,
 		"songType": "MULTISOFT",
-		"songTitle": "Verandan rasart",
+		"songTitle": "Verandan rasat",
 		"melody": "Vinten rasat",
 		"author": "Henrik Stiernstedt",
 		"songText": [
@@ -527,5 +527,40 @@
 			"…och verandor…, sen i Portugal"
 		],
 		"comment": "Från Summer party 2022, med återblick på Konferensen på Gotland 2021."
+	},
+	{
+		"songNumber": 19,
+		"songType": "MULTISOFT",
+		"songTitle": "Datormössens julafton",
+		"melody": "Mössens julafton",
+		"author": "Henrik Stiernstedt",
+		"songText": [
+			"När virusen blir många och alla ställer in",
+			"tar Microsoft och samlar programmerarskaran sin",
+			"De visar sen på Zoom för att kopiera den",
+			"så får vi allesammans mötestid igen",
+			"Hejsan hoppsan fallerallera",
+			"När mötet startar måste linan utåt vara bra",
+			"Hejsan hoppsan fallerallera",
+			"När mötet startar lyssnar även NSA",
+			"",
+			"Man ansluter till möten i ensam karantän",
+			"Men inlogget det strular för man tillhör fel domän",
+			"Man startar om sin dator, ja om och om igen",
+			"Väl inne starta mötet för rätt längesen",
+			"Hejsan hoppsan fallerallerid",
+			"När möten startar bör man vara ute i god tid",
+			"Hejsan hoppsan fallerallerid",
+			"Men varför funkar nu inte min video feed?",
+			"",
+			"Det laggar och det sprakar och videon gör ett hack",
+			"Man önskar att Teams lånat ännu mera utav Slack",
+			"När ordföraren säger att nu är mötet slut",
+			"Då inser man att sista kvarten vart på mute",
+			"Hejsan hoppsan fallerallerajn",
+			"När covid kommer ska varenda möte va online",
+			"Hejsan hoppsan fallerallerajn",
+			"När covid kommer ska varenda möte va online"
+		]
 	}
 ]

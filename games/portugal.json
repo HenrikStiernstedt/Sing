@@ -562,5 +562,35 @@
 			"Hejsan hoppsan fallerallerajn",
 			"När covid kommer ska varenda möte va online"
 		]
+	},
+	{
+		"songNumber": 20,
+		"songType": "MULTISOFT",
+		"songTitle": "Jag glömde boka",
+		"melody": "My name is Luka",
+		"author": "Victor Westin",
+		"songText": [
+			"Jag glömde boka",
+			"Rum på sjätte våningen",
+			"Kundmötet börjar nu",
+			"Alla lyser rött nu igen",
+			"",
+			"Jag kopplar upp mig från min plats",
+			"Är rätt få runtomkring mig trots allt",
+			"Sorry, jag är lite sen",
+			"Sorry, jag är lite sen",
+			"Det var fullt i tysta kupén",
+			"",
+			"Jag vet att det var klantigt",
+			"Jag ska inte prata högt",
+			"”Gå till ett ledigt rum!”",
+			"Tror du inte jag försökt?",
+			"",
+			"Jag önskar jag fick vara själv",
+			"Med kamera och dubbel skärm",
+			"Planera bättre nästa gång",
+			"Planera bättre nästa gång",
+			"Men till dess jag sjunger min sång"
+		]
 	}
 ]

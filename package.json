@@ -1,7 +1,7 @@
 {
-  "name": "socket-quiz-and-map",
-  "version": "0.0.5",
-  "description": "my first socket.io app",
+  "name": "socket-sing-a-song",
+  "version": "1.0.0",
+  "description": "my second socket.io app",
   "dependencies": {
     "express": "^4.17.1",
     "express-session": "^1.17.0",
@@ -13,11 +13,14 @@
   },
   "main": "index.js",
 	"scripts": {
-		"start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+		"start": "node index.js"
 	},
   "engines": {
     "node": "12.x"
   },
-  "author": "Henrik Stiernstedt"
+  "author": "Henrik Stiernstedt",
+  "runs": {
+    "using": "node16",
+    "main": "index.js"
+  }
 }

@@ -79,7 +79,7 @@ var vm = new Vue({
         "isSung": false
       },
       "savegame": "game",
-      "loadQuestions": "2020",
+      "loadQuestions": "jul",
       "QuestionListNumber": 0,
       "questionList": [{
         "songNumber": 1,

@@ -59,7 +59,7 @@
               <div class="glass">
                 <div class="">
                   <span v-if="status.question.songType == 'WELCOME'">
-                    <img class="card-img-top" src="images/spegelsal2.jpg" alt="Nu kör vi" />
+                    <img class="card-img-top" src="images/Multisoft2.jpg" alt="Nu kör vi" />
                     <div class="card-body">
                       
                       <h5 class="card-title">{{status.question.songTitle}}</h5>
@@ -79,7 +79,7 @@
                     <img v-if="status.question.songType == 'DUBLIN'" class="card-img-top" src="images/dublin2.jpg" alt="Dublinvisa!">
                     <img v-if="status.question.songType == 'WINE'" class="card-img-top" src="images/wine.jpg" alt="Dublinvisa!">
                     <img v-if="status.question.songType == 'BEER'" class="card-img-top" src="images/beer.jpg" alt="Dublinvisa!">
-                    <img v-if="status.question.songType == 'MULTISOFT'" class="card-img-top" src="images/jul.png" alt="">
+                    <img v-if="status.question.songType == 'MULTISOFT'" class="card-img-top" src="images/Multisoft2.jpg" alt="">
                     <div class="card-body" v-bind:class="status.question.songType">
                       <!--<div v-if="status.questionTime" class="QuestionCountdownOverlay" :key="`countdown-${status.questionTime}`"> {{status.questionTime}}</div>-->
                       <h5 class="card-title">Sång {{status.question.songNumber}}: {{status.question.songTitle}}</h5>

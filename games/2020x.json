@@ -781,5 +781,34 @@
 			"Planera bättre nästa gång",
 			"Men till dess jag sjunger min sång"
 		]
+	},
+	{
+		"songNumber": 34,
+		"songType": "SNAPS",
+		"songTitle": "Portos visa",
+		"melody": "Annie get your gun",
+		"author": "",
+		"songText": [
+			"Jag vill börja gasqua",
+			"Var fan är min flaska",
+			"Vem i helvete stal min butelj",
+			"Skall törsten mig tvinga",
+			"En TT börja svinga",
+			"Nej för fan bara blunda och svälj",
+			"",
+			"Vilken smörja",
+			"Får jag spörja",
+			"Vem för fan tror att jag är en älg?",
+			"",
+			"Till England vi rider",
+			"Och sedan vad det lider",
+			"Träffar vi välan på någon pub",
+			"Och där skall vi festa",
+			"och dricka av det mesta",
+			"Utav whisky och portvin",
+			"Jag tänker gå hårt in",
+			"För att smaka på rubb och stubb"
+		],
+		"comment": ""
 	}
 ]

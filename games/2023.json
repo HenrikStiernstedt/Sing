@@ -1004,5 +1004,31 @@
 			"Inga sorger finnes mer",
 			"när punsch vi får"
 		]
+	},
+	{
+		"songNumber": 40,
+		"songType": "MULTISOFT",
+		"songTitle": "Ivars sommarvisa",
+		"melody": "Idas sommarvisa",
+		"author": "Victor Westin",
+		"songText": [
+			"Du ska inte tro hjulet snurrar ",
+			"Ifall inte nån sätter fart",
+			"På flywheelet runt igelkotten",
+			"För då kommer framgången snart",
+			"Jag satsar rejält på Softadmin",
+			"Jag gör hela plattformen grann",
+			"Och nu har rekryterna kommit",
+			"De grymmaste i vårat land",
+			"",
+			"Jag gör så att kunderna chockas",
+			"Av nöjdhet för allt är allright",
+			"Jag gör referensmarknadsföring",
+			"Tar fram blogginlägg till vår site",
+			"Jag får nya kunder på tråden",
+			"Det blir en och annan affär",
+			"Sen tar jag ett glas framåt kvällen",
+			"För det tycker jag jag är värd"
+		]
 	}
 ]

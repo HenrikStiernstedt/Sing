@@ -405,7 +405,6 @@
 		"comment": "Om omvänd version av Niklolajev. Värt att veta är att \"X Æ A-Xii\" sägs uttalas \"Ex Ash A-Twelve\".",
 		"isSung": false
 	},
-	
 	{
 		"songNumber": 11,
 		"songText": [
@@ -462,7 +461,6 @@
 		"songTitle": "Så länge kunden är nöjd",
 		"songType": "MULTISOFT"
 	},
-
 	{
 		"songNumber": 13,
 		"songType": "MULTISOFT",
@@ -573,5 +571,22 @@
 			"slipper du bry dig om copyright!"
 		],
 		"comment": "Denna låt är baserad på verkliga lunchdiskussioner."
+	},
+	{
+		"songNumber": 17,
+		"songType": "MULTISOFT",
+		"songTitle": "Konsulterna arbetssång",
+		"melody": "Mössens arbetssång (Från Askungen)",
+		"author": "Henrik Stiernstedt",
+		"songText": [
+			"Vi har sålt och vi har kodat",
+			"Jobbat på så vi har råd att",
+			"Ha en fest i högsta klassen",
+			"På Opera-terrassen",
+			"Trots röster som känns klena, ihop slår vi Marlena",
+			"För Multisoft på bal med takt och ton i hundratal",
+			"så vacker sången blir i operans stora sal"
+		],
+		"comment": "Låten skall framföras i fasett!"
 	}
 ]

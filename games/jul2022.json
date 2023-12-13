@@ -2,11 +2,11 @@
 	{
 		"songNumber": "X",
 		"songType": "WELCOME",
-		"songTitle": "Multisofts julbord 2023",
+		"songTitle": "Multisofts julbord 2022",
 		"melody": "",
 		"author": "",
 		"songText": [
-			"Välkommen till Operaterassen!",
+			"Välkommen till Grand hotel",
 			"Här finns en blandning av både klassiska sittningsvisor och ett urval av sånger som skrivits i samband med AW:s, konferenser och julfester sen någon gång kring 2018."
 		],
 		"comment": ""
@@ -351,26 +351,228 @@
 		]
 	},
 	{
-		"songNumber": 9,
+		"songNumber": 10,
 		"songType": "SNAPS",
-		"songTitle": "Onödigt med fastpris",
+		"songTitle": "Onödigt",
 		"melody": "Tre pepparkaksgubbar",
 		"author": null,
 		"songText": [
-			"Visst gillar jag vatten, men OP smakar bäst",
-			"Den är lika viktig som havre för en häst",
+			"Visst gillar jag vatten, men OP smakar bäst.",
+			"Den är lika viktig som havre för en häst.",
 			"För vattnet som ofta finns i ett glas breve´",
-			"är lika onödigt som blinkers på en BMW",
-			"",
-			"Visst gillar jag fastpris, men löpande är bäst",
-			"Då finns tiden för både kodgranskning och test",
-			"För vattnet som ofta finns i ett glas breve´",
-			"Är lika onödigt som estimat på en UP"
-		],
-		"comment": "Andra versen ny sen 2023."
+			"är lika onödigt som blinkers på en BMW"
+		]
 	},
 	{
-		"songNumber": 10,
+		"songNumber": 11,
+		"songType": "SNAPS",
+		"songTitle": "Så länge rösten är mild",
+		"melody": "Så länge skutan kan gå",
+		"songText": [
+			"Så länge rösten är mild",
+			"så länge ingen är vild",
+			"så länge spegeln på väggen ger halvskaplig bild",
+			"så länge alla kan stå",
+			"så länge alla kan gå",
+			"så länge alla kan tralla så fyller vi på. "
+		],
+		"isSung": false
+	},
+	{
+		"songNumber": "12",
+		"songType": "SNAPS",
+		"songTitle": "Mera Skåne",
+		"melody": "Internationalen",
+		"songText": [
+			"Mera brännvin i glasen,",
+			"mera glas på vårt bord",
+			"Mera bord på kalasen,",
+			"mer kalas på vår jord",
+			"Mera jordar med måne,",
+			"mera månar kring mars",
+			"Mera marscher till Skåne,",
+			"mera skåne jo bevars"
+		]
+	},
+	{
+		"songNumber": "13",
+		"songType": "SNAPS",
+		"songTitle": "Vikingen",
+		"melody": "When Johnny  Comes Marching Home",
+		"songText": [
+			"En viking älskar livets vann",
+			"Hurra, hurra",
+			"Den hastigt i mitt svalg försvann",
+			"Hurra, hurra",
+			"Till kalv, till oxe, till fisk, till fläsk",
+			"När kärringar bara dricker läsk",
+			"Ja då vill alla vikingar ha en bäsk",
+			"När vi har druckit bäsken slut",
+			"Tragik, tragik",
+			"Då bäres varje viking ut",
+			"Som lik, sig lik",
+			"Och se’n om vi vaknar vi sjunger en bit",
+			"Se’n korkar vi upp Skånes Akvavit",
+			"Skål för alla vikingar som kom hit"
+		],
+		"isSung": false
+	},
+	{
+		"songNumber": 14,
+		"songType": "SNAPS",
+		"songTitle": "Månen",
+		"melody": "Mors lilla Olle",
+		"author": null,
+		"songText": [
+			"En gång i månan är månen full,",
+			"aldrig vi sett honom ramla omkull.",
+			"Stum av beundran hur mycket han tål",
+			"höjer vi glasen och utbringar skål! "
+		]
+	},
+	{
+		"songNumber": 15,
+		"songType": "SNAPS",
+		"songTitle": "Spritbolaget",
+		"melody": "Snickarboa",
+		"author": null,
+		"songText": [
+			"Till spritbolaget ränner jag",
+			"och bankar på dess port",
+			"Jag vill ha nåt’ som bränner bra",
+			"och gör mig sketfull fort",
+			"Expediten sade: Godda’,",
+			"hur gammal kan min herre va?",
+			"Har ni nåt’ leg, ditt fula drägg",
+			"Kom hit igen när ni fått skägg",
+			"Nej, detta det var inte bra,",
+			"jag ska bli full ikväll",
+			"Då plötsligt en idé fick jag,",
+			"de har ju sprit på Shell (och OKQ8!)",
+			"Många flaskor stod där på rad,",
+			"så nu kan jag bli full och glad",
+			"Den röda drycken åkte ner,",
+			"nu kan jag inte titta mer!"
+		]
+	},
+	{
+		"songNumber": 16,
+		"songType": "SNAPS",
+		"songTitle": "Nikolajev",
+		"melody": "Sovjetunionens nationalsång",
+		"author": null,
+		"songText": [
+			"Jag heter Nikolajev",
+			"och kommer från Sovjet",
+			"Jag flyger runt jorden i min rymdraket",
+			"Och jag skall stanna uppe i 84 varv",
+			"För det har Chrustjev sagt,",
+			"men det tycker jag är larv",
+			"Jag längtar hem, hem till min planet",
+			"till fru och barn där hemma i Sovjet",
+			"Men mest utav allt längtar jag till ett rum",
+			"med ett hjärta uppå dörren",
+			"Jag längtar hem, hem till min planet",
+			"till fru och barn där hemma i Sovjet",
+			"Min kapsel innehåller många instrument",
+			"Ja, mycket av sånt som ännu ej är känt",
+			"Men lika förbannat, vad du nu än tror",
+			"jag glömde gå på muggen innan jag for",
+			"Jag längtar hem..."
+		]
+	},
+	{
+		"songNumber": 20,
+		"songType": "WINE",
+		"songTitle": "Bordeaux, Bordeaux",
+		"melody": "I sommarens soliga dagar",
+		"author": null,
+		"songText": [
+			"Jag minns än idag hur min fader",
+			"kom hem ifrån staden så glader",
+			"och rada’ upp flaskor i rader",
+			"och sade nöjd som så: ",
+			"Bordeaux, Bordeaux",
+			"",
+			"Han drack ett glas, kom i extas",
+			"och sedan blev det stort kalas",
+			"och vi små glin, ja vi drack vin",
+			"som första klassens fyllesvin",
+			"och vi dansade runt där på borden",
+			"och skrek så vi blev blå: ",
+			"Bordeaux, Bordeaux"
+		]
+	},
+	{
+		"songNumber": 21,
+		"songType": "WINE",
+		"songTitle": "Imsig vimsig blir man",
+		"melody": "Imse vimse spindel",
+		"author": null,
+		"songText": [
+			"Imsig vimsig blir man utav lite vin",
+			"Klättrar upp på stolen, verkar piggelin",
+			"Ramlar under bordet, sussar en minut",
+			"Vaknar av att vinet i glaset tagit slut"
+		]
+	},
+	{
+		"songNumber": 22,
+		"songType": "WINE",
+		"songTitle": "I Frankrike dricks det viner ",
+		"melody": "Eurovisionssignaturen",
+		"author": null,
+		"songText": [
+			"I Frankrike dricks det viner",
+			"När tyskarna dricker öl underbart de mår ",
+			"Men svensken som dricker, svin är ",
+			"Oss svin emellan ta en tår "
+		]
+	},
+	{
+		"songNumber": 30,
+		"songType": "BEER",
+		"songTitle": "Ode till ölet",
+		"melody": "Trampa på gasen",
+		"author": null,
+		"songText": [
+			"Tu tu tu Tuborg",
+			"och ca ca ca Carlsberg",
+			"det är den bästa",
+			"pi pi pi pilsnern som jag vet",
+			"Tu tu tu Carlsberg",
+			"och ca ca ca Tuborg",
+			"det är det bästa",
+			"pi pi pi ölet som jag vet",
+			"Tu tu tu Ölberg",
+			"och ca ca ca Pilsborg",
+			"det är den bästa",
+			"pi pi pi biran som jag vet",
+			"Tu ca pi Ölsner",
+			"och pi tu ca Bira",
+			"det är den bästa",
+			"ca pi tu lering som jag gjort"
+		]
+	},
+	{
+		"songNumber": 31,
+		"songType": "BEER",
+		"songTitle": "Min pilsner",
+		"melody": "My Bonnie",
+		"author": null,
+		"songText": [
+			"Min Pilsner skall svalka min tunga",
+			"Min Pilsner skall duscha min gom",
+			"Min Pilsner skall få mig att sjunga",
+			"om jag ser att flaskan är tom:",
+			"Pilsner. Pilsner",
+			"Hämta en Pilsner till mig till mig",
+			"Pilsner. Pilsner",
+			"Hämta en Pilsner till mig till mig!"
+		]
+	},
+	{
+		"songNumber": 40,
 		"songText": [
 			"Jag heter Elon Musk och",
 			"jag är Sydafrikan",
@@ -405,9 +607,78 @@
 		"comment": "Om omvänd version av Niklolajev. Värt att veta är att \"X Æ A-Xii\" sägs uttalas \"Ex Ash A-Twelve\".",
 		"isSung": false
 	},
-	
 	{
-		"songNumber": 11,
+		"songNumber": 41,
+		"songType": "MULTISOFT",
+		"songTitle": "Obsolåt",
+		"melody": "Små grodorna",
+		"author": "Henrik Stiernstedt",
+		"songText": [
+			"Antennkablar och scartkablar",
+			"Är lustiga att se",
+			"S-video och VGA",
+			"och allt som är passé",
+			"",
+			"Kontakter och sladdar från tider som har flytt",
+			"I lådor i källarn man hittar dem var flytt",
+			"",
+			"Koaxial, koaxial, koaxialkabel",
+			"Koaxial, koaxial, koaxialkabel "
+		]
+	},
+	{
+		"songNumber": 42,
+		"songText": [
+			"Det kom ett mail med en felrapport",
+			"En nyanställd hoppa’ på den",
+			"Supportprocessen den ska gå fort",
+			"Men fattar inget av koden",
+			"”Jag vill ha hjälp!” hördes kodarn rope'",
+			"Kollegan svarte: Ge mig en UP!",
+			"Med timmar kvar, med timmar kvar...",
+			"",
+			"Det blev en hotfix på fredagkväll",
+			"Kan tyckas va’ lite vågat",
+			"De tyckte risken var marginell",
+			"Och har till krogen nu tågat",
+			"Vi tar ett glas för att starta helgen",
+			"Nyp inte av, utan bara svälj den!",
+			"Ej anträffbar - Vi nubben tar!",
+			""
+		],
+		"author": "Victor Westin",
+		"melody": "Måsen/När månen vandrar",
+		"songTitle": "Kodarn",
+		"songType": "MULTISOFT"
+	},
+	{
+		"songNumber": 43,
+		"songText": [
+			"Alla önskar sig ett fint system",
+			"Som sparar massa tid",
+			"Kommed, Kommed är ej mycket värt",
+			"Ej heller Pyramid",
+			"Var dag av administration:",
+			"En dag att lida pin",
+			"Slipp klick, min vän, slipp kaos och fel",
+			"När du har Softadmin",
+			"",
+			"Centralt i stadens röda hus",
+			"Där finns vår drömfabrik",
+			"Nya komponenter snidas fram",
+			"Med kod så magnifik",
+			"De bästa av konsulter finns",
+			"På Brunkebergets ås",
+			"Och vi firar glatt tillsammans när",
+			"Affären går i lås!"
+		],
+		"author": "Victor Westin",
+		"melody": "Nu grönskar det",
+		"songTitle": "Alla önskar sig",
+		"songType": "MULTISOFT"
+	},
+	{
+		"songNumber": 44,
 		"songText": [
 			"Stena, Stena gamla vän",
 			"trevligt att du lever än",
@@ -446,7 +717,7 @@
 		"author": "Henrik Stiernstedt"
 	},
 	{
-		"songNumber": 12,
+		"songNumber": 45,
 		"songText": [
 			"Så länge kunden är nöjd",
 			"Så länge vi håller höjd",
@@ -462,9 +733,57 @@
 		"songTitle": "Så länge kunden är nöjd",
 		"songType": "MULTISOFT"
 	},
-
 	{
-		"songNumber": 13,
+		"songNumber": 46,
+		"songText": [
+			"Hejsan Emil, hejsan staben",
+			"Här är brev från personalen",
+			"Vi har kul här på kontoret",
+			"Vi är ca 90 stycken som bebor ett",
+			"",
+			"Hus som saknar, ett och annat",
+			"Hissen våran, den har stannat",
+			"Men jag vill inte, bara gnälla",
+			"För jag har skaffat mig en egen värmekälla",
+			"",
+			"Månadsmöten har vi många",
+			"De är bra men något långa",
+			"Vad gör det när man får mackor",
+			"Brie/salami det går inte av för hackor",
+			"",
+			"Femmans toa jag besätter",
+			"Torka rumpan med servetter",
+			"Men musiken den är vacker",
+			"Tills den byttes ut till techno av nån hacker",
+			"",
+			"Jag är rädd för, DEMO-spöken",
+			"Men jag borstar, WC-kröken",
+			"När jag ätit Ivars låda",
+			"Det är annars inget vackert att beskåda",
+			"",
+			"Jag har tappat några kunder",
+			"För jag gjorde visst en blunder",
+			"När jag skulle rensa rader",
+			"Så när chefen nu får se mig får hon spader",
+			"",
+			"Vid mitt fönster bor en spindel",
+			"I Visionen får man svindel",
+			"Trivs de bättre ner’ på fyran?",
+			"Stefan firar, det är värsta glädjeyran",
+			"",
+			"Nej nu får vi sluta versa",
+			"Jag vill foka på min bärsa",
+			"Enda glädjen med att sjunga",
+			"Är att sedan få nåt blött uppå sin tunga"
+		],
+		"author": "Rim utan reson",
+		"melody": "Brevet från Kolonien",
+		"songTitle": "Brevet från konsultavdelningen",
+		"songType": "MULTISOFT",
+		"comment": "Det är knappt att man minns hur det var på kontoret, men så här var det!"
+	},
+	{
+		"songNumber": 47,
 		"songType": "MULTISOFT",
 		"songTitle": "Man kan göra många saker i Excel",
 		"melody": "Ola Aurell - Man kan göra många saker med en katt",
@@ -513,7 +832,7 @@
 		"isSung": false
 	},
 	{
-		"songNumber": 14,
+		"songNumber": 48,
 		"songType": "MULTISOFT",
 		"songTitle": "MSFOIBV",
 		"melody": "Siffervisan/Ritsch ratsch",
@@ -531,7 +850,45 @@
 		"comment": "Multisofts förkortnings- och internbegreppsvisa"
 	},
 	{
-		"songNumber": 15,
+		"songNumber": 49,
+		"songType": "MULTISOFT",
+		"songTitle": "Jag vill ha en egen UP",
+		"melody": "Jag vill ha en egen måne (Ted Gärdestad)",
+		"author": "Henrik Stiernstedt",
+		"songText": [
+			"Du har då aldrig trott på testning",
+			"Det passar inte för en punkt",
+			"Trots den är överestimerad",
+			"finns inga timmar kvar",
+			"Kan du förstå två tidrapporter",
+			"Med bara ”punkt” som kommentar",
+			"Man rår ej för att tiden rinner",
+			"Innan man är klar",
+			" ",
+			"Jag vill ha en egen UP som jag kan sitta med",
+			"Där jag kan rapportera all min tid",
+			"Jag kan sitta med min UP",
+			"Och göra ingenting",
+			"Där stannar jag tills allting ordnat sig",
+			" ",
+			"Du tror du vet hur allt ska vara",
+			"Du vet när allting passar sig",
+			"Utom när jag ska förklara",
+			"hur det skitit sig",
+			"Finns inget mer att fakturera",
+			"Och det har tagit mig så hårt",
+			"Du kan väl inte acceptera",
+			"Att någonting är svårt",
+			" ",
+			"Jag vill ha en egen UP som jag kan sitta med",
+			"Där jag kan rapportera all min tid",
+			"Jag kan sitta med min UP",
+			"Och göra ingenting",
+			"Där sitter jag tills allting ordnat sig"
+		]
+	},
+	{
+		"songNumber": 50,
 		"songText": [
 			"Huledal han skumpar i en skritt på sin häst",
 			"Mia badar isvak, Therese har förnäm vinsmak",
@@ -557,7 +914,7 @@
 		"melody": "Rönnerdahl"
 	},
 	{
-		"songNumber": 16,
+		"songNumber": 51,
 		"songType": "MULTISOFT",
 		"songTitle": "TikTok Boogie",
 		"melody": "Visa vid vindens ängar (Mats Paulson/Håkan Hellström)",
@@ -573,5 +930,24 @@
 			"slipper du bry dig om copyright!"
 		],
 		"comment": "Denna låt är baserad på verkliga lunchdiskussioner."
+	},
+	{
+		"songNumber": 52,
+		"songType": "MULTISOFT",
+		"songTitle": "Verandan rasat",
+		"melody": "Vinten rasat",
+		"author": "Henrik Stiernstedt",
+		"songText": [
+			"Verandan rasa ned på efterfesten",
+			"Det var nära, någon kunde dö",
+			"Då vi trotsade corona-pesten",
+			"Förra sommarn på vår största ö",
+			"",
+			"Det är dags igen för somriga kläder",
+			"Trots att solen just i dag kändes kall",
+			"Vi får hoppas på stabilare väder",
+			"…och verandor…, sen i Portugal"
+		],
+		"comment": "Från Multisoft Summerparty 2022, med återblick på Konferensen på Gotland 2021."
 	}
 ]

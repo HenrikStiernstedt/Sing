@@ -565,6 +565,30 @@
 	{
 		"songNumber": 17,
 		"songType": "MULTISOFT",
+		"songTitle": "Måsten",
+		"melody": "Måsen",
+		"author": "Moa Bohman",
+		"songText": [
+			"En glad konsult på en Kinnarps-tron",
+			"var så trött mitt i vintern",
+			"Han hade slitit som ett hjon",
+			"för att bli klar till semestern",
+			"\"Jag vill ha öl!\" var konsultens budord,",
+			"och Ivar svarte: \"Vi drar på julbord!\"",
+			"Det blir ju kul - när det är jul!",
+			" ",
+			"Konsulten sade \"det går väl bra,",
+			"jag har ju gjort sista UP:n",
+			"Kunden vill ha leverans idag,",
+			"och jag vill ta första suupen!\"",
+			"Aningslös om den stora sorgen",
+			"Körde konsulten ut prod-deployen",
+			"\"Det blir ju kul! - Nu är det jul!\""
+		]
+	},
+	{
+		"songNumber": 18,
+		"songType": "MULTISOFT",
 		"songTitle": "Konsulterna arbetssång",
 		"melody": "Mössens arbetssång (Från Askungen)",
 		"author": "Henrik Stiernstedt",

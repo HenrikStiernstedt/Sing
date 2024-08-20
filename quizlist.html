@@ -59,7 +59,7 @@
               <div class="glass">
                 <div class="">
                   <span v-if="status.question.songType == 'WELCOME'">
-                    <img class="card-img-top" src="images/Multisoft2.jpg" alt="Nu kör vi" />
+                    <img class="card-img-top" src="images/garda.jpg" alt="Nu kör vi" />
                     <div class="card-body">
                       
                       <h5 class="card-title">{{status.question.songTitle}}</h5>
@@ -118,7 +118,7 @@
                 <div class="card-header" v-bind:class="song.songType" data-toggle="collapse"  :data-target="'#collapse'+song.songNumber" :id='"heading"+song.songNumber' :key='song.songNumber'>
                   <h5 class="mb-0">
                     <a class="btn btn-link" aria-expanded="false"  :aria-controls='"collapse"+song.songNumber'>
-                      <span  v-if="song.songType != 'WELCOME'">{{song.songNumber}}. </span>{{song.songTitle}} <i v-if="song.isSung" class="fas fa-check"></i>
+                      <span  v-if="song.songType != 'WELCOME'">{{song.songNumber}}. </span>{{song.songTitle}} <span v-if="status.songVotes && status.songVotes[index] > 0" class="badge badge-light">{{ status.songVotes[index] }}</span> <i v-if="song.isSung" class="fas fa-check"></i>
                     </a>
                     <div v-if="player.isQuizMaster" class="btn-group float-right" role="group">
                       <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -133,12 +133,11 @@
                     <template v-if="song.songType != 'WELCOME'">
                      
                       <transition name="fade" mode="out-in">
-                        <button v-if="status.isBuzzActive && player.submittedAnswer != song.songTitle && !song.isSung" v-bind:buttonValue="song.songTitle" class="btn btn-primary float-right" v-on:click="buzz2($event);" type="button">Önska</button>
-                        <button v-if="player.submittedAnswer == song.songTitle" class="btn btn-secondary float-right" disabled type="button">Önskad</button>
+                        <button v-if="status.isBuzzActive && !song.isSung && !player.votedSongs.includes(index)" v-bind:buttonValue="index" class="btn btn-light float-right" v-on:click="buzz2($event, index);" type="button">Önska</button>
+                        <button v-if="status.isBuzzActive && !song.isSung && player.votedSongs.includes(index)" class="btn btn-info float-right" type="button" v-on:click="buzz2($event, index);">Önskad</button>
                       </transition>
                     </template>
                   </h5>
-
 
                 </div>
             

@@ -70,7 +70,8 @@ var data = {
       "questionScore" : 0,
       "NumberOfWins": 0,
       "emote" : "",
-      "confidenceLevel": 5
+      "confidenceLevel": 5,
+      "votedSongs": []
   }],
   status: {
     "isBuzzed" : false,
@@ -79,6 +80,7 @@ var data = {
     "winningTeamName" : null,
     "winningTeam" : null,
     "buzzList" : [],
+    "songVotes": [],
     quizMasterId: 0,
     question : { 
       "songNumber": 1,
@@ -202,6 +204,25 @@ function upsert(array, item) { // (1)
   else array.push(item);
 }
 
+function songVotes() {
+
+  // Initialize songVotes array with zeros based on the questionList length
+  const votes = new Array(data.status.questionList.length).fill(0);
+
+  // Traverse each player's votedSongs array
+  data.players.forEach(player => {
+    if(player.votedSongs)
+    {
+      player.votedSongs.forEach(songIndex => {
+        // Increment the count for the song at the corresponding index
+        votes[songIndex]++;
+      });
+    }
+  });
+
+  return votes;
+}
+
 /******************************************************************************
  * Socket.io code for ADMINISTRATIVE EVENTS
  ******************************************************************************/
@@ -231,7 +252,8 @@ io.on('connection', function(socket){
               "active" : true,
               "socketId" : socket.id,
               "teamName" : "Team " + socket.handshake.session.teamName != null ? socket.handshake.session.teamName : "Team " + socket.handshake.session.team,
-              "NumberOfWins": 0
+              "NumberOfWins": 0,
+              "votedSongs": []
             };
       data.players.push(player);
     }
@@ -256,7 +278,8 @@ io.on('connection', function(socket){
             "questionScore" : 0,
             "NumberOfWins": 0,
             "emote": emote,
-            "confidenceLevel": 0
+            "confidenceLevel": 0,
+            "votedSongs": []
           };
     data.players.push(player);
 
@@ -272,7 +295,8 @@ io.on('connection', function(socket){
         pendingAnswer: "",
         isQuizMaster: (player.id == data.status.quizMasterId ? true : false),
         answer: null, // TODO: Hur återställer vi "answer" vid reconnect? //getCurrentObject(data.answers, socket.handshake.session.team) ? getCurrentObject(data.answers, socket.handshake.session.team).answer : null,
-        confidenceLevel: player.confidenceLevel
+        confidenceLevel: player.confidenceLevel,
+        votedSongs: player.votedSongs
     }
   );
 
@@ -389,7 +413,8 @@ io.on('connection', function(socket){
             answer: "",
             pendingAnswer: "",
             isQuizMaster: true,
-            confidenceLevel: 0
+            confidenceLevel: 0,
+            votedSongs: []
         }
       );
 
@@ -493,6 +518,44 @@ io.on('connection', function(socket){
 /******************************************************************************
  * Socket.io code for GAME EVENTS
  ******************************************************************************/
+  
+  // Update playeres votes
+  socket.on('Buzz2', function(votedSongs, fn){
+    var player = getCurrentPlayer(socket.handshake.session.team);
+    teamName = player.teamName;
+
+    if(!data.status.isBuzzActive)
+    {
+      console.log("Answer from team " + player.teamName + " out of question time.");
+      return;
+    }
+
+     console.log('Buzz2 from ' + teamName);
+
+    // Handle wishes for songs.
+    addOrReplace(data.answers, {
+      "id" : socket.handshake.session.team,
+      // "answer": answer,
+      "questionScore": data.status.question.questionScore,
+      "clueScore": null,
+      "votedSongs": votedSongs
+    });
+
+    player.votedSongs = votedSongs; // Make answers public.
+    player.lastAnswer = Date.now();
+
+    data.status.songVotes = songVotes(); // Calculate totals.
+
+    var player = getCurrentPlayer(socket.handshake.session.team);
+
+
+    console.log("Player " + (player.name ?? player.id )+ " wished: "+ votedSongs);
+
+    io.emit('UpdatePlayers', {status: data.status, players: data.players } );
+
+    //console.log(data.status);
+  });
+
 
   socket.on('Buzz', function(answer, fn){
     var player = getCurrentPlayer(socket.handshake.session.team);
@@ -850,7 +913,7 @@ function startQuestion() {
 
 // Initial song book after server restart.
 try {
-  let dataToLoad = fs.readFileSync('games/2024.json', null);
+  let dataToLoad = fs.readFileSync('games/garda2024.json', null);
   data.questionList = JSON.parse(dataToLoad);
   data.status.questionList = data.questionList; // Make list of songs public.
   io.emit('UpdatePlayers',  {status: data.status, players: data.players } );

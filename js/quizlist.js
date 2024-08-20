@@ -18,7 +18,8 @@ var vm = new Vue({
         "questionScore" : 0,
         "NumberOfWins": 0,
         "emote" : "",
-        "confidenceLevel": 0
+        "confidenceLevel": 0,
+        "votedSongs": []
     }],
     status: {
       "isBuzzed" : false,
@@ -27,6 +28,9 @@ var vm = new Vue({
       "winningTeamName" : "",
       "winningTeam" : "",
       "buzzList" : [0],
+      "songVotes": [
+        { songIndex: 0, numberOfVotes: 0 }
+      ],
       quizMasterId: 0,
       question : {
         "songNumber": 1,
@@ -42,7 +46,8 @@ var vm = new Vue({
         "id" : 0,
         "answer": "",
         "questionScore": 0,
-        "clueScore": 0
+        "clueScore": 0,
+        "votedSongs": []
       }],
       "questionList": [{
         "songNumber": 1,
@@ -64,7 +69,8 @@ var vm = new Vue({
       "submittedAnswer": "",
       "isQuizMaster": false,
       "quizMasterPassword": "",
-      "confidenceLevel": 0
+      "confidenceLevel": 0,
+      "votedSongs": []
     },
     quizMaster :
     {
@@ -79,7 +85,7 @@ var vm = new Vue({
         "isSung": false
       },
       "savegame": "game",
-      "loadQuestions": "jul",
+      "loadQuestions": "garda2024",
       "QuestionListNumber": 0,
       "questionList": [{
         "songNumber": 1,
@@ -109,6 +115,7 @@ var vm = new Vue({
       }
 
     }
+
   },
   methods: {
     say: function (message) {
@@ -262,19 +269,30 @@ var vm = new Vue({
       }
     },
     // Special buzz for voting buttons.
-    buzz2: function(event) {
-      console.log(event.target);
-      console.log(event.target.getAttribute("buttonvalue"));
+    buzz2: function(event, songNumber) {
+
+      var songIndex = songNumber;
+
+      if (!vm.player.votedSongs) {
+        vm.player.votedSongs = [];
+      }
+      if (!vm.player.votedSongs.includes(songIndex))
+      {
+        vm.player.votedSongs.push(songIndex);
+      }
+      else {
+        vm.player.votedSongs = vm.player.votedSongs.filter(num => num !== songIndex);
+      }
+
+      console.log(vm.player.votedSongs);
+
       var pendingAnswer = event.target.getAttribute("buttonvalue");
 
-      socket.emit('Buzz', pendingAnswer, function (answer)
+      socket.emit('Buzz2', vm.player.votedSongs, function (answer)
         {
-          console.log("You answered " + answer);
-          // vm.player.submittedAnswer = answer;
+          console.log("You voted " + answer);
 
         });
-      vm.player.submittedAnswer = pendingAnswer;
-      vm.player.pendingAnswer = "";
 
       event.stopPropagation();
 
@@ -522,6 +540,5 @@ function initQuizlist() {
   getStatusUpdate();
   getChatHistory();
   loadSounds();
-
 
 }

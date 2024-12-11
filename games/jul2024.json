@@ -118,7 +118,7 @@
 			"Så till sist kan vi utbringa",
 			"Falalalalaaa lalaaa - en skål!"
 		]
-	},	
+	},
 	{
 		"songNumber": 2,
 		"songType": "MULTISOFT",
@@ -349,7 +349,7 @@
 			"Hejsan hoppsan fallerallerajn",
 			"När covid kommer ska varenda möte va online"
 		]
-	},	
+	},
 	{
 		"songNumber": 9,
 		"songType": "MULTISOFT",
@@ -584,6 +584,37 @@
 			"Aningslös om den stora sorgen",
 			"Körde konsulten ut prod-deployen",
 			"\"Det blir ju kul! - Nu är det jul!\""
+		]
+	},
+	{
+		"songNumber": 18,
+		"songType": "MULTISOFT",
+		"songTitle": "Vi är IT-konsulter",
+		"melody": "Vi äro musikanter",
+		"author": "Henrik Stiernstedt",
+		"songText": [
+			"Vi är IT-konsulter allt ifrån Multisoft",
+			"Vi är IT-konsulter allt ifrån Multisoft",
+			" ",
+			"Vi gör snabba val om kollektivavtal",
+			"Vi gör världen mera digital",
+			" ",
+			"Och Månads-mötes-måndags-fralla! ",
+			"Bom falleralla, bom falleralla",
+			"Månads-mötes-måndags-fralla. ",
+			"Bom falleralla lej",
+			" ",
+			"Vi kan sjunga för ett ädelt ändamål:",
+			"Att avsluta sången med en skål",
+			" ",
+			"🍻",
+			" ",
+			"Och vi kan skåla andra gången",
+			"andra gången, andra gången",
+			"vi kan skåla andra gången, ",
+			"andra gången med!",
+			" ",
+			"🍻"
 		]
 	}
 ]

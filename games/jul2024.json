@@ -620,6 +620,22 @@
 	{
 		"songNumber": 19,
 		"songType": "MULTISOFT",
+		"songTitle": "Snart är det val",
+		"author": "Henrik Stiernstedt",
+		"melody": "Nu är det jul här i vårt hus",
+		"comment": "",
+		"songText": [
+			"Nästa kvartal, då är det val",
+			"om vi skall ha ett kollektivavtal",
+			"Tidplanen spräcks när det upptäcks: folk gillar flex!",
+			"Kommer man sent dagar med julfester",
+			"krävs ju att man tar minisemester",
+			"ett par minuter, tills man ansluter, och bara njuter i Loungen! "
+		]
+	},
+	{
+		"songNumber": 20,
+		"songType": "MULTISOFT",
 		"songTitle": "Projektledarens klagan",
 		"melody": "Räven raskar över isen",
 		"author": "Stefan Iversen",
@@ -628,6 +644,26 @@
 			"Skriv ej \"Fel\" på tids-momentet",
 			"Är koden hel är det ej fel",
 			"Om inte kunden beställt (d)et"
+		]
+	},
+	{
+		"songNumber": 21,
+		"songType": "MULTISOFT",
+		"songTitle": "Obsolåt 2.0",
+		"author": "Henrik Stiernstedt",
+		"melody": "Små grodorna",
+		"comment": "Uppdaterad i version 2.0 då de tidigare kabelreferenserna kändes utdaterade.",
+		"songText": [
+			"Antennkablar och scartkablar",
+			"Är lustiga att se",
+			"S-video och VGA",
+			"och allt som är passé",
+			"",
+			"Kontakter och sladdar från tider som har flytt",
+			"I lådor i källarn man hittar dem var flytt",
+			"",
+			"Koaxial, koaxial, koaxialkabel",
+			"Koaxial, koaxial, koaxialkabel"
 		]
 	}
 ]

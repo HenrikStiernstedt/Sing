@@ -616,5 +616,18 @@
 			" ",
 			"🍻"
 		]
+	},
+	{
+		"songNumber": 19,
+		"songType": "MULTISOFT",
+		"songTitle": "Projektledarens klagan",
+		"melody": "Räven raskar över isen",
+		"author": "Stefan Iversen",
+		"songText": [
+			"Skriv ej \"Fel\" på tids-momentet",
+			"Skriv ej \"Fel\" på tids-momentet",
+			"Är koden hel är det ej fel",
+			"Om inte kunden beställt (d)et"
+		]
 	}
 ]

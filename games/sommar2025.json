@@ -38,101 +38,6 @@
         ]
     },
     {
-        "songNumber": "2",
-        "songType": "SNAPS",
-        "songTitle": "Så länge rösten är mild",
-        "melody": "Så länge skutan kan gå",
-        "songText": [
-            "Så länge rösten är mild",
-            "så länge ingen är vild",
-            "så länge spegeln på väggen ger halvskaplig bild",
-            "så länge alla kan stå",
-            "så länge alla kan gå",
-            "så länge alla kan tralla så fyller vi på. "
-        ],
-        "isSung": false
-    },
-    {
-        "songNumber": "3",
-        "songType": "SNAPS",
-        "songTitle": "Alla tallarna!",
-        "meoldy": "Kaffe utan grädde",
-        "originalAuthor": null,
-        "songText": [
-            "Alla tallarna, alla tallarna,",
-            "Alla stora, alla små,",
-            "Alla tallarna, alla tallarna",
-            "Ska vi koka brännvin på.",
-            "Alla tallarna, alla tallarna,",
-            "från roten till dess topp,",
-            "alla tallarna, alla tallarna,",
-            "de ska vi ta dricka opp!"
-        ],
-        "melody": "Valfri..."
-    },
-    {
-        "songNumber": "4",
-        "songType": "SNAPS",
-        "songTitle": "Snapsatleten",
-        "melody": "Måndag gör jag ingenting,  ingenting, ingenting",
-        "songText": [
-            "Jag behöver inget gym, ",
-            "inget gym, inget gym.",
-            "Högerarmen min är grym, ",
-            "jättegrym, jättegrym.",
-            "Lyfter nubbar kvart i stupen",
-            "för att hälla ner i strupen.",
-            "Nu ni vet min hemlighet",
-            "Hur jag blev en snapsatlet!"
-        ]
-    },
-    {
-        "songNumber": "5",
-        "songType": "SNAPS",
-        "songTitle": "Mera Skåne",
-        "melody": "Internationalen",
-        "songText": [
-            "Mera brännvin i glasen,",
-            "mera glas på vårt bord",
-            "Mera bord på kalasen,",
-            "mer kalas på vår jord",
-            "Mera jordar med måne,",
-            "mera månar kring mars",
-            "Mera marscher till Skåne,",
-            "mera skåne jo bevars"
-        ]
-    },
-    {
-        "songNumber": "6",
-        "songType": "SNAPS",
-        "songTitle": "Svåra ord",
-        "melody": "Var bor du lilla råtta?",
-        "songText": [
-            "Det finns så många långa svåra ord",
-            "som inte går att fånga vid vårt bord.",
-            "För nu har snapsen verkat, vilken pers.",
-            "Gud hjälpe mig att klara nästa vers.",
-            "",
-            "Besiktningsprotokollet, ganska lätt.",
-            "men 30-års-krigsgrollet, mera svett.",
-            "Ett fotbollsVMshalvtidsreferat.",
-            "En arvstvistsbouppteckningsadvokat."
-        ]
-    },
-    {
-        "songNumber": "7",
-        "songType": "SNAPS",
-        "songTitle": "Månen",
-        "melody": "Mors lilla Olle",
-        "author": null,
-        "songText": [
-            "En gång i månan är månen full,",
-            "aldrig vi sett honom ramla omkull.",
-            "Stum av beundran hur mycket han tål",
-            "höjer vi glasen och utbringar skål! "
-        ]
-    },
-    {
         "songNumber": "8",
         "songType": "WINE",
         "songTitle": "Bordeaux, Bordeaux",
@@ -222,129 +127,7 @@
             "Hämta en Pilsner till mig till mig!"
         ]
     },
-    {
-        "songNumber": "13",
-        "songType": "SNAPS",
-        "songTitle": "Spritbolaget",
-        "melody": "Snickarboa",
-        "author": null,
-        "songText": [
-            "Till spritbolaget ränner jag",
-            "och bankar på dess port",
-            "Jag vill ha nåt' som bränner bra",
-            "och gör mig sketfull fort",
-            "Expediten sade: Godda',",
-            "hur gammal kan min herre va?",
-            "Har ni nåt' leg, ditt fula drägg",
-            "Kom hit igen när ni fått skägg",
-            "Nej, detta det var inte bra,",
-            "jag ska bli full ikväll",
-            "Då plötsligt en idé fick jag,",
-            "de har ju sprit på Shell (och OKQ8!)",
-            "Många flaskor stod där på rad,",
-            "så nu kan jag bli full och glad",
-            "Den röda drycken åkte ner,",
-            "nu kan jag inte titta mer!"
-        ]
-    },
-    {
-        "songNumber": "14",
-        "songType": "SNAPS",
-        "songTitle": "Autocorrect",
-        "melody": "Vem kan segla",
-        "author": null,
-        "songText": [
-            "Vem kan skriva ett sms",
-            "Efter sju-åtta snapsar",
-            "Utan autocorrects effekt",
-            "Som gör att allt kollapsar",
-            "",
-            "Jag kan skrida fett sms",
-            "Efter sju-klocka snacksar",
-            "Utan automobilskonfekt",
-            "Jag dör på katt och paxar"
-        ]
-    },
-    {
-        "songNumber": "15",
-        "songType": "SNAPS",
-        "songTitle": "Onödigt med fastpris",
-        "melody": "Tre pepparkaksgubbar",
-        "author": null,
-        "songText": [
-            "Visst gillar jag vatten, men OP smakar bäst",
-            "Den är lika viktig som havre för en häst",
-            "För vattnet som ofta finns i ett glas breve'",
-            "är lika onödigt som blinkers på en BMW",
-            "",
-            "Visst gillar jag fastpris, men löpande är bäst",
-            "Då finns tiden för både kodgranskning och test",
-            "För vattnet som ofta finns i ett glas breve'",
-            "Är lika onödigt som estimat på en UP"
-        ],
-        "comment": "Andra versen ny sen 2023."
-    },
-    {
-        "songNumber": "16",
-        "songText": [
-            "Jag heter Elon Musk och",
-            "jag är Sydafrikan",
-            "Jag ville upp till rymden redan som barn",
-            "-\"Jag skall bygga elbil och kolonisera Mars\"",
-            "Men syokonsulenten",
-            "trodde jag rökt hasch",
-            "",
-            "Jag längtar bort, bort från min planet",
-            "Från skatt och moms och överstatlighet",
-            "Men mest utav allt vill jag ha ensamhet",
-            "på en egen röd planet",
-            "Jag längtar bort, jag vill vara själv",
-            "utan fru och lilla X \u00c6 A-Xii (Ex Ash A-Twelve)",
-            "",
-            "Min kapsel har en tveksam bränsleekonomi",
-            "Det krävs tusen stycken för min koloni",
-            "Men likt förbannat, skall jag bygga ett hem",
-            "Må jordens CO\u2082 öka några ppm",
-            "",
-            "Jag längtar bort, bort från min planet",
-            "Från skatt och moms och överstatlighet",
-            "Men mest utav allt vill jag ha ensamhet",
-            "på en egen röd planet",
-            "Jag längtar bort, jag vill vara själv",
-            "utan fru och lilla X \u00c6 A-Xii (Ex Ash A-Twelve)"
-        ],
-        "songType": "MULTISOFT",
-        "songTitle": "Elon Musk",
-        "author": "Henrik Stiernstedt",
-        "melody": "Sovjets nationalsång",
-        "comment": "Om omvänd version av Niklolajev. Värt att veta är att \"X \u00c6 A-Xii\" sägs uttalas \"Ex Ash A-Twelve\".",
-        "isSung": false
-    },
-    {
-        "songNumber": "17",
-        "songText": [
-            "Då sommarlunken vänder om",
-            "till massivt buller och tumult",
-            "När frugan ropar: \"Janne, kom",
-            "vårt fågelbo är fullt...",
-            "",
-            "av getingar! Nu ska de ut!",
-            "Och du, ta fram vår etanol",
-            "så skapar vi med Absolut",
-            "ett riktigt gentingbål\"",
-            "",
-            "Tycker du att boet är för stort",
-            "ta då bort det men så gör det fort",
-            "Hinner en, sticker en, sticker två, sticker tre",
-            "Så dör du kvickare"
-        ],
-        "songType": "MULTISOFT",
-        "songTitle": "Bålgetingen",
-        "author": "Henrik Stiernstedt",
-        "melody": "Så lunka vi",
-        "comment": "Från Lounge-chattens: Jannes \"snälla\" bålgetingar i fågelboet."
-    },
-    {
+     {
         "songNumber": "18",
         "songType": "MULTISOFT",
         "songTitle": "Obsolåt",
@@ -361,41 +144,6 @@
             "",
             "Koaxial, koaxial, koaxialkabel",
             "Koaxial, koaxial, koaxialkabel "
-        ]
-    },
-    {
-        "songNumber": "19",
-        "songType": "MULTISOFT",
-        "songTitle": "Datormössens julafton",
-        "melody": "Mössens julafton",
-        "author": "Henrik Stiernstedt",
-        "songText": [
-            "När virusen blir många och alla ställer in",
-            "tar Microsoft och samlar programmerarskaran sin",
-            "De visar sen på Zoom för att kopiera den",
-            "så får vi allesammans mötestid igen",
-            "Hejsan hoppsan fallerallera",
-            "När mötet startar måste linan utåt vara bra",
-            "Hejsan hoppsan fallerallera",
-            "När mötet startar lyssnar även NSA",
-            "",
-            "Man ansluter till möten i ensam karantän",
-            "Men inlogget det strular för man tillhör fel domän",
-            "Man startar om sin dator, ja om och om igen",
-            "Väl inne starta mötet för rätt längesen",
-            "Hejsan hoppsan fallerallerid",
-            "När möten startar bör man vara ute i god tid",
-            "Hejsan hoppsan fallerallerid",
-            "Men varför funkar nu inte min video feed?",
-            "",
-            "Det laggar och det sprakar och videon gör ett hack",
-            "Man önskar att Teams lånat ännu mera utav Slack",
-            "När ordföraren säger att nu är mötet slut",
-            "Då inser man att sista kvarten vart på mute",
-            "Hejsan hoppsan fallerallerajn",
-            "När covid kommer ska varenda möte va online",
-            "Hejsan hoppsan fallerallerajn",
-            "När covid kommer ska varenda möte va online"
         ]
     },
     {
@@ -650,26 +398,6 @@
         ]
     },
     {
-        "songNumber": "28",
-        "songText": [
-            "Vaccinera dig så att vi har en chans",
-            "Att få till en riktig fysisk konferens",
-            "Du kan också låta andra",
-            "Som på denna jorden vandra",
-            "Bli sängliggande med andningsassistans",
-            "",
-			"Vaccinera dig så att vi har en chans",
-			"Att få till en riktig fysisk konferens",
-			"Om du tar på någons bölder",
-			"kan det ge ap-trista följder",
-			"Du får åka ambulans som en chimpans"
-        ],
-        "songType": "MULTISOFT",
-        "songTitle": "Vaccinera dig",
-        "author": "Henrik Stiernstedt",
-        "melody": "Klappa händerna"
-    },
-    {
         "songNumber": "29",
         "songText": [
             "Huledal han skumpar i en skritt på sin häst",
@@ -883,23 +611,6 @@
             "lika mustig vy kan måla, ens om han målade med sked.",
             "",
             "Refr."
-        ]
-    },
-    {
-        "songNumber": "37",
-        "songType": "SNAPS",
-        "songTitle": "Punschen kommer",
-        "melody": "",
-        "author": "",
-        "songText": [
-            "Punschen kommer, punschen kommer",
-            "ljuv och sval",
-            "Glasen imma, röster stimma",
-            "i vår sal",
-            "Skål för alla minnen",
-            "Skål för varje vår",
-            "Inga sorger finnes mer",
-            "när punsch vi får"
         ]
     }
 ]

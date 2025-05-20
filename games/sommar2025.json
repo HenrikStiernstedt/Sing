@@ -38,7 +38,7 @@
         ]
     },
     {
-        "songNumber": "8",
+        "songNumber": "2",
         "songType": "WINE",
         "songTitle": "Bordeaux, Bordeaux",
         "melody": "I sommarens soliga dagar",
@@ -60,7 +60,7 @@
         ]
     },
     {
-        "songNumber": "9",
+        "songNumber": "3",
         "songType": "WINE",
         "songTitle": "Imsig vimsig blir man",
         "melody": "Imse vimse spindel",
@@ -73,7 +73,7 @@
         ]
     },
     {
-        "songNumber": "10",
+        "songNumber": "4",
         "songType": "WINE",
         "songTitle": "I Frankrike dricks det viner ",
         "melody": "Eurovisionssignaturen",
@@ -86,7 +86,7 @@
         ]
     },
     {
-        "songNumber": "11",
+        "songNumber": "5",
         "songType": "BEER",
         "songTitle": "Ode till ölet",
         "melody": "Trampa på gasen",
@@ -111,7 +111,7 @@
         ]
     },
     {
-        "songNumber": "12",
+        "songNumber": "6",
         "songType": "BEER",
         "songTitle": "Min pilsner",
         "melody": "My Bonnie",
@@ -127,8 +127,8 @@
             "Hämta en Pilsner till mig till mig!"
         ]
     },
-     {
-        "songNumber": "18",
+    {
+        "songNumber": "7",
         "songType": "MULTISOFT",
         "songTitle": "Obsolåt",
         "melody": "Små grodorna",
@@ -147,7 +147,7 @@
         ]
     },
     {
-        "songNumber": "20",
+        "songNumber": "8",
         "songText": [
             "Det kom ett mail med en felrapport",
             "En nyanställd hoppa' på den",
@@ -172,7 +172,7 @@
         "songType": "MULTISOFT"
     },
     {
-        "songNumber": "21",
+        "songNumber": "9",
         "songText": [
             "Alla önskar sig ett fint system",
             "Som sparar massa tid",
@@ -198,7 +198,7 @@
         "songType": "MULTISOFT"
     },
     {
-        "songNumber": "22",
+        "songNumber": "10",
         "songText": [
             "Stena, Stena gamla vän",
             "trevligt att du lever än",
@@ -237,7 +237,7 @@
         "author": "Henrik Stiernstedt"
     },
     {
-        "songNumber": "23",
+        "songNumber": "11",
         "songText": [
             "Så länge kunden är nöjd",
             "Så länge vi håller höjd",
@@ -254,7 +254,7 @@
         "songType": "MULTISOFT"
     },
     {
-        "songNumber": "24",
+        "songNumber": "12",
         "songText": [
             "Hejsan Emil, hejsan staben",
             "Här är brev från personalen",
@@ -303,7 +303,7 @@
         "comment": "Det är knappt att man minns hur det var på kontoret, men så här var det!"
     },
     {
-        "songNumber": "25",
+        "songNumber": "13",
         "songType": "MULTISOFT",
         "songTitle": "Man kan göra många saker i Excel",
         "melody": "Ola Aurell - Man kan göra många saker med en katt",
@@ -318,11 +318,6 @@
             "Det känns nästan som att man kan programmera",
             "Med en syntax som är något speciell",
             "kan man göra många saker i Excel",
-            "",
-            "Man kan använda den som en databas",
-            "om man inte kräver att det ej blir knas",
-            "för det krävs en bristfällig datamodell",
-            "för att göra många saker i Excel",
             "",
             "Skall du fuska med din skatt får du problem",
             "Om du kör med Visma som affärssystem",
@@ -342,7 +337,7 @@
         "isSung": false
     },
     {
-        "songNumber": "26",
+        "songNumber": "14",
         "songType": "MULTISOFT",
         "songTitle": "MSFOIBV",
         "melody": "Siffervisan/Ritsch ratsch",
@@ -360,7 +355,7 @@
         "comment": "Multisofts förkortnings- och internbegreppsvisa"
     },
     {
-        "songNumber": "27",
+        "songNumber": "15",
         "songType": "MULTISOFT",
         "songTitle": "Jag vill ha en egen UP",
         "melody": "Jag vill ha en egen måne (Ted Gärdestad)",
@@ -398,7 +393,7 @@
         ]
     },
     {
-        "songNumber": "29",
+        "songNumber": "16",
         "songText": [
             "Huledal han skumpar i en skritt på sin häst",
             "Mia badar isvak, Therese har förnäm vinsmak",
@@ -424,7 +419,7 @@
         "melody": "Rönnerdahl"
     },
     {
-        "songNumber": "30",
+        "songNumber": "17",
         "songType": "MULTISOFT",
         "songTitle": "TikTok Boogie",
         "melody": "Visa vid vindens ängar (Håkan Hellström)",
@@ -442,7 +437,7 @@
         "comment": "Denna låt är baserad på verkliga lunchdiskussioner."
     },
     {
-        "songNumber": "31",
+        "songNumber": "18",
         "songType": "MULTISOFT",
         "songTitle": "Verandan rasat",
         "melody": "Vinten rasat",
@@ -461,7 +456,7 @@
         "comment": "Från Multisoft Summerparty 2022, med återblick på Konferensen på Gotland 2021."
     },
     {
-        "songNumber": "32",
+        "songNumber": "19",
         "songType": "MULTISOFT",
         "songTitle": "Jag glömde boka",
         "melody": "My name is Luka",
@@ -491,7 +486,7 @@
         ]
     },
     {
-        "songNumber": "33",
+        "songNumber": "20",
         "songType": "SNAPS",
         "songTitle": "Portos visa",
         "melody": "Annie, Get Your Gun",
@@ -519,7 +514,7 @@
         ]
     },
     {
-        "songNumber": "34",
+        "songNumber": "21",
         "songType": "WINE",
         "songTitle": "Feta fransyskor",
         "melody": "Tomtarnas julmarsch",
@@ -542,7 +537,7 @@
         ]
     },
     {
-        "songNumber": "35",
+        "songNumber": "22",
         "songType": "SNAPS",
         "songTitle": "Jag skall festa",
         "melody": "Bamse",
@@ -571,7 +566,7 @@
         ]
     },
     {
-        "songNumber": "36",
+        "songNumber": "23",
         "songType": "SNAPS",
         "songTitle": "Härjarevisan",
         "melody": "Gärdebylåten",

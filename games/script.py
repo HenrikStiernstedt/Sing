@@ -1,13 +1,28 @@
 import json
 
-# Load the JSON file
-with open('2024.json', 'r') as file:
-    data = json.load(file)
+# filepath: c:\Project\Sing\games\sommar2025.json
+file_path = r"c:\Project\Sing\games\sommar2025.json"
 
-# Iterate over the songs and update the songNumber
-for i, song in enumerate(data, start=1):
-    song['songNumber'] = str(i)
+def update_song_numbers(file_path):
+    # Read the file as plain text
+    with open(file_path, "r", encoding="utf-8") as file:
+        file_content = file.read()
+        data = json.loads(file_content)
 
-# Save the updated JSON back to the file
-with open('2024.json', 'w') as file:
-    json.dump(data, file, indent=4)
+    # Start numbering with "X" for the first song, then increment from 1
+    next_number = 1
+    for song in data:
+        if next_number == 1:  # First song gets "X"
+            song["songNumber"] = "X"
+        else:
+            song["songNumber"] = str(next_number - 1)
+        next_number += 1
+
+    # Write the updated JSON back to the file as plain text
+    with open(file_path, "w", encoding="utf-8") as file:
+        file.write(json.dumps(data, ensure_ascii=False, indent=4))
+
+    print("Song numbers updated successfully!")
+
+# Run the function
+update_song_numbers(file_path)

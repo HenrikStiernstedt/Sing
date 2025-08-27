@@ -85,7 +85,7 @@ var vm = new Vue({
         "isSung": false
       },
       "savegame": "game",
-      "loadQuestions": "garda2024",
+      "loadQuestions": "paris2025",
       "QuestionListNumber": 0,
       "questionList": [{
         "songNumber": 1,

@@ -913,7 +913,7 @@ function startQuestion() {
 
 // Initial song book after server restart.
 try {
-  let dataToLoad = fs.readFileSync('games/jul2024.json', null);
+  let dataToLoad = fs.readFileSync('games/paris2025.json', null);
   data.questionList = JSON.parse(dataToLoad);
   data.status.questionList = data.questionList; // Make list of songs public.
   io.emit('UpdatePlayers',  {status: data.status, players: data.players } );

@@ -765,17 +765,17 @@
     {
         "songNumber": "33",
         "songType":"MULTISOFT",
-            "songTitle":"Sam Altman har en serverfarm",
+            "songTitle":"Sam Altman hah hade en serverfarm",
             "author":"Henrik Stiernstedt",
             "melody":"Old MacDonald Had a Farm \/ Per Olsson han hade en bonnagård",
         "songText": [
-            "Sam Altman han hade en serverfarm, Open-AI-E!",
-            "Och på den fanns Chat-GPT, Open-AI-E!",
+            "Sam Altman han hade en serverfarm, Open-AI-O!",
+            "Och på den fanns Chat-GPT, Open-AI-O!",
             "Och det var AI här",
             "Det var AI där",
             "Här A, där I",
             "Här var det AI",
-            "Sam Altman han hade en serverfarm, Open-AI-E!"
+            "Sam Altman han hade en serverfarm, Open-AI-O!"
         ]
     },
         {

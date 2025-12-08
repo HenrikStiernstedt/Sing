@@ -59,7 +59,7 @@
               <div class="glass">
                 <div class="">
                   <span v-if="status.question.songType == 'WELCOME'">
-                    <img class="card-img-top" src="images/paris2025.jpg" alt="Nu kör vi" />
+                    <img class="card-img-top" src="images/spegelsal2.jpg" alt="Nu kör vi" />
                     <div class="card-body">
                       
                       <h5 class="card-title">{{status.question.songTitle}}</h5>
@@ -199,70 +199,7 @@
 
       </div>
       <!-- Kontroller för score board -->
-      <div class="row Leaderboard">
-        <div class="playerTable col-lg-12" style="width:100%">
-          <div class="card glass">
-            <div class="card-body" style="padding:0px;">
-              <table class="MaxWidth">
-                <thead>
-                  <tr>
-                    <th style="width:25px;">#</th>
-                    <th style="width:120px;">Namn</th>
-                    <th style="width:70px;">Status</th>
-                    <th>Önskan</th>
-                    <!--<th style="width:50px;">Poäng</th>-->
-                    <th v-if="player.isQuizMaster">Knappar</th>
-                  </tr>
-                </thead>
-              <tbody name="flip-list" is="transition-group">
-
-                  <tr v-for="p in players" v-bind:key="p.team" v-bind:id="p.team" v-bind:questionScore="p.questionScore" v-bind:class="[player.id == p.team ?  'you' : '']">
-                    <td>
-                      {{ p.team }}
-                    </td>
-                    <td class="NameCell">{{ p.teamName }}
-                      <transition name="bounce" mode="out-in">
-                        <span :key="p.NumberOfWins" title="Antal vinster i matchen" v-if="p.NumberOfWins > 0" class="badge badge-pill badge-warning">{{p.NumberOfWins}}</span>
-                      </transition>
-                    </td>
-                    <td>
-                      <transition name="qbounce" mode="out-in">
-                        <i :key="1" v-if="p.isCorrect" class="far fa-grin-stars fa-2x shaking"></i>
-                        <i :key="2" v-else-if="status.winningTeam !== p.team && p.HasBuzzed" class="far fa-sad-cry fa-2x headShake"></i>
-                        <i :key="p.emote" v-else-if="p.active" :class="p.emote" class="far fa-2x"></i>
-                        <i :key="p.emote" title="Disconnected" v-else class="far fa-dizzy fa-2x"></i>
-                      </transition>
-                      <span v-if="p.buzzOrder">Buzz: {{ p.buzzOrder }}</span>
-                      <i v-if="status.winningTeam == p.team" class="far fa-hand-paper shaking fa-2x"></i>
-                    </td>
-                    <td>
-
-
-                      <transition name="bounce">
-                        <span v-if="p.questionScore > 0 && p.isCorrect" class="badge badge-pill badge-success questionScore">{{p.questionScore}}</span>
-                        <span v-else-if="p.questionScore > 0" class="badge badge-pill badge-secondary questionScore">{{p.questionScore}}</span>
-                      </transition>
-                      <span v-if="p.answer">{{ p.answer }}</span>
-
-
-                    </td>
-                    <!--<td> {{p.score}}</td>-->
-                    <td v-if="player.isQuizMaster">
-
-                      <a v-on:Click="givePoints((p.questionScore ? p.questionScore : status.question.questionScore), p.id, true)"><i v-if="p.isCorrect" class="far fa-star fa-2x"></i><i v-else class="fas fa-star fa-2x"></i></a>
-                      <a onClick="givePoints(1, $(this).parent().parent().attr('id'), false);"><i class="fas fa-caret-up fa-2x"></i></a>
-                      <a onClick="givePoints(-1, $(this).parent().parent().attr('id'), false);"><i class="fas fa-caret-down fa-2x"></i></a>
-                    </td>
-                </tr>
-
-              </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-
-      </div>
-      <!---->
+      
       <div class="row administration">
         <!-- Kontroller för QuizMaster och administration -->
         <div class="administration col-xs-12" style="width:100%">
@@ -443,6 +380,71 @@
 
 
       </div>
+
+<div class="row Leaderboard">
+        <div class="playerTable col-lg-12" style="width:100%">
+          <div class="card glass">
+            <div class="card-body" style="padding:0px;">
+              <table class="MaxWidth">
+                <thead>
+                  <tr>
+                    <th style="width:25px;">#</th>
+                    <th style="width:120px;">Namn</th>
+                    <th style="width:70px;">Status</th>
+                    <th>Önskan</th>
+                    <!--<th style="width:50px;">Poäng</th>-->
+                    <th v-if="player.isQuizMaster">Knappar</th>
+                  </tr>
+                </thead>
+              <tbody name="flip-list" is="transition-group">
+
+                  <tr v-for="p in players" v-bind:key="p.team" v-bind:id="p.team" v-bind:questionScore="p.questionScore" v-bind:class="[player.id == p.team ?  'you' : '']">
+                    <td>
+                      {{ p.team }}
+                    </td>
+                    <td class="NameCell">{{ p.teamName }}
+                      <transition name="bounce" mode="out-in">
+                        <span :key="p.NumberOfWins" title="Antal vinster i matchen" v-if="p.NumberOfWins > 0" class="badge badge-pill badge-warning">{{p.NumberOfWins}}</span>
+                      </transition>
+                    </td>
+                    <td>
+                      <transition name="qbounce" mode="out-in">
+                        <i :key="1" v-if="p.isCorrect" class="far fa-grin-stars fa-2x shaking"></i>
+                        <i :key="2" v-else-if="status.winningTeam !== p.team && p.HasBuzzed" class="far fa-sad-cry fa-2x headShake"></i>
+                        <i :key="p.emote" v-else-if="p.active" :class="p.emote" class="far fa-2x"></i>
+                        <i :key="p.emote" title="Disconnected" v-else class="far fa-dizzy fa-2x"></i>
+                      </transition>
+                      <span v-if="p.buzzOrder">Buzz: {{ p.buzzOrder }}</span>
+                      <i v-if="status.winningTeam == p.team" class="far fa-hand-paper shaking fa-2x"></i>
+                    </td>
+                    <td>
+
+
+                      <transition name="bounce">
+                        <span v-if="p.questionScore > 0 && p.isCorrect" class="badge badge-pill badge-success questionScore">{{p.questionScore}}</span>
+                        <span v-else-if="p.questionScore > 0" class="badge badge-pill badge-secondary questionScore">{{p.questionScore}}</span>
+                      </transition>
+                      <span v-if="p.answer">{{ p.answer }}</span>
+
+
+                    </td>
+                    <!--<td> {{p.score}}</td>-->
+                    <td v-if="player.isQuizMaster">
+
+                      <a v-on:Click="givePoints((p.questionScore ? p.questionScore : status.question.questionScore), p.id, true)"><i v-if="p.isCorrect" class="far fa-star fa-2x"></i><i v-else class="fas fa-star fa-2x"></i></a>
+                      <a onClick="givePoints(1, $(this).parent().parent().attr('id'), false);"><i class="fas fa-caret-up fa-2x"></i></a>
+                      <a onClick="givePoints(-1, $(this).parent().parent().attr('id'), false);"><i class="fas fa-caret-down fa-2x"></i></a>
+                    </td>
+                </tr>
+
+              </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!---->      
       <!-- Kontroller för chat -->
       <!--
       <div class="row clearfix hs-height">

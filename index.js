@@ -251,7 +251,7 @@ io.on('connection', function(socket){
               "score" : 0,
               "active" : true,
               "socketId" : socket.id,
-              "teamName" : "Team " + socket.handshake.session.teamName != null ? socket.handshake.session.teamName : "Team " + socket.handshake.session.team,
+              "teamName" : "Sångare " + socket.handshake.session.teamName != null ? socket.handshake.session.teamName : "Team " + socket.handshake.session.team,
               "NumberOfWins": 0,
               "votedSongs": []
             };
@@ -269,7 +269,7 @@ io.on('connection', function(socket){
             "score" : 0,
             "active" : true,
             "socketId" : socket.id,
-            "teamName" : "Team " + socket.handshake.session.team,
+            "teamName" : "Sångare " + socket.handshake.session.team,
             "HasBuzzd": false,
             "buzzOrder": null,
             "isCorrect": null,
@@ -913,7 +913,7 @@ function startQuestion() {
 
 // Initial song book after server restart.
 try {
-  let dataToLoad = fs.readFileSync('games/paris2025.json', null);
+  let dataToLoad = fs.readFileSync('games/jul2025.json', null);
   data.questionList = JSON.parse(dataToLoad);
   data.status.questionList = data.questionList; // Make list of songs public.
   io.emit('UpdatePlayers',  {status: data.status, players: data.players } );

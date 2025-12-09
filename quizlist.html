@@ -80,6 +80,7 @@
                     <img v-if="status.question.songType == 'WINE'" class="card-img-top" src="images/wine.jpg" alt="Dublinvisa!">
                     <img v-if="status.question.songType == 'BEER'" class="card-img-top" src="images/beer.jpg" alt="Dublinvisa!">
                     <img v-if="status.question.songType == 'MULTISOFT'" class="card-img-top" src="images/Multisoft2.jpg" alt="">
+                    <img v-if="status.question.songType == 'AUTOMIZERS'" class="card-img-top" src="images/Automiozers-jul.jpg" alt="">
                     <div class="card-body" v-bind:class="status.question.songType">
                       <!--<div v-if="status.questionTime" class="QuestionCountdownOverlay" :key="`countdown-${status.questionTime}`"> {{status.questionTime}}</div>-->
                       <h5 class="card-title">Sång {{status.question.songNumber}}: {{status.question.songTitle}}</h5>
@@ -230,6 +231,7 @@
                   <option value="WINE">Vin</option>
                   <option value="BEER">Öl</option>
                   <option value="MULTISOFT">Multisoft</option>
+                  <option value="AUTOMIZERS">Automizers</option>
                 </select>
               </div>
               <div class="input-group mb-1">
